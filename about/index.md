@@ -10,9 +10,9 @@ comments: true
 
 ## Birinder Singh
 
-* [Master of Data Science](https://masterdatascience.ubc.ca/) candidate at [The University of British Columbia] (2018-2019) (https://www.ubc.ca/)
-* Petrophysicist Schlumberger Solutions ltd. (2016-2018) [Schlumberger](https://www.slb.com/)
-* Petrophysicist and Well Placement Engineer Schlumberger Asia Services ltd. (2013-2016)[Schlumberger](https://www.slb.com/)
+* [Master of Data Science](https://masterdatascience.ubc.ca/) candidate at [The University of British Columbia](https://www.ubc.ca/) (2018-2019)
+* Petrophysicist at Schlumberger Solutions ltd. (2016-2018) [Schlumberger](https://www.slb.com/)
+* Petrophysicist and Well Placement Engineer at Schlumberger Asia Services ltd. (2013-2016)[Schlumberger](https://www.slb.com/)
 * Research assistant University of Bergen, Norway (2011) [Experience](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet)
 * Geophysical Technology Integrated Master of technology from [Indian Institute of Technology Roorkee](https://www.iitr.ac.in/) (2008-2013)
 
