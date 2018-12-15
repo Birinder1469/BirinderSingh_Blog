@@ -6,7 +6,7 @@ reading_time:       true
 words_per_minute:   200
 logo:               'https://avatars1.githubusercontent.com/u/39837286?s=400&u=9bb9641553a70a2cf4afe634ecb1bed6a6a4a322&v=4'
 background:         'assets/img/placeholder-big.jpg'
-tiled_bg:           true   # Set this true if you want to tile your background image, otherwise it will be covered
+tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
 url:                https://birinder1469.github.io/BirinderSingh_Blog
 
@@ -37,20 +37,20 @@ disqus:   Birinder
   #ad-client:
   #ad-slot:
 #bing-verify:
-#email:
-twitter:            username
+email:              birinder1469@gmail.com
+#twitter:            username
 facebook:           /birinder.s.s/
 github-url:         Birinder1469/
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 linkedin:           birinder-singh/
 #xing:              username
-instagram:          username
+#instagram:          username
 #lastfm:            username
 #tumblr:            username
 #medium:            '@username'
 #pinterest:         username
 #foursquare:        username
-steam:              username
+#steam:              username
 #dribbble:          username
 #youtube:           username
 #youtube-channel:   channel
