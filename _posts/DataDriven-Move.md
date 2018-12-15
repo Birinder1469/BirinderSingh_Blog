@@ -4,9 +4,9 @@ title:  "From Surrey to Dunbar - A Data driven move"
 date:   2016-03-15
 excerpt: "Data Analysis"
 tag:
-- sample
-- post
-- video
+- sample post
+- images
+- test
 comments: true
 ---
 
