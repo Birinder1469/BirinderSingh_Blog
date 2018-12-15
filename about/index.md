@@ -10,14 +10,15 @@ comments: true
 
 ## Birinder Singh
 
-* [Master of Data Science](https://masterdatascience.ubc.ca/) candidate at [The University of British Columbia](https://www.ubc.ca/)
-* Petrophysicist Schlumberger Solutions ltd. [Schlumberger](https://www.slb.com/)
-* Petrophysicist and Well Placement Engineer Schlumberger Asia Services ltd. [Schlumberger](https://www.slb.com/)
-* Research assistant University of Bergen, Norway [Experience](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet)
-* Geophysical Technology Integrated Master of technology from [Indian Institute of Technology Roorkee](https://www.iitr.ac.in/)
+* [Master of Data Science](https://masterdatascience.ubc.ca/) candidate at [The University of British Columbia] (2018-2019) (https://www.ubc.ca/)
+* Petrophysicist Schlumberger Solutions ltd. (2016-2018) [Schlumberger](https://www.slb.com/)
+* Petrophysicist and Well Placement Engineer Schlumberger Asia Services ltd. (2013-2016)[Schlumberger](https://www.slb.com/)
+* Research assistant University of Bergen, Norway (2011) [Experience](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet)
+* Geophysical Technology Integrated Master of technology from [Indian Institute of Technology Roorkee](https://www.iitr.ac.in/) (2008-2013)
+
 
  If you want to chat or just say Hi!, shoot me an email at the email address provided below. All the open source code that I write is available on my [GitHub account](https://github.com/Birinder1469). Also, let me know about any errors that you find in any blog post and I will be happy to correct them!
 
 ### Contact me
 
-[BirinderSingh](mailto:birinder1469@gmail.com)
+[birinder1469@gmail.com](mailto:birinder1469@gmail.com)
