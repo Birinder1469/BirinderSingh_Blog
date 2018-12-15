@@ -1,14 +1,17 @@
 ---
 layout: post
-title: "From Surrey to Dunbar - A Data driven move"
-date: 2018-09-29
+title:  "From Surrey to Dunbar - A Data driven move"
+date:   2016-03-15
 excerpt: "Data Analysis"
-tags: [sample post, images, test]
+tag:
+- sample
+- post
+- video
 comments: true
 ---
 
 One fine evening in may this year I returned from my work after an hour-long bus ride to my home in Surrey. Totally exhausted I lay on the bed and before I could realize I was in deep sleep. In the middle of the night I woke up and a thought crossed my mind. My Master of Data Science program was just 3 months away and I started questioning my decision to stay in Surrey and not in Vancouver. My work was tiring but the MDS program would be much more tiring. I started thinking if I had made wise choice to plan to stay in Surrey and commute to UBC everyday. It was at 2 AM when the data scientist in me woke up and I started my research.
-The question in mind was to analyze if it was better to stay in Surrey and commute to UBC everyday or rent a place closer to UBC. I discussed with my friends studying at UBC and I decided to limit my search to the Dunbar area in case I decide to move. I shortlisted couple of important factors I had to base my decision on. 
+The question in mind was to analyze if it was better to stay in Surrey and commute to UBC everyday or rent a place closer to UBC. I discussed with my friends studying at UBC and I decided to limit my search to the Dunbar area in case I decide to move. I shortlisted couple of important factors I had to base my decision on.
 
 **1. Distance**
 
@@ -16,7 +19,7 @@ The question in mind was to analyze if it was better to stay in Surrey and commu
 
 *Distance between my home in Surrey and the UBC-MDS department*
 
-![randomName](../imgs/Dunbar_UBC_Distance.PNG) 
+![randomName](../imgs/Dunbar_UBC_Distance.PNG)
 
 *Distance between Dunbar area and the UBC-MDS department (Rough estimate)*
 
@@ -34,7 +37,7 @@ The Dunbar area that I was targeting in Vancouver would not be more than 6-8 km 
 
 During the morning hours (7AM-9AM) the commute from Surrey to UBC would take around 1.5 to 2 hours by Public transport and at least 1- 1.5 hours by car where as the time of commute by bus from Dunbar area to UBC would be around 25-30 minutes. I was probably going to spend around 4 hours in public transport if I decide to travel from Surrey to UBC everyday. This comparison worried me a bit.
 
-**3. Rent** 
+**3. Rent**
 
 In case I had to move I thought of checking the rent in both the areas. In surrey even if I had to move around, the rent was typically in the range of $500 – $700. I had no idea about the Vancouver rentals, so I looked up to the Craigslist and Kijiji websites of house rentals. I shortlisted 19 houses based just on the distance from UBC. I also saw few houses in surrey in case I decide to move in future. I was amazed by the findings.
 
@@ -61,7 +64,7 @@ I had a good idea about the Indian restaurants in Surrey but I had to enquire if
 
 *Indian restaurants in Surrey*
 
-**5. Networking events** 
+**5. Networking events**
 
 At the professional level I plan to be part of the networking events relevant to data science. I came across the website Meetup and there were more than 5 events every month. Apparently, all the meetups take place in downtown which is much closer to Dunbar area compared to Surrey.
 
@@ -69,7 +72,7 @@ At the professional level I plan to be part of the networking events relevant to
 ![randomName](../imgs/Events_Vancouver_2.PNG)
 
 *Calender of Data Science events planned by Meetup website in September 2018*
- 
+
 Besides the external events I also wanted to be actively engaged in the activities within the campus. Commuting from Surrey for such events would have been tiring.
 
 **6. Human Factor**
@@ -78,8 +81,8 @@ Being practical I gave some thought towards my health. Travel of 4 hours per day
 
 **Analysis**
 
-Now that I had looked at all my concerns, I decided to do some cost analysis as it was the only thing pulling be back in surrey. 
--	Rent : 
+Now that I had looked at all my concerns, I decided to do some cost analysis as it was the only thing pulling be back in surrey.
+-	Rent :
 It had been clear now that the rent in Dunbar would be almost double the rent it Surrey. I took the average values for rent in surrey and Dunbar as 600 and 1200 respectively.
 -	Food :
 Based on my previous credit card bills I was spending monthly around $350 in Surrey for food and groceries. In Dunbar considering I spend $8 per meal and take two meals a day and adding a few groceries it would amount to $600 monthly.
