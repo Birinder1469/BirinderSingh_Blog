@@ -6,8 +6,6 @@ date: 2018-12-15
 comments: true
 ---
 
-![](https://avatars1.githubusercontent.com/u/39837286?s=400&u=9bb9641553a70a2cf4afe634ecb1bed6a6a4a322&v=4)
-
 <center><a href="https://avatars1.githubusercontent.com/u/39837286?s=400&u=9bb9641553a70a2cf4afe634ecb1bed6a6a4a322&v=4"></a> </center>
 
 <center><a href="https://birinder1469.github.io/BirinderSingh_Blog/"></a></center>
