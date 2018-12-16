@@ -20,7 +20,7 @@ I also worked as lead Petrophysicist and played a key role in establishing the D
 Having experienced the drilling and interpretation side of the industry I started getting curios in the potential of using ML application in making the redundant tasks automated. I wrote couple of scripts which would reduce the time spent on manually doing some tasks with much more efficiency and in much less time.  
 I started developing my skills in programming and with several ideas in mind decided to get into the structured way of learning Data Science and decided to pursue Master of Data Science from The University of British Columbia.
 
-There is lot more coming on my experience but for no here is a glimpse of some good old days from My Schlumberger Trainings.
+There is lot more coming on my experience but for now here is a glimpse of some good old days from My Schlumberger Trainings.
 
 **Trainings In Schlumberger**
 
