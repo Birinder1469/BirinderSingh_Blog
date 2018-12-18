@@ -41,7 +41,7 @@ The 3 main columns look like below :
 
 Next I checked how many examples I have for each category and the plot below shows the imbalanced categories.
 
-![Customer_Review_Categories](../imgs/Complaint_Counts_with_titles.PNG)
+![Customer_Review_Categories](../imgs/Complaint_Counts_with_titles.png)
 
 You can notice there is a big imbalance between the categories. I chose the top 5 of those categories listed below and converted my data in balanced dataset.
 
@@ -54,7 +54,7 @@ You can notice there is a big imbalance between the categories. I chose the top 
 I chose 1000 examples of each of these classes and constructed a dataframe of 5000 rows.
 
 
-- Machine Learning 
+- Machine Learning
 
 **References:**
 
