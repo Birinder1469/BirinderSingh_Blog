@@ -22,22 +22,25 @@ The data is available at [Data](https://catalog.data.gov/dataset/consumer-compla
 
 **Analysis**
 
-- Data Cleaning
+<u> Data Cleaning </u>
+
 The first step was loading the data in proper format in the Jupyter Notebook. I used the pandas library to load the csv file.The below snapshot shows how the dataframe looks upon loading. The two columns of our interest are :
 
- > Product
- > Consumer complaint narrative
+ 1. Product
+ 2. Consumer complaint narrative
 
 ![Customer_Review_dataset](../imgs/Consumer_dataframe.PNG)
-*Consumer review snippet*
+<center>*** Consumer review snippet *** </center> <br>
 
 Based on the customer complaint narrative we intend to categorize the data in different product categories. I noticed there are several Null values in the Consumer complaint narrative which will not add any value to our training, hence I removed these Null values.
 I assigned numeric values to the product categories in a separate column names : Product_id since in fact the python also treats the categorical variables as Numeric in the memory and while conducting any analysis.
 
-The 3 main columns look like below :
+The 3 main columns look like below : <br>
 
 ![Customer_Review](../imgs/Customer_narrative.PNG)
-*Consumer review snippet*
+
+<center>*** Consumer review snippet *** </center>
+<br>
 
 Next I checked how many examples I have for each category and the plot below shows the imbalanced categories.
 
@@ -54,7 +57,8 @@ You can notice there is a big imbalance between the categories. I chose the top 
 I chose 1000 examples of each of these classes and constructed a dataframe of 5000 rows.
 
 
-- Machine Learning
+<u> Machine Learning </u>
+
 
 **References:**
 
