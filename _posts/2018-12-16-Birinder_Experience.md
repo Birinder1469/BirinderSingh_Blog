@@ -19,6 +19,10 @@ My experiences are shared on the University website [My Experiences](https://www
 ![Remotely_Operated_Vehicle](../imgs/ROV_Birinder.jpg)
 
 
+<center>
+<img src="https://www.uib.no/sites/w3.uib.no/files/styles/content_main/public/w2/3_/3_with_the_rov.jpg?itok=CeFb0gLE" width="300" height="400" />
+</center>
+
 **Schlumberger**
 
 I got into Schlumberger through campus placement and had an enriching 5 years working in the field and in the office.
