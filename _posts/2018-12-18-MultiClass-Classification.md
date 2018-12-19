@@ -77,7 +77,7 @@ Once the matrix is constructed I used the following algorithms :
 
 Naive bayes assumes that the features/words are conditionally independent which means that the occurrence of any feature/word has nothing to do with the occurrence of the other features in the sentence. This sounds a little unrealistic but it has been observed to work well in general.
 
-We have the matrix of counts of the occurrence of different features/words with us. Lets use the <u>Multinomial Naive bayes algorithm </u>. I split the data that I had in Train and Test dataset in 80:20 ratio.
+We have the matrix of counts of the occurrence of different features/words with us. Lets use the [Multinomial Naive bayes algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html). I split the data that I had in Train and Test dataset in 80:20 ratio.
 I trained the MultinomialNB on the Train data set and then scored the model on both the train and test datasets.
 
 Results:
@@ -88,7 +88,7 @@ Results:
 
 Some times it does not matter how many times the words occur rather the presence or absence of the word in the sentence is enough. Lets convert the dataset into binary matrix in which instead of count of the occurrence of a word we have wither 0 or 1. 0 signifies absence of the word in our complaint and 1 signifies its presence.
 
-Now the new matric that I have can be trained using the <u>BernoulliNB Naive Bayes algorithm</u>. As above we train the data and then get the score for both the train and test data.
+Now the new matric that I have can be trained using the [BernoulliNB Naive Bayes algorithm](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.BernoulliNB.html). As above we train the data and then get the score for both the train and test data.
 
 | Algorithm  | Train Accuracy  | Test Accuracy  |
 |---|---|---|
