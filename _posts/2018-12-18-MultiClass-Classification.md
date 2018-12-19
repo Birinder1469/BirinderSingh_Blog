@@ -73,7 +73,7 @@ Once the matrix is constructed I used the following algorithms :
 3. Random Forest(ensemble method)
 4. Linear SVM
 
-<u> <span style='color: blue'> [Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html) </span> </u>
+[Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html)
 
 Naive bayes assumes that the features/words are conditionally independent which means that the occurrence of any feature/word has nothing to do with the occurrence of the other features in the sentence. This sounds a little unrealistic but it has been observed to work well in general.
 
@@ -97,7 +97,7 @@ Now the new matric that I have can be trained using the <u>BernoulliNB Naive Bay
 
 It seems from the above results the frequency of occurrence of a word is making our algorithm more robust.
 
-<u><span style='color: blue'> [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) </span> </u>
+[Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html)
 
 Logistic regression is a famous Linear classifier algorithm which by default uses the OneVsRest approach by default if given the multi class data. In this situation the algorithm considers each class vs all others for each class in the dataset.  Logistic Regression computes the following linear function and checks the sign of it.
 Positive sign assigns to one class and negative to the other.
@@ -119,7 +119,7 @@ Positive sign assigns to one class and negative to the other.
 | BernoulliNB  | 0.76625   |0.643   |
 | Logistic Regression  | 0.98425   | 0.729  |
 
-<u> <span style='color: blue'>[LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html) </span> </u>
+[LinearSVC](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html)
 
 The Linear SVC looks for the hyperplane of k-1 dimension in the k-dimension space where k is the number of features in the dataset. By default it works on the OvR that is One vs Rest principle for multiclass classification. It tries to find the Hyperplane which segregates the classes better. It does so by maximizing the margin or the distance between the nearest points from different classes. The accuracy of the Linear SVC is as shown below.
 
@@ -131,7 +131,7 @@ The Linear SVC looks for the hyperplane of k-1 dimension in the k-dimension spac
 | LinearSVC  | 0.99675   | 0.688  |
 
 
-<u> <span style='color: blue'>[Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) </span> </u>
+[Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
 Last but not the least is my favorite ensemble technique of Random Forest. I decided to choose the maximum depth by plotting the random forest accuracies on train and test datasets across different tree depths. The plot below shows the variation of accuracies with varying maximum tree depths.
 
