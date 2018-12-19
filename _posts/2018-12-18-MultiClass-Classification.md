@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Multi Class Text Classification - Scikit Learn"
-date:   2018-03-18
+date:   2018-12-18
 excerpt: "Consumer review data"
 tag:
 - sample post
