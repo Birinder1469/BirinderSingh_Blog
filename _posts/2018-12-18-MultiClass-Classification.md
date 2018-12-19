@@ -176,6 +176,4 @@ Looking at the above table it seems that the Random Forest and Logistic Regressi
 
 **References:**
 
-Inspired by : [Medium_post](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
-
-Thanks Susan li
+Inspired by Susan Li: [Medium_post](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
