@@ -104,7 +104,7 @@ Positive sign assigns to one class and negative to the other.
 
 <center>
 
-![Sigmoid_Function](../imgs/Sigmoid_equation.png)
+![Sigmoid_Equation](../imgs/Sigmoid_equation.PNG)
 
 </center>
 
