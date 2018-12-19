@@ -170,7 +170,10 @@ Looking at the above table it seems that the Random Forest and Logistic Regressi
 *** Confusion Matrix RandomForest***
 </center>
 
+From the confusion matrices we can get an idea as to how many of each class we predicted was actually predicted correctly.
 
+Please feel free to get in touch with me for further discussion on the analysis.
+The code is available on my [GithubProfile](https://github.com/Birinder1469/MultiClass_Text_Classification).
 
 **References:**
 
