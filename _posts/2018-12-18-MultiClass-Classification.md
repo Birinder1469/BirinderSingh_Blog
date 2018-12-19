@@ -73,7 +73,7 @@ Once the matrix is constructed I used the following algorithms :
 3. Random Forest(ensemble method)
 4. Linear SVM
 
-<u> <span style='color: red'> Naive Bayes </span> </u>
+<u> <span style='color: blue'> Naive Bayes </span> </u>
 
 Naive bayes assumes that the features/words are conditionally independent which means that the occurrence of any feature/word has nothing to do with the occurrence of the other features in the sentence. This sounds a little unrealistic but it has been observed to work well in general.
 
@@ -97,7 +97,7 @@ Now the new matric that I have can be trained using the <u>BernoulliNB Naive Bay
 
 It seems from the above results the frequency of occurrence of a word is making our algorithm more robust.
 
-<u><span style='color: red'> Logistic Regression </span> </u>
+<u><span style='color: blue'> Logistic Regression </span> </u>
 
 Logistic regression is a famous Linear classifier algorithm which by default uses the OneVsRest approach by default if given the multi class data. In this situation the algorithm considers each class vs all others for each class in the dataset.  Logistic Regression computes the following linear function and checks the sign of it.
 Positive sign assigns to one class and negative to the other.
@@ -119,7 +119,32 @@ Positive sign assigns to one class and negative to the other.
 | BernoulliNB  | 0.76625   |0.643   |
 | Logistic Regression  | 0.98425   | 0.729  |
 
-<u> <span style='color: red'>Linear SVC </span> </u>
+<u> <span style='color: blue'>Linear SVC </span> </u>
+
+The Linear SVC
+
+| Algorithm  | Train Accuracy  | Test Accuracy  |
+|---|---|---|
+| MultinomialNB  | 0.87075   |0.745   |
+| BernoulliNB  | 0.76625   |0.643   |
+| Logistic Regression  | 0.98425   | 0.729  |
+| LinearSVC  | 0.99675   | 0.688  |
+
+
+<u> <span style='color: blue'>Random Forest </span> </u>
+
+
+![Random_Forest_Depth](../imgs/RandomForest_accuracy.png)
+
+
+
+![CF_LogisticRegression](../imgs/Confusion_Matrix_Heatmap_Logistic_Regression.png)
+
+
+
+![CF_RandomForest](../imgs/Confusion_Matrix_Heatmap_RandomForest.png)
+
+
 
 **References:**
 
