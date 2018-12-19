@@ -121,7 +121,7 @@ Positive sign assigns to one class and negative to the other.
 
 <u> <span style='color: blue'>Linear SVC </span> </u>
 
-The Linear SVC
+The Linear SVC looks for the hyperplane of k-1 dimension in the k-dimension space where k is the number of features in the dataset. By default it works on the OvR that is One vs Rest principle for multiclass classification. It tries to find the Hyperplane which segregates the classes better. It does so by maximizing the margin or the distance between the nearest points from different classes. The accuracy of the Linear SVC is as shown below.
 
 | Algorithm  | Train Accuracy  | Test Accuracy  |
 |---|---|---|
@@ -133,20 +133,43 @@ The Linear SVC
 
 <u> <span style='color: blue'>Random Forest </span> </u>
 
+Last but not the least is my favorite ensemble technique of Random Forest. I decided to choose the maximum depth by plotting the random forest accuracies on train and test datasets across different tree depths. The plot below shows the variation of accuracies with varying maximum tree depths.
+
 
 ![Random_Forest_Depth](../imgs/RandomForest_accuracy.png)
 
+<center>
 
+*** Accuracy vs Maximum Tree depth ***
+</center>
+
+As he depth increases the training accuracy tends to reach 100% but the test accuracies sort of saturates. I chose the depth of 40 for further analysis at which the test accuracy started saturating and the train error was also good enough.
+
+| Algorithm  | Train Accuracy  | Test Accuracy  |
+|---|---|---|
+| MultinomialNB  | 0.87075   |0.745   |
+| BernoulliNB  | 0.76625   |0.643   |
+| Logistic Regression  | 0.98425   | 0.729  |
+| LinearSVC  | 0.99675   | 0.688  |
+| RandomForest  |   0.975 | 0.72 |
+
+Looking at the above table it seems that the Random Forest and Logistic Regression and doing a good job. I plotted the confusion matrix to further understand the Precision and Recall.
 
 ![CF_LogisticRegression](../imgs/Confusion_Matrix_Heatmap_Logistic_Regression.png)
 
+<center>
+*** Confusion Matrix LogisticRegression ***
+</center>
 
 
 ![CF_RandomForest](../imgs/Confusion_Matrix_Heatmap_RandomForest.png)
 
 <center>
-<img src="../imgs/Confusion_Matrix_Heatmap_Logistic_Regression.png" width="300" height="300" />
+*** Confusion Matrix RandomForest***
 </center>
+
+
+
 **References:**
 
 Inspired by : [Medium_post](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
