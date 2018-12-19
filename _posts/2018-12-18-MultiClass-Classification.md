@@ -144,7 +144,7 @@ The Linear SVC
 
 ![CF_RandomForest](../imgs/Confusion_Matrix_Heatmap_RandomForest.png)
 
-
+<img src="../imgs/Confusion_Matrix_Heatmap_RandomForest.png" width="400" height="400" />
 
 **References:**
 
