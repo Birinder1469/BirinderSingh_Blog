@@ -60,7 +60,7 @@ You can notice there is a big imbalance between the categories. I chose the top 
 
 I chose 1000 examples of each of these classes and constructed a DataFrame of 5000 rows.
 
-<u> Machine Learning </u>
+[Machine Learning](https://en.wikipedia.org/wiki/Machine_learning)
 
 So far I obtained the DataFrame with 5000 examples where each of the 5 classes has 1000 examples corresponding. But the algorithms cannot process the reviews in the form we humans understand. We need to transform the text reviews in a way the algorithms understand and process.
 For that we will convert the reviews into features (words) and count the occurrence of each feature in each example(complaint).
