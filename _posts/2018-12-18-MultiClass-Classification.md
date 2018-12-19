@@ -155,9 +155,8 @@ As he depth increases the training accuracy tends to reach 100% but the test acc
 
 Looking at the above table it seems that the Random Forest and Logistic Regression and doing a good job. I plotted the confusion matrix to further understand the Precision and Recall.
 
-<span> <u>
 [ConfusionMatrix](https://scikit-learn.org/stable/modules/naive_bayes.html)
-</span> </u>
+
 
 ![CF_LogisticRegression](../imgs/Confusion_Matrix_Heatmap_Logistic_Regression.png)
 
