@@ -102,11 +102,7 @@ It seems from the above results the frequency of occurrence of a word is making 
 Logistic regression is a famous Linear classifier algorithm which by default uses the OneVsRest approach by default if given the multi class data. In this situation the algorithm considers each class vs all others for each class in the dataset.  Logistic Regression computes the following linear function and checks the sign of it.
 Positive sign assigns to one class and negative to the other.
 
-<center>
-
 ![Sigmoid_Equation](../imgs/Sigmoid_equation.PNG)
-
-</center>
 
  where $\beta$  are the weights assigned to each of the feature x. To further find the probability or the confidence Sigmoid function is used. The value of the above function (t) is used in the Sigmoid function the further it is either side of 0.5 more the confidence of classification.
 
