@@ -7,7 +7,6 @@ tag:
 - sample post
 - post
 - images
-- test
 comments: true
 ---
 
