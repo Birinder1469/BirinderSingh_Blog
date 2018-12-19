@@ -35,7 +35,8 @@ The first step was loading the data in proper format in the Jupyter Notebook. I 
 Based on the customer complaint narrative we intend to categorize the data in different product categories. I noticed there are several Null values in the Consumer complaint narrative which will not add any value to our training, hence I removed these Null values.
 I assigned numeric values to the product categories in a separate column names : Product_id since in fact the python also treats the categorical variables as Numeric in the memory and while conducting any analysis.
 
-The 3 main columns look like below : <br>
+The 3 main columns look like below :
+<br>
 
 ![Customer_Review](../imgs/Customer_narrative.PNG)
 
@@ -54,10 +55,28 @@ You can notice there is a big imbalance between the categories. I chose the top 
 - Credit reporting
 - Student loan
 
-I chose 1000 examples of each of these classes and constructed a dataframe of 5000 rows.
-
+I chose 1000 examples of each of these classes and constructed a DataFrame of 5000 rows.
 
 <u> Machine Learning </u>
+
+So far I obtained the DataFrame with 5000 examples where each of the 5 classes has 1000 examples corresponding. But the algorithms cannot process the reviews in the form we humans understand. We need to transform the text reviews in a way the algorithms understand and process.
+For that we will convert the reviews into features (words) and count the occurrence of each feature in each example(complaint).
+The widely used approach of doing this is using the Bag or Words which is nothing but a dictionary of words. We choose based on the dataset we have total number of major features/words and then construct a matrix which counts the occurrence of these words in each text complaint. I will remove the counting of redundant words like 'a', 'the' and punctuations etc. which do not add much value in our classification process. This is done using the stop words argument as "english" which skips all these words from our analysis. One important thing to note is that this approach is only relying on the occurrence of the words and is ignoring any order of the words.
+
+Once the matrix is constructed I used the following algorithms :
+
+1. Naive Bayes (MultinomialNB and BernoulliNB)
+2. Logistic Regression
+3. Random Forest(ensemble method)
+4. Linear SVM
+
+<u> Naive Bayes </u>
+
+Naive bayes assumes that the features/words are conditionally independent which means that the occurrence of any feature/word has nothing to do with the occurrence of the other features in the sentence. This sounds a little unrealistic but it has been observed to work well in general.
+
+
+
+
 
 
 **References:**
