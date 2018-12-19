@@ -46,7 +46,10 @@ The 3 main columns look like below :
 Next I checked how many examples I have for each category and the plot below shows the imbalanced categories.
 
 ![Customer_Review_Categories](../imgs/Complaint_Counts_with_titles.png)
-
+<center>
+*** Number of complaints vs Product classes ***
+</center>
+<br>
 You can notice there is a big imbalance between the categories. I chose the top 5 of those categories listed below and converted my data in balanced dataset.
 
 - Credit reporting, credit repair services, or other personal consumer reports
@@ -79,7 +82,7 @@ I trained the MultinomialNB on the Train data set and then scored the model on b
 
 Results:
 
-| Algorithm  | Train Score  | Test Score  |
+| Algorithm  | Train Accuracy  | Test Accuracy  |
 |---|---|---|
 | MultinomialNB  | 0.87075   |0.745   |
 
@@ -87,7 +90,7 @@ Some times it does not matter how many times the words occur rather the presence
 
 Now the new matric that I have can be trained using the <u>BernoulliNB Naive Bayes algorithm</u>. As above we train the data and then get the score for both the train and test data.
 
-| Algorithm  | Train Score  | Test Score  |
+| Algorithm  | Train Accuracy  | Test Accuracy  |
 |---|---|---|
 | MultinomialNB  | 0.87075   |0.745   |
 | BernoulliNB  | 0.76625   |0.643   |
@@ -101,12 +104,18 @@ Positive sign assigns to one class and negative to the other.
 
 <center>
 
-$y = \beta_0 +\beta_1 x_1 +\beta_2x_2 +  . . . + \beta_k x_k$
+$t = \beta_0 +\beta_1 x_1 +\beta_2x_2 +  . . . + \beta_k x_k$
 </center>
 <br>
 
- where $\beta$  are the weights assigned to each of the feature x.
+ where $\beta$  are the weights assigned to each of the feature x. To further find the probability or the confidence Sigmoid function is used. The value of the above function (t) is used in the Sigmoid function the further it is either side of 0.5 more the confidence of classification.
 
+![Sigmoid_Function](../imgs/Sigmoid_Function.png)
+
+<center>
+*** Sigmoid Function ***
+</center>
+<br>
 
 
 
