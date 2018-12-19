@@ -144,8 +144,9 @@ The Linear SVC
 
 ![CF_RandomForest](../imgs/Confusion_Matrix_Heatmap_RandomForest.png)
 
-<img src="../imgs/Confusion_Matrix_Heatmap_RandomForest.png" width="400" height="400" />
-
+<center>
+<img src="../imgs/Confusion_Matrix_Heatmap_RandomForest.png" width="300" height="300" />
+</center>
 **References:**
 
 Inspired by : [Medium_post](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
