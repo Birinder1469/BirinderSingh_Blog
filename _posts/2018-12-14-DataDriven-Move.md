@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "From Surrey to Dunbar - A Data driven move"
-date:   2018-03-15
+date:   2018-10-15
 excerpt: "Data Analysis"
 tag:
 - sample post
