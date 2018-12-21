@@ -62,6 +62,28 @@ Next I loaded the csv files for all the companies with their share prices. I cho
 ![Share-Price_DF](../imgs/Final_DF_Share_Price.PNG)   
 <center> *** Share price record for different companies *** </center>
 
+To have a broader picture of the relations between Year, Share price and Oil Price i plotted the Pairwise plot for each company.
+
+![](../imgs/RDSB.L.png)
+<br><br>
+![](../imgs/BP.L.png)
+<br><br>
+![](../imgs/CNE.L.png)
+<br><br>
+![](../imgs/PMO.L.png)
+<br><br>
+![](../imgs/STL.OL.png)
+<br><br>
+![](../imgs/FP.PA.png)
+<br><br>
+![](../imgs/REP.MC.png)
+<br><br>
+![](../imgs/ENGI.PA.png)
+<br><br>
+![](../imgs/SLB.PA.png)
+
+
+
 
 
 
