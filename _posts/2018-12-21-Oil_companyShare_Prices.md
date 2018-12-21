@@ -10,20 +10,20 @@ tag:
 comments: true
 ---
 
-**Introduction**
+### Introduction
 
 I conducted this small analysis to see how the price of oil (Europe Brent spot price FOB -  $ per barrel ) changed in last few decades and how the share price of some major Oil companies changed over the same time period. My intentions were to see if there was any correlation and find any insights. That is what the Data Scientists do, unravel the secrets from the data. Having worked in Oil and gad Industry for long time I had many ideas which I intend to execute eventually with my Data Science tool kit. I believe this is just the beginning.  
 
 The Python libraries used are :
 
 | Library  | Description   |
-|---|---|
+|:---:|:---:|
 |`Numpy`   | Library for multidimensional arrays with high level mathematical functions to operate them  |
 | `Pandas`  | Works on top of Numpy, offer a great way of manipulate and analyze data.  |
 | `Matplotlib`  | Plotting and visualization.  |
 | `Seaborn` |  Works on top of matplotlib to provide a high level interface for attractive plotting and visualization|
 
-**Data**
+### Data
 
 The Data has been taken from the following resources :
   1. Oil price dataset from the U.S Energy Information administration. [Webpage](https://www.eia.gov/dnav/pet/hist/RBRTED.htm)
@@ -45,7 +45,7 @@ The companies considered in the analysis are :
 |REPSOL | [REP.MC](https://uk.finance.yahoo.com/quote/REP.MC?p=REP.MC&.tsrc=fin-srch-v1) |
 
 
-**Analysis**
+### Analysis
 
 [Data Cleaning](https://en.wikipedia.org/wiki/Data_cleansing)
 
@@ -72,6 +72,6 @@ Next I loaded the csv files for all the companies with their share prices. I cho
 
 
 
-**References:**
+### References:
 
 Inspired by Susan Li's post : [Post link](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
