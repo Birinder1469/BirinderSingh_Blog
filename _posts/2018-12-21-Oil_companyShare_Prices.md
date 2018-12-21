@@ -81,11 +81,36 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 ![](../imgs/ENGI.PA.png)
 <br><br>
 ![](../imgs/SLB.PA.png)
+<br><br>
 
 
+![](../imgs/RDSB.Lshareprice.png)
+<br><br>
+![](../imgs/BP.Lshareprice.png)
+<br><br>
+![](../imgs/CNE.Lshareprice.png)
+<br><br>
+![](../imgs/PMO.Lshareprice.png)
+<br><br>
+![](../imgs/STL.OLshareprice.png)
+<br><br>
+![](../imgs/FP.PAshareprice.png)
+<br><br>
+![](../imgs/REP.MCshareprice.png)
+<br><br>
+![](../imgs/ENGI.PAshareprice.png)
+<br><br>
+![](../imgs/SLB.PAshareprice.png)
+<br><br>
 
 
+<br><br>
+![](../imgs/AdjustedSharePriceScaledVsYear.png)
+<br><br>
 
+<br><br>
+![](../imgs/AdjustedSharePriceScaledVsOilPrice.png)
+<br><br>
 
 
 
