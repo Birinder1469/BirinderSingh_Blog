@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  " Oil price vs Share Price "
+title:  " The story of Oil price vs Share Price "
 date:   2018-12-21
 excerpt: "Oil Price and variation in the Share Price of some companies"
 tag:
