@@ -35,7 +35,7 @@ The companies considered in the analysis are :
 | Oil Company  | Listing   |
 |---|---|
 |Shell | [RDSB.L](https://uk.finance.yahoo.com/quote/RDSB.L/history?p=RDSB.L&.tsrc=fin-srch-v1)|
-|BP | [BP.L](https://uk.finance.yahoo.com/quote/BP.L/history?p=BP.L&.tsrc=fin-srch-v1)|
+|British Petroleum | [BP.L](https://uk.finance.yahoo.com/quote/BP.L/history?p=BP.L&.tsrc=fin-srch-v1)|
 |Cairn Energy   | [CNE.L](https://uk.finance.yahoo.com/quote/CNE.L/history?p=CNE.L&.tsrc=fin-srch-v1) |
 |Premier Oil| [PMO.L](https://uk.finance.yahoo.com/quote/PMO.L/history?p=PMO.L&.tsrc=fin-srch-v1) |
 |Statoil | [STL.OL](https://uk.finance.yahoo.com/quote/EQNR.OL?p=EQNR.OL&.tsrc=fin-srch-v1) |
@@ -68,7 +68,7 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 ##### Shell
 ![](../imgs/RDSB.L.png)
 <br>
-##### BP  
+##### British Petroleum  
 ![](../imgs/BP.L.png)
 <br>
 ##### Cairn Energy
@@ -91,7 +91,9 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 <br>
 ##### Schlumberger
 ![](../imgs/SLB.PA.png)
-<br><br>
+<br>
+
+During my tenure in Schlumberger I very distinctly remember watching the oil prices having a free fall second half of 2014 onwards. There are lot of insights we can draw from the above plots but the most distinct that even I am interested in the most comes by looking at the plots between the Oil Price and Adjusted Share price. With the falling oil price the share price of most of the companies also show a major decline. If we notice the top right plot (Row 1 , Column 3) between share prices and oil price, we notice that the lower oil price in 2015 and 2016 has affected all the companies but the impact is probably less on Schlumberger, BP and Shell.
 
 
 |   |   |   |
