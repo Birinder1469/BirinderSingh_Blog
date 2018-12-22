@@ -104,4 +104,4 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 
 ## References:
 
-Inspired by Susan Li's post : [Post link](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
+Inspired by javier bravo's post: [Post link](https://www.kaggle.com/javierbravo/a-tour-of-the-oil-industry/notebook)
