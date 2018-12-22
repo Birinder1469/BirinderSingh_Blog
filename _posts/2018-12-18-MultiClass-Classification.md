@@ -103,9 +103,8 @@ Positive sign assigns to one class and negative to the other.
 
 $$ t = \beta_0 + \beta_1 x_1 +\beta_2 x_2 + ... + \beta_k x_k$$
 
-#![Sigmoid_Equation](../imgs/Sigmoid_equation.PNG)
 
- where $\beta$  are the weights assigned to each of the feature x. To further find the probability or the confidence Sigmoid function is used. The value of the above function (t) is used in the Sigmoid function the further it is either side of 0.5 more the confidence of classification.
+ where $$\beta$$  are the weights assigned to each of the feature x. To further find the probability or the confidence Sigmoid function is used. The value of the above function (t) is used in the Sigmoid function the further it is either side of 0.5 more the confidence of classification.
 
 ![Sigmoid_Function](../imgs/Sigmoid_Function.png)
 
