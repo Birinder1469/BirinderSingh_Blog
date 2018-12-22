@@ -115,7 +115,7 @@ When I tried to fit the best fit line I notice that there is a strong positive r
 ![](../imgs/AdjustedSharePriceScaledVsOilPrice_lm.png)
 <br><br>
 
-The above analysis was a short attempt to show that there is a lot of insight which we can draw from appropriate visualizations. Please feel free to get in touch with me for any suggestions. 
+The above analysis was a short attempt to show how lot of insights can be drawn from appropriate visualizations. Please feel free to get in touch with me for any suggestions. 
 
 ## References:
 
