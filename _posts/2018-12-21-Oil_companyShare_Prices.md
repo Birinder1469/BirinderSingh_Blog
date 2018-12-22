@@ -91,13 +91,6 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 | ![](../imgs/REP.MCshareprice.png)  | ![](../imgs/ENGI.PAshareprice.png)  |![](../imgs/SLB.PAshareprice.png)|
 
 
-
-
-
-<br><br>
-![](../imgs/AdjustedSharePriceScaledVsYear.png)
-<br><br>
-
 <br><br>
 ![](../imgs/AdjustedSharePriceScaledVsOilPrice.png)
 <br><br>
