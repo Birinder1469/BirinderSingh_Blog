@@ -95,6 +95,7 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 
 During my tenure in Schlumberger I very distinctly remember watching the oil prices having a free fall second half of 2014 onwards. There are lot of insights we can draw from the above plots but the most distinct that even I am interested in the most comes by looking at the plots between the Oil Price and Adjusted Share price. With the falling oil price the share price of most of the companies also show a major decline. If we notice the top right plot (Row 1 , Column 3) between share prices and oil price, we notice that the lower oil price in 2015 and 2016 has affected all the companies but the impact is probably less on Schlumberger, BP and Shell.
 
+Now lets have a look individually at how the oil price and share price relate for these companies.
 
 |   |   |   |
 |---|---|---|
