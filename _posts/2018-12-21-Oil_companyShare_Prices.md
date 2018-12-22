@@ -12,20 +12,20 @@ comments: true
 
 ## Introduction
 
-I conducted this small analysis to see how the price of oil (Europe Brent spot price FOB -  $ per barrel ) changed in last few decades and how the share price of some major Oil companies changed over the same time period. My intentions were to see if there was any correlation and find any insights. That is what the Data Scientists do, unravel the secrets from the data. Having worked in Oil and gad Industry for long time I had many ideas which I intend to execute eventually with my Data Science tool kit. I believe this is just the beginning.  
+I conducted this small analysis to see how the price of oil (Europe Brent spot price FOB -  $ per barrel ) changed in past and how the share price of some major Oil companies changed over the same time period. My intentions were to see if there was any correlation and find any insights. That is what the Data Scientists do, unravel the secrets from the data. Having worked in Oil and gad Industry for long time I had many ideas which I intend to execute eventually with my Data Science tool kit. I believe this is just the beginning.  
 
 The Python libraries used are :
 
 | Library  | Description   |
 |:---|:---|
 |`Numpy`   | Library for multidimensional arrays with high level mathematical functions to operate them  |
-| `Pandas`  | Works on top of Numpy, offer a great way of manipulate and analyze data.  |
+| `Pandas`  | Works on top of Numpy, offers a great way to manipulate and analyze data in tabular form  |
 | `Matplotlib`  | Plotting and visualization.  |
 | `Seaborn` |  Works on top of matplotlib to provide a high level interface for attractive plotting and visualization|
 
 ## Data
 
-The Data has been taken from the following resources :
+The Data has been taken from the following websites :
   1. Oil price dataset from the U.S Energy Information administration. [Webpage](https://www.eia.gov/dnav/pet/hist/RBRTED.htm)
   2. Share price dataset from Yahoo Finance in a daily frequency. [Webpage](https://uk.finance.yahoo.com/quote/RDSB.L/history?period1=946684800&period2=1499122800&interval=1d&filter=history&frequency=1d)
 
@@ -49,42 +49,52 @@ The companies considered in the analysis are :
 
 [Data Cleaning](https://en.wikipedia.org/wiki/Data_cleansing)
 
-The first step was loading the data in proper format in the Jupyter Notebook. I used the pandas library to load the excel and csv files. The Europe Brent Spot Price FOB (Dollars per Barrel) data was available from 1987-05-20 to 2017-06-26.
+The first step of data analysis is always loading the data in proper format in the Jupyter Notebook. I used the pandas library to load the excel and csv files. The Europe Brent Spot Price FOB (Dollars per Barrel) data was available from 1987-05-20 to 2017-06-26.
 
-The trend of Oil price is as below :
+The trend of Oil price is as shown below :
 
 ![Brent_Price](../imgs/Brent_Price.png)
 
 <center> *** Brent price *** </center>
 
-Next I loaded the csv files for all the companies with their share prices. I chose the adjusted closing share price and not the closing price as the former gives accurate representation of the firm's equity value beyond just the simple market price. For comparison purpose I also scaled the share prices between 0 and 1 for each company into a separate column, this could be used to analyze the variation beyond just the absolute share price values. Any NA value if exist was removed.
+Next I loaded the csv files for all the companies with their share prices. I chose the adjusted closing share price and not the closing price as the former gives accurate representation of the firm's equity value beyond just the simple market price. For comparison purpose I also scaled the share prices between 0 and 1 for each company into a separate column, this could be used to analyze the variation beyond just the absolute share price values. Any Null value in the data wherever existed was removed. The following snippet shows the final form of the table I obtained.
 
 ![Share-Price_DF](../imgs/Final_DF_Share_Price.PNG)   
 <center> *** Share price record for different companies *** </center>
 
-To have a broader picture of the relations between Year, Share price and Oil Price i plotted the Pairwise plot for each company.
+To have a broader picture of the relations between Year, Share price and Oil Price I plotted the Pairwise plot for each company.
+<br>
 
+##### Shell
 ![](../imgs/RDSB.L.png)
-<br><br>
+<br>
+##### BP  
 ![](../imgs/BP.L.png)
-<br><br>
+<br>
+##### Cairn Energy
 ![](../imgs/CNE.L.png)
-<br><br>
+<br>
+##### Premier Oil
 ![](../imgs/PMO.L.png)
-<br><br>
+<br>
+##### STATOIL
 ![](../imgs/STL.OL.png)
 <br><br>
+##### Total
 ![](../imgs/FP.PA.png)
-<br><br>
+<br>
+##### Repsol
 ![](../imgs/REP.MC.png)
-<br><br>
+<br>
+##### ENGIE
 ![](../imgs/ENGI.PA.png)
-<br><br>
+<br>
+##### Schlumberger
 ![](../imgs/SLB.PA.png)
 <br><br>
 
 
-|   |   |  |
+|   |   |   |
 |---|---|---|
 | ![](../imgs/RDSB.Lshareprice.png)  | ![](../imgs/BP.Lshareprice.png) |![](../imgs/CNE.Lshareprice.png)|
 | ![](../imgs/PMO.Lshareprice.png) | ![](../imgs/STL.OLshareprice.png)  |![](../imgs/FP.PAshareprice.png)|
