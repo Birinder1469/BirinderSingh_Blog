@@ -109,13 +109,13 @@ I also plotted the relation between the Oil price and the Share price for all th
 ![](../imgs/AdjustedSharePriceScaledVsOilPrice.png)
 <br><br>
 
-When I tried to fit the best fit line I notice that there is a strong positive relation between oil price and share price for Premier Oil and BP but it was not of value unless seen year wise. I plotted the same relation but this time the best line was fit yearly for each of these companies. This plot gives much better picture. We notice a strong positive correlation between oil price and share price of Schlumberger. That means as the oil price increased the share price increased and also vice versa.
+When I tried to fit the best fit line I notice that there is a strong positive correlation between oil price and share price for Premier Oil and BP but it was not of value unless seen year wise. I plotted the same relation but this time the best line was fit yearly for each of these companies. This plot gives much better picture. We notice a strong positive correlation between oil price and share price of Schlumberger. That means as the oil price increased the share price increased and also vice versa.
 
 <br><br>
 ![](../imgs/AdjustedSharePriceScaledVsOilPrice_lm.png)
 <br><br>
 
-The above analysis was a short attempt to show how lot of insights can be drawn from appropriate visualizations. Please feel free to get in touch with me for any suggestions. 
+The above analysis was a short attempt to show how lot of insights can be drawn from appropriate visualizations. Please feel free to get in touch with me for any suggestions.
 
 ## References:
 
