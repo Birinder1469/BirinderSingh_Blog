@@ -96,7 +96,9 @@ To have a broader picture of the relations between Year, Share price and Oil Pri
 <br><br>
 
 
-
+<br><br>
+![](../imgs/AdjustedSharePriceScaledVsOilPrice_lm.png)
+<br><br>
 
 
 
