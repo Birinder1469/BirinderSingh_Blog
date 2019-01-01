@@ -11,7 +11,8 @@ tag:
 comments: true
 ---
 
-## Geophysicist at IIT Roorkee
+## Geophysicist
+#### Indian Institute of Technology, Roorkee
 
 After qualifying the IIT JEE(Indian Institute of Technology Joint Entrance Examination) in 2008 I got into studying Geophysical Technology from the prestigious IIT Roorkee. I was an outgoing person and the field offered me exactly what I wanted. I loved going on field trips and we had couple of them in my first and second year at IIT Roorkee. Due to my love for the subject I did voluntary internship in 2009 at The Wadiya Institute of Himalayan Geology, Dehradun under the supervision of Dr. Naresh Dhatwalia, Scientist-B. I got great insights about carrying out the Earthquake data analysis and using softwares like SEISAN. I was curious to work in the field of Seismic and in 2011 I got a chance to go on funded Internship at The University of Bergen, Norway. This was a lifetime experience for me. We went on the research cruise aboard G.O SARS looking for Black smokers. Our team from UoB along with the Team from STATOIL now Equinor investigated the gas leakages from the Sliepner Storage sites in the North Sea. I learnt a lot during 2 months in the sea. I worked with advanced Technologies Multi beam Echo Sounder being one of them.
 My experiences are shared on the University website [My Experiences](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet).
