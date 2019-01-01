@@ -53,19 +53,9 @@ There is lot more coming on my experience but for now here is a glimpse of some 
 
 **Appreciation Letters**
 
-<center>
-
 ![AppreciationLetter_JDC](../imgs/AppreciationLetter_JDC.PNG)
 
-*Appreciation Letter from Japanese Drilling Company*
-
-<br><br>
-
 ![AppreciationLetter_Oilmax](../imgs/AppreciationLetter_Oilmax.PNG)
-
-*Appreciation Letter from Oilmax*
-
-</center>
 
 ### Data Scientist in Training
 #### The University of British Columbia, Vancouver (2018-2019)
