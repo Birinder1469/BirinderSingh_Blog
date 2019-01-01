@@ -39,7 +39,7 @@ I worked as lead Petrophysicist and played a key role in establishing the Data S
 Having experienced the drilling and interpretation side of the industry for a significant time I started getting curios in the potential of using Machine Learning automating the redundant tasks. I wrote couple of scripts which would reduce the time spent on manually doing some tasks with much more efficiency and in much less time.  
 I started developing my skills in programming and with several ideas in mind decided to get into the structured way of learning Data Science and decided to pursue Master of Data Science from The University of British Columbia, Vancouver.
 
-There is lot more coming on my experience but for now here is a glimpse of some good old days from My Schlumberger Trainings.
+There is lot more coming on my experience but for now here is a glimpse of some good old days from My Schlumberger Trainings and Appreciation Letters/Awards I received.
 
 **Trainings In Schlumberger**
 
@@ -51,6 +51,21 @@ There is lot more coming on my experience but for now here is a glimpse of some 
 
 ![DB4](../imgs/DB4.PNG)
 
+**Appreciation Letters**
+
+<center>
+
+![AppreciationLetter_JDC](../imgs/AppreciationLetter_JDC.PNG)
+
+*Appreciation Letter from Japanese Drilling Company*
+
+<br><br>
+
+![AppreciationLetter_Oilmax](../imgs/AppreciationLetter_Oilmax.PNG)
+
+*Appreciation Letter from Oilmax*
+
+</center>
 
 ### Data Scientist in Training
 #### The University of British Columbia, Vancouver (2018-2019)
