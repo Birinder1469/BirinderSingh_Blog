@@ -27,8 +27,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus:
-  shortname: birinder1469
+disqus: birinder1469
 
 # Social
 # if you don't have any of social below, comment the line.
