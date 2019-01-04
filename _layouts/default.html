@@ -50,7 +50,7 @@
         </footer>
       </div>
     </div>
-
+    {% if site.google_analytics and jekyll.environment == 'production' %}
     {% include analytics.html %}
     {% include disqus.html %}
     <script id="dsq-count-scr" src="https://birinder1469.github.io/BirinderSingh_Blog/.disqus.com/count.js" async></script>
