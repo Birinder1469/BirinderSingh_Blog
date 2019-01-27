@@ -30,8 +30,8 @@ The data under consideration have the following features :
 
 | Features   | Description   |
 |---|---|
-|`State`   | Name of state in the US  |
-|`Department`   |  Police jurisdiction  |
+|```State```   | Name of state in the US  |
+|```Department```   |  Police jurisdiction  |
 | `year`  |  Year of consideration |
 | `violent_crime` , `violent_per_100k`  | Total violent crimes and crimes per 100k residents  |
 | `homs`,`homs_per_100k`  | Total homicides and homicides per 100k residents |
