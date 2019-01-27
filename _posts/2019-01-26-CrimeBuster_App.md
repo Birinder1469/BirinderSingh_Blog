@@ -106,7 +106,7 @@ User can select the crimes of interest out of the four crime types available. Se
 
 ## Display Panel
 
-There are two outputs figures that would display data interactively according to user selections
+There are two output figures that would display data interactively according to user selections
 
 ### Time Trend Plot
 
