@@ -137,5 +137,6 @@ GitHub Repository : https://github.com/Birinder1469/Crime_Busters
 
 For any questions and suggestions please contact the app developers :
 
-Birinder Singh (birinder1469@gmail.com)
+<span style="color: blue"> Birinder Singh (birinder1469@gmail.com)
 Sylvia Lee (sylvialee19@hotmail.com)
+ </span>
