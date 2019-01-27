@@ -129,6 +129,6 @@ If the users are interested to see exact numbers, the summarization table shows 
 
 ## Vision and Next Steps
 
-So far the app has the functionalities proposed earlier. In the future, the development of the Crime Buster app is to be able to include more states and jurisdictions in the selection. A feature that might be useful to implement is the 'hover' feature that allows users to see the data represented at each point on the plots. Additionally, a toggle can be implemented to collapse the selection panel and allow users to maximize their screen space to explore data in the plots.
+In the future, the development of the Crime Buster app is to be able to include more states and jurisdictions in the selection. A feature that might be useful to implement is the 'hover' feature that allows users to see the data represented at each point on the plots. Additionally, a toggle can be implemented to collapse the selection panel and allow users to maximize their screen space to explore data in the plots.
 
 I hope that the app will be helpful to the police and citizens in getting information about the crime situations around them.
