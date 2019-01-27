@@ -10,9 +10,9 @@ tag:
 comments: true
 ---
 
-# Milestone 2 - Writeup
+# My first Shiny App
 
-Access : The app can be assessed from the following link.
+Access : The app can be assessed from the following link :
 [Crime Buster App](https://birinder1469.shinyapps.io/Crime_Fighters/)
 
 ## Rationale
@@ -43,7 +43,7 @@ The current version of Crime Buster App can showcase data from six major states:
 
 ## Tasks
 
-These were the tasks at hand for Milestone 2
+These were the tasks at hand :
 
 - Wrangle data
     - Remove empty entries
@@ -131,4 +131,4 @@ If the users are interested to see exact numbers, the summarization table shows 
 
 So far the app has the functionalities proposed earlier. In the future, the development of the Crime Buster app is to be able to include more states and jurisdictions in the selection. A feature that might be useful to implement is the 'hover' feature that allows users to see the data represented at each point on the plots. Additionally, a toggle can be implemented to collapse the selection panel and allow users to maximize their screen space to explore data in the plots.
 
-We hope that the app will be helpful to the police and citizens in getting information about the crime situations around them.
+I hope that the app will be helpful to the police and citizens in getting information about the crime situations around them.
