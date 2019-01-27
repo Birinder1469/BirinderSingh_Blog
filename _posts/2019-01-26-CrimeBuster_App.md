@@ -13,7 +13,9 @@ comments: true
 ## My first Shiny App
 
 The app can be assessed from the following link :
-[Crime Buster App](https://birinder1469.shinyapps.io/Crime_Fighters/)
+<span style="color: blue"> [Crime Buster App](https://birinder1469.shinyapps.io/Crime_Fighters/)
+ </span>
+
 
 ## Rationale
 
@@ -133,10 +135,10 @@ In the future, the development of the Crime Buster app is to be able to include 
 
 I hope that the app will be helpful to the police and citizens in getting information about the crime situations around them.
 
-GitHub Repository : https://github.com/Birinder1469/Crime_Busters
+<span style="color: blus"> [GitHub Repository url](https://github.com/Birinder1469/Crime_Busters) </span>
+
 
 For any questions and suggestions please contact the app developers :
 
-<span style="color: blue"> Birinder Singh (birinder1469@gmail.com) <br>
+Birinder Singh (birinder1469@gmail.com) <br>
 Sylvia Lee (sylvialee19@hotmail.com)
- </span>
