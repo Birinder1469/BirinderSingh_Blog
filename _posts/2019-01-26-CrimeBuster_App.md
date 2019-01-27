@@ -10,9 +10,9 @@ tag:
 comments: true
 ---
 
-# My first Shiny App
+## My first Shiny App
 
-Access : The app can be assessed from the following link :
+The app can be assessed from the following link :
 [Crime Buster App](https://birinder1469.shinyapps.io/Crime_Fighters/)
 
 ## Rationale
@@ -72,56 +72,56 @@ The app is highly user friendly and easy to use. <br> The Interface looks like t
 
 ![Usage](../imgs/CromeBusters_App.PNG)
 
-### Selection Options
+## Selection Options
 
-##### 1. Year Slider
+### 1. Year Slider
 
 ![Year](../imgs/Year_Slider.PNG)
 
 The Year Slider can be used to choose any range from 1975 to 2014 by sliding the knobs. Results will be displayed only for the chosen year range.
 
-##### 2. State Selector
+### 2. State Selector
 
 ![State_Selector](../imgs/State_Selector_1.PNG)
 
 The State Selector can be used to choose the state for which we want to see the crime data. Users can chose out of the six states shown below. Note that this app cannot show data from all department within the selected state, subsequent selection of department is needed (see below).
 
-##### 3. Department Selector
+### 3. Department Selector
 
 ![Dep_selector](../imgs/Dep_Selector.PNG)
 
 Users can chose out of 30 departments/jurisdictions and see the crime data for specific department within that state. The options for this selection will change according to the state selected above.
 
-##### 4. Count Measurement choice
+### 4. Count Measurement choice
 
 ![](../imgs/Count_Measure.PNG)
 
 User can choose to see the data for either total number of crimes in the area or crimes per 100,000 residents of the area.
 
-##### 5. Crime Type choice
+### 5. Crime Type choice
 
 ![](../imgs/Crime_type.PNG)
 
 User can select the crimes of interest out of the four crime types available. Selection of multiple crime types is allowed.
 
-### Display Panel
+## Display Panel
 
 There are two outputs figures that would display data interactively according to user selections
 
-##### Time Trend Plot
+### Time Trend Plot
 
 ![](../imgs/Crime_Line_Plot.PNG)
 
 The first plot shows the time trend data for the selected state, department and the year of interest. Different crimes are shown through different colorations as defined by the legend.
 
-##### Proportion Plot
+### Proportion Plot
 
 ![](../imgs//Usage1.PNG)
 
 Users also get access to the bar charts showing the proportion of different crimes out of total crime incidents in that jurisdiction.
 This plots shows that there had been few incidents of homicides out of the total crime reported but much more assaults and robberies in this area. Police can take necessary steps accordingly.
 
-##### Summarization Table
+### Summarization Table
 
 ![](../imgs/Table.PNG)
 
