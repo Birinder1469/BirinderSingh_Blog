@@ -135,7 +135,7 @@ In the future, the development of the Crime Buster app is to be able to include 
 
 I hope that the app will be helpful to the police and citizens in getting information about the crime situations around them.
 
-<span style="color: blus"> [GitHub Repository url](https://github.com/Birinder1469/Crime_Busters) </span>
+<span style="color: blue"> [GitHub Repository url](https://github.com/Birinder1469/Crime_Busters) </span>
 
 
 For any questions and suggestions please contact the app developers :
