@@ -10,18 +10,14 @@ tag:
 comments: true
 ---
 
-## My Machine Learning Python package - SklearncomPYre
-
-
 ## Motivation
 
 As a part of Master of Data Science student at The University of British Columbia I had to try out different machine learning models on the different datasets almost every week. I would try out different models compare the test scores and give my judgement as to which model could be used for further analysis. After doing this for couple of months I realized it was high time to make a package out of it and make my life easy by removing this the redundant task of splitting the data trying different models and making comparison plot of accuracies.
 
 
 ## About the Package
-<br>
-A Python package facilitating beautifully efficient comparisons of machine learning classifiers and regression models.
-<br>
+
+A Python package facilitating beautifully efficient comparisons of machine learning classifiers and regression models.<br>
 
 ### Dependencies
 - `sklearn`
