@@ -12,13 +12,13 @@ comments: true
 
 ## Motivation
 
-As a part of Master of Data Science student at The University of British Columbia I had to try out different machine learning models on the different datasets almost every week. I would try out different models compare the test scores and give my judgement as to which model could be used for further analysis. After doing this for couple of months I realized it was high time to make a package out of it and make my life easy by removing the redundant task of splitting the data trying different models and making comparison plot of accuracies.
-This package provides functions to help make the early stages of model selection and exploration easier to cycle through and meaningfully compare.
+As a part of Master of Data Science cohort at The University of British Columbia I would try out different machine learning models on the different datasets almost every week. I would compare the test scores and give my judgement as to which model could be used for further analysis. After doing this for couple of months I realized it was high time to make a package out of it and make my life easy by removing the redundant task of splitting the data, fitting  different models and making comparison plot of accuracies.<br>
+`SklearncomPYre` package provides functions to help make the early stages of model selection and exploration easier to cycle through and meaningfully compare.
 
 
 ## About the Package
 
-__SklearncomPYre__ harnesses the power of <a href="https://scikit-learn.org/">scikit-learn</a>, combining it with <a href="https://pandas.pydata.org/">pandas</a> dataframes and <a href="https://matplotlib.org/">matplotlib</a> plots for easy, breezy, and beautiful machine learning exploration.A Python package facilitating beautifully efficient comparisons of machine learning classifiers and regression models. The package comprises of 3 functions which together have the capabilities to split the X (predictors) and y (target) inputs in the Train, Test and Validation datasets based on the input proportions given by the user. The package takes the input dictionary of the models user wants to fit and score on the data and additionally saves the bar plot of the Accuracy and Time taken to fit and predict these models. The details of each of these functions is given below.
+__SklearncomPYre__ harnesses the power of <a href="https://scikit-learn.org/">scikit-learn</a>, combining it with <a href="https://pandas.pydata.org/">pandas</a> dataframes and <a href="https://matplotlib.org/">matplotlib</a> plots for easy, breezy, and beautiful machine learning exploration. A Python package facilitating beautifully efficient comparisons of machine learning classifiers and regression models. The package comprises of 3 functions which together have the capabilities to split the X (predictors) and y (target) inputs in the Train, Test and Validation datasets based on the input proportions given by the user. The package takes the input dictionary of the models user wants to fit and score on the data and additionally saves the bar plot of the Accuracy and Time comparison of fit and predict of these models. The details of each of these functions is given below.
 
 ### Dependencies
 - `sklearn`
