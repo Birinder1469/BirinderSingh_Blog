@@ -11,11 +11,6 @@ tag:
 comments: true
 ---
 
-Success Text.
-{:.success}
-
-`success`{:.success}
-
 ## Geophysicist
 #### Indian Institute of Technology, Roorkee
 
@@ -59,31 +54,32 @@ Here is a glimpse of some good old days from My Schlumberger Trainings and Appre
 
 **Appreciation Letters**
 
+![AppreciationLetter_JDC](../imgs/AppreciationLetter_JDC.PNG)
+
 *Appreciation Letter from Japanese Drilling Company*
 
-![AppreciationLetter_JDC](../imgs/AppreciationLetter_JDC.PNG)
+![AppreciationLetter_Oilmax](../imgs/AppreciationLetter_Oilmax.PNG)
 
 *Appreciation Letter from Oilmax*
 
-![AppreciationLetter_Oilmax](../imgs/AppreciationLetter_Oilmax.PNG)
 
 ## Data Scientist in Training
 #### The University of British Columbia, Vancouver (2018-2019)
 
 I am currently part of the 2018 - 2019 cohort of the Master of Data Science(MDS) at The University of British Columbia.
-I got a chance to learn from extremely motivated like minded people in my cohort. Within a month of joining the program we(I along with 2 MDS students) won the 2018 Vancouver Whitecaps FC Datathon - Business Case. We estimated the merchandise purchase probability based on the time spent by the viewers inside the stadium and understood the purchase behavior in terms of time of transactions and suggested marketing automation.
+I got a chance to learn from highly motivated like minded people in my cohort. Within a month of joining the program we(I along with 2 MDS students) won the 2018 Vancouver Whitecaps FC Datathon - Business Case. We estimated the merchandise purchase probability based on the time spent by the viewers inside the stadium and understood the purchase behavior in terms of time of transactions and suggested marketing automation.
 
-![Datahon1](../imgs/Datathon1.jpg){:.circle}
+![Datahon1](../imgs/Datathon1.jpg)
 
 *Winner 2018 Vancouver Whitecaps FC Datathon - Business Case*
 
-![Datathon2](../imgs/Datathon2.jpg){:.border}
+![Datathon2](../imgs/Datathon2.jpg)
 
 *Invited to attend the Vancouver Whitecaps game at BC Place, Vancouver*
 
-The detailed of the curriculum is available on the program website [Curriculum](https://masterdatascience.ubc.ca/programs/vancouver)
+The detailed curriculum is available on the program website : [Curriculum](https://masterdatascience.ubc.ca/programs/vancouver)
 
-I made a Shiny dashboard `Crime Buster App` which is a classic tool for anyone who wants insights into regional crime situations in the United States of America. Potential users may include citizens concerned with the safety of their local area or someone moving to a new location. This app is also potentially useful for sheriffs planning the deployment of their police force by providing visual depictions of past crime data. [Blogpost_On_Shinydashbard](https://birinder1469.github.io/BirinderSingh_Blog/CrimeBuster_App/)
+I made a Shiny dashboard `Crime Buster App` which is a classic tool for anyone who wants insights into regional crime situations in the United States of America. Potential users include citizens concerned with the safety of their local area or someone moving to a new location. This app is also potentially useful for sheriffs planning the deployment of their police force by providing visual depictions of past crime data [Blogpost_On_Shinydashbard](https://birinder1469.github.io/BirinderSingh_Blog/CrimeBuster_App/)
 
 I also made a python package harnessing the power of scikit-learn, combining it with pandas dataframes and matplotlib plots for easy, breezy, and beautiful machine learning exploration. The Python package facilitates efficient comparisons of machine learning classifiers and regression models [Blogpost_On_SklearncomPYre_Package](https://birinder1469.github.io/BirinderSingh_Blog/SklearncomPYre_Package/)
 
