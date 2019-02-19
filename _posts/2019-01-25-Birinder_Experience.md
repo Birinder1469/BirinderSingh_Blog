@@ -11,6 +11,11 @@ tag:
 comments: true
 ---
 
+Success Text.
+{:.success}
+
+`success`{:.success}
+
 ## Geophysicist
 #### Indian Institute of Technology, Roorkee
 
@@ -44,7 +49,7 @@ Here is a glimpse of some good old days from My Schlumberger Trainings and Appre
 
 **Trainings In Schlumberger**
 
-![DB1](../imgs/DB1.PNG)
+![DB1](../imgs/DB1.PNG){:.border}
 
 ![DB2](../imgs/DB2.PNG)
 
@@ -68,17 +73,17 @@ Here is a glimpse of some good old days from My Schlumberger Trainings and Appre
 I am currently part of the 2018 - 2019 cohort of the Master of Data Science(MDS) at The University of British Columbia.
 I got a chance to learn from extremely motivated like minded people in my cohort. Within a month of joining the program we(I along with 2 MDS students) won the 2018 Vancouver Whitecaps FC Datathon - Business Case. We estimated the merchandise purchase probability based on the time spent by the viewers inside the stadium and understood the purchase behavior in terms of time of transactions and suggested marketing automation.
 
-![Datahon1](../imgs/Datathon1.jpg)
+![Datahon1](../imgs/Datathon1.jpg){:.circle}
 
 *Winner 2018 Vancouver Whitecaps FC Datathon - Business Case*
 
-![Datathon2](../imgs/Datathon2.jpg)
+![Datathon2](../imgs/Datathon2.jpg){:.border}
 
 *Invited to attend the Vancouver Whitecaps game at BC Place, Vancouver*
 
 The detailed of the curriculum is available on the program website [Curriculum](https://masterdatascience.ubc.ca/programs/vancouver)
 
-I made a Shiny dashboard `Crime Buster App` which is a classic tool for anyone who wants insights into regional crime situations in the United States of America. Potential users may include citizens concerned with the safety of their local area or someone moving to a new location. This app is also potentially useful for sheriffs planning the deployment of their police force by providing visual depictions of past crime data.[Blogpost_On_Shinydashbard](https://birinder1469.github.io/BirinderSingh_Blog/CrimeBuster_App/)
+I made a Shiny dashboard `Crime Buster App` which is a classic tool for anyone who wants insights into regional crime situations in the United States of America. Potential users may include citizens concerned with the safety of their local area or someone moving to a new location. This app is also potentially useful for sheriffs planning the deployment of their police force by providing visual depictions of past crime data. [Blogpost_On_Shinydashbard](https://birinder1469.github.io/BirinderSingh_Blog/CrimeBuster_App/)
 
 I also made a python package harnessing the power of scikit-learn, combining it with pandas dataframes and matplotlib plots for easy, breezy, and beautiful machine learning exploration. The Python package facilitates efficient comparisons of machine learning classifiers and regression models [Blogpost_On_SklearncomPYre_Package](https://birinder1469.github.io/BirinderSingh_Blog/SklearncomPYre_Package/)
 
