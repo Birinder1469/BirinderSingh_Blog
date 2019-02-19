@@ -14,7 +14,7 @@ comments: true
 ## Geophysicist
 #### Indian Institute of Technology, Roorkee
 
-After qualifying the IIT JEE(Indian Institute of Technology Joint Entrance Examination) in 2008 I got into studying Geophysical Technology from the prestigious IIT Roorkee. I was an outgoing person and the field offered me exactly what I wanted. I loved going on field trips and we had couple of them in my first and second year at IIT Roorkee. Due to my love for the subject I did voluntary internship in 2009 at The Wadiya Institute of Himalayan Geology, Dehradun under the supervision of Dr. Naresh Dhatwalia, Scientist-B. I got great insights about carrying out the Earthquake data analysis and using softwares like SEISAN. I was curious to work in the field of Seismic and in 2011 I got a chance to go on funded Internship at The University of Bergen, Norway. This was a lifetime experience for me. We went on the research cruise aboard G.O SARS looking for Black smokers. Our team from UoB along with the Team from STATOIL now Equinor investigated the gas leakages from the Sliepner Storage sites in the North Sea. I learnt a lot during 2 months in the sea. I worked with advanced Technologies Multi beam Echo Sounder being one of them.
+After qualifying the IIT JEE(Indian Institute of Technology [Joint Entrance Examination](https://en.wikipedia.org/wiki/Joint_Entrance_Examination)) in 2008 I got into studying Geophysical Technology from the prestigious IIT Roorkee. I was an outgoing person and the field offered me exactly what I wanted. I loved going on field trips and we had couple of them in my first and second year at IIT Roorkee. Due to my love for the subject I did voluntary internship in 2009 at The Wadiya Institute of Himalayan Geology, Dehradun under the supervision of Dr. Naresh Dhatwalia, Scientist-B. I got great insights about carrying out the Earthquake data analysis and using softwares like SEISAN. I was curious to work in the field of Seismic and in 2011 I got a chance to go on funded Internship at The University of Bergen, Norway. This was a lifetime experience for me. We went on the research cruise aboard G.O SARS looking for Black smokers. Our team from UoB along with the Team from STATOIL now Equinor investigated the gas leakages from the Sliepner Storage sites in the North Sea. I learnt a lot during 2 months in the sea. I worked with advanced Technologies, Multi beam Echo Sounder being one of them.
 My experiences are shared on the University website [My Experiences](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet).
 For my final year thesis I worked on the Estimation of attenuation characteristics of Aswan reservoir region, Egypt under the supervision of Prof Sagarika Mukhopadhyay, Department of Earth Sciences, IIT Roorkee. For the first time I got a chance to work on the large volume of data comprising several earthquake records observed in the region of interest over last couple of decades. We were wasting lot of time analyzing these earthquake records manually. To make the procedure efficient I used MATLAB to reduce manual editing and manipulation of excel files. The task which otherwise would have taken more than a month and if there were to bring any change then god knows how much more could now be done in less than a week using these MATLAB scripts.
 After a year long hard work we successfully published our work in the prestigious Journal of Seismology [Estimation of attenuation characteristics of Aswan reservoir region, Egypt](https://link.springer.com/article/10.1007/s10950-015-9511-2).
@@ -24,7 +24,7 @@ After a year long hard work we successfully published our work in the prestigiou
 
 I got into Schlumberger through campus placement at IIT Roorkee and had an enriching experience of 5 years working in the field and in the office.
 I worked as a Logging While drilling petrophysicist and my job was to carry out real time log analysis and make recommendations to the clients based on their objectives. My job profile brought lot of satisfaction once we successfully met our targets or had some interested findings while drilling. The feeling of accomplishment after I saw the smile on the face of our clients with every successful well used to be the motivation for me to keep giving my best everyday. From log analysis to understanding Mud logs, frequent discussions with Drilling Engineers, Chemists, Reservoir Engineers and Geologists gave me a holistic picture of the entire drilling and interpretation cycle.      
-While real time analysis I used to be in touch with the Well placement engineers and started working on Well placement jobs on my own looking at which the management decided to Cross train me in the Well Placement Domain as well. As a WP engineer I used to Geo steer high angle horizontal wells to maximize the production from the target reservoirs.
+While real time analysis I used to be in touch with the Well placement (WP) engineers and started working on Well placement jobs on my own looking at which the management decided to Cross train me in the Well Placement Domain as well. As a WP engineer I used to Geo steer high angle horizontal wells to maximize the production from the target reservoirs.
 One of the major projects that I worked on was the Second Leg of the National Gas hydrate Expedition (NGHP-02) carried out along the East Coast of India. This was a Multi million Dollar project and the teams from Japanese Drilling company, USGS(United States Geological Society), ONGC and Schlumberger were involved. I led the Logging While drilling workforce for the 24 wells drilled by Schlumberger.
 We used the top notch technology available which included the Nuclear Magnetic Resonance while drilling , Acoustics and Spectroscopy while drilling to delineate the Methane hydrates under the Ocean floor. The project had many challenges varying from technical to logistic which we had to overcome in order to deliver up to Schlumberger standards. After 5 months of hard work we got appreciation letters from the Japanese Drilling company for the service we provided. We successfully published our work on [New technique for accurate porosity estimation from logging-while-drilling nuclear magnetic resonance data](https://doi.org/10.1016/j.marpetgeo.2018.11.001) in the prestigious Journal (Marine and Petroleum Geology) of international repute.
 
@@ -40,7 +40,7 @@ I worked as lead Petrophysicist and played a key role in establishing the Data S
 Having experienced the drilling and interpretation side of the industry for a significant time I started getting curios in the potential of using Machine Learning automating the redundant tasks. I wrote couple of scripts which would reduce the time spent on manually doing some tasks with much more efficiency and in much less time.  
 I started developing my skills in programming and with several ideas in mind decided to get into the structured way of learning Data Science and decided to pursue Master of Data Science from The University of British Columbia, Vancouver.
 
-There is lot more coming on my experience but for now here is a glimpse of some good old days from My Schlumberger Trainings and Appreciation Letters/Awards I received.
+Here is a glimpse of some good old days from My Schlumberger Trainings and Appreciation Letters/Awards I received.
 
 **Trainings In Schlumberger**
 
@@ -65,4 +65,23 @@ There is lot more coming on my experience but for now here is a glimpse of some 
 ## Data Scientist in Training
 #### The University of British Columbia, Vancouver (2018-2019)
 
-I am currently part of the 2018 - 2019 cohort of the Master of Data Science at The University of British Columbia.
+I am currently part of the 2018 - 2019 cohort of the Master of Data Science(MDS) at The University of British Columbia.
+I got a chance to learn from extremely motivated like minded people in my cohort. Within a month of joining the program we(I along with 2 MDS students) won the 2018 Vancouver Whitecaps FC Datathon - Business Case. We estimated the merchandise purchase probability based on the time spent by the viewers inside the stadium and understood the purchase behavior in terms of time of transactions and suggested marketing automation.
+
+![Datahon1](../imgs/Datathon1.jpg)
+
+*Winner 2018 Vancouver Whitecaps FC Datathon - Business Case*
+
+![Datathon2](../imgs/Datathon2.jpg)
+
+*Invited to attend the Vancouver Whitecaps game at BC Place, Vancouver*
+
+The detailed of the curriculum is available on the program website [Curriculum](https://masterdatascience.ubc.ca/programs/vancouver)
+
+I made a Shiny dashboard `Crime Buster App` which is a classic tool for anyone who wants insights into regional crime situations in the United States of America. Potential users may include citizens concerned with the safety of their local area or someone moving to a new location. This app is also potentially useful for sheriffs planning the deployment of their police force by providing visual depictions of past crime data.[Blogpost_On_Shinydashbard](https://birinder1469.github.io/BirinderSingh_Blog/CrimeBuster_App/)
+
+I also made a python package harnessing the power of scikit-learn, combining it with pandas dataframes and matplotlib plots for easy, breezy, and beautiful machine learning exploration. The Python package facilitates efficient comparisons of machine learning classifiers and regression models [Blogpost_On_SklearncomPYre_Package](https://birinder1469.github.io/BirinderSingh_Blog/SklearncomPYre_Package/)
+
+#### Contact :
+Please take out some time to check some of my work on my GitHub profile :
+[BirinderSingh_GitHub](https://github.com/Birinder1469)
