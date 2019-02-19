@@ -108,8 +108,8 @@ We are aware of a <a href="">new package</a>, `sklearn-pandas` that combines `sc
 
 For any clarification please feel free to contact the following contributors:
 
-| Contributor                  | Github              | CWL |
-| --------------------- |-----------------------|-----------------------|
-| Birinder Singh | [birinder1469](https://github.com/Birinder1469) | bsingh02 |
-| Jes Simkin | [jessimk](https://github.com/jessimk) | jess354 |
-| Talha Siddiqui | [talhaadnan100](https://github.com/talhaadnan100) | talhaas |
+| Contributor                  | Github              |
+| --------------------- |-----------------------|
+| Birinder Singh | [birinder1469](https://github.com/Birinder1469) |
+| Jes Simkin | [jessimk](https://github.com/jessimk) |
+| Talha Siddiqui | [talhaadnan100](https://github.com/talhaadnan100) |
