@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Work Experience"
-date:   2018-12-16
+date:   2019-01-25
 excerpt: "Experiences"
 tag:
 - sample post
