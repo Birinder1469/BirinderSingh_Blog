@@ -23,3 +23,4 @@ comments: true
 
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
+![Data_available_1](../imgs/Analysis_Income_prediction_workhours.png)
