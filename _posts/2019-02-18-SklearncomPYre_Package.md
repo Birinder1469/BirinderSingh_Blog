@@ -9,7 +9,6 @@ tag:
 - images
 comments: true
 ---
-
 <h5 align="center">
  <br>
 <img src="../imgs/logo.png" alt="SklearncomPYre" width="350"></a>
@@ -23,38 +22,12 @@ Created by</a></h5>
 
 <h4 align="center">
 
-[Birinder Singh](https://github.com/Birinder1469) &nbsp;&middot;&nbsp;
-[Jes Simkin](https://github.com/jessimk) &nbsp;&middot;&nbsp;
+[Birinder Singh](https://github.com/Birinder1469)
+[Jes Simkin](https://github.com/jessimk)
 [Talha Siddiqui](https://github.com/talhaadnan100)
 </a></h4>
 
-<br>
-<h4 align="center">
 
-[![Build Status](https://travis-ci.org/UBC-MDS/SklearncomPYre.svg?branch=master)](https://travis-ci.org/UBC-MDS/SklearncomPYre)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![codecov](https://codecov.io/gh/UBC-MDS/SklearncomPYre/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/SklearncomPYre)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![GitHub forks](https://img.shields.io/github/forks/UBC-MDS/SklearncomPYre.svg?style=social)](https://github.com/UBC-MDS/SklearncomPYre/network)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![GitHub issues](https://img.shields.io/github/issues/UBC-MDS/SklearncomPYre.svg?style=social)](https://github.com/UBC-MDS/SklearncomPYre/issues)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![GitHub stars](https://img.shields.io/github/stars/UBC-MDS/SklearncomPYre.svg?style=social)](https://github.com/UBC-MDS/SklearncomPYre/stargazers)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-[![GitHub license](https://img.shields.io/github/license/UBC-MDS/SklearncomPYre.svg?style=social)](https://github.com/UBC-MDS/SklearncomPYre/blob/master/LICENSE)
-</a></h4>
-
-
-<h1></h1>
-<h4 align="center">
- <a href="#summary">Summary</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
- <a href="#install">Install</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
- <a href="#how-to-use">How To Use</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
- <a href="#credits">Credits</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
- <a href="#related">Related</a> &nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
- <a href="#license">License</a>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;
- <a href="#contribute">Contribute</a>
-</h4>
-<h1></h1>
-
-<br>
 
 
 ## Motivation
