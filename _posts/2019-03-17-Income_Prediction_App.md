@@ -12,15 +12,33 @@ comments: true
 
 ## Motivation
 
+<br>
+
 ![Data_available](../imgs/Data_available.png)
+
+<br>
 
 ![Data_available_1](../imgs/Data_available_1.png)
 
+<br>
+
 ![Data_available_1](../imgs/Analysis_Income_prediction.png)
+
+<br>
+
 ![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
+
+<br>
+
+
 ![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
+
+<br>
+
 ![Data_available_1](../imgs/Analysis_Income_prediction_workhours.png)
 
+<br>
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
-![Data_available_1](../imgs/Analysis_Income_prediction_workhours.png)
+
+<br>
