@@ -13,12 +13,7 @@ comments: true
  <br>
 <img src="../imgs/logo.png" alt="SklearncomPYre" width="350"></a>
 <br>
-
 </h5>
-
-<h4 align="center">Facilitating beautifully efficient comparisons of machine learning classifiers and regression models</a>.</h4>
-
-<h5 align="center">
 
 
 ## Motivation
