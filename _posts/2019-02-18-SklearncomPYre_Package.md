@@ -11,10 +11,11 @@ comments: true
 ---
 <h5 align="center">
  <br>
-<img src="../imgs/logo.png" alt="SklearncomPYre" width="350"></a>
+<img src="../imgs/logo.png" alt="SklearncomPYre" width="350">
 <br>
 </h5>
 
+<h4 align="center">Facilitating beautifully efficient comparisons of machine learning classifiers and regression models</h4>
 
 ## Motivation
 
@@ -25,12 +26,6 @@ As a part of Master of Data Science cohort at The University of British Columbia
 ## About the Package
 
 __SklearncomPYre__ harnesses the power of <a href="https://scikit-learn.org/">scikit-learn</a>, combining it with <a href="https://pandas.pydata.org/">pandas</a> dataframes and <a href="https://matplotlib.org/">matplotlib</a> plots for easy, breezy, and beautiful machine learning exploration. A Python package facilitating beautifully efficient comparisons of machine learning classifiers and regression models. The package comprises of 3 functions which together have the capabilities to split the X (predictors) and y (target) inputs in the Train, Test and Validation datasets based on the input proportions given by the user. The package takes the input dictionary of the models user wants to fit and score on the data and additionally saves the bar plot of the Accuracy and Time comparison of fit and predict of these models. The details of each of these functions is given below.
-
-### Dependencies
-- `sklearn`
-- `numpy`
-- `matplotlib`
-- `pandas`
 
 ### Summary
 __SklearncomPYre__ harnesses the power of <a href="https://scikit-learn.org/">scikit-learn</a>, combining it with <a href="https://pandas.pydata.org/">pandas</a> dataframes and <a href="https://matplotlib.org/">matplotlib</a> plots for easy, breezy, and beautiful machine learning exploration.
