@@ -12,6 +12,6 @@ comments: true
 
 ## Motivation
 
-![Data_available](../imgs/Data_available.PNG)
+![Data_available](../imgs/Data_available.png)
 
-![Data_available_1](../imgs/Data_available_1.PNG)
+![Data_available_1](../imgs/Data_available_1.png)
