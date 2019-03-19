@@ -15,7 +15,7 @@ comments: true
 <br>
 </h5>
 
-<h4 align="center">Facilitating beautifully efficient comparisons of machine learning classifiers and regression models</h4>
+## <h4 align="center" >Facilitating beautifully efficient comparisons of machine learning classifiers and regression models </h4>
 
 ## Motivation
 
