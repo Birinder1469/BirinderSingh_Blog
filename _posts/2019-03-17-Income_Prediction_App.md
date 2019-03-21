@@ -12,7 +12,7 @@ comments: true
 
 ## Motivation
 
-The motivation to do the analysis is to build an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model and then deployment on a microservice Heroku so that it can be used for analysis by anyone. The task is to is to determine whether a person makes over $50k a year.
+The motivation to do the analysis is to build an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model and then deployment on a microservice [Heroku](https://www.heroku.com/) so that it can be used for analysis by anyone. The task is to is to determine whether a person makes over `$50k` a year.
 
 
 ## Dataset
@@ -29,10 +29,12 @@ I loaded the data and since its a binary classification problem I converted the 
 
 ![](../imgs/Head_UCI_Adultdata.PNG)
 
-<kbd> <img src="../imgs/Head_UCI_Adultdata.PNG"> </kbd>
-
-
 ## Exploratory Data Analysis
+
+| Occupation | Workclass|
+|--|--|
+| ![](../imgs/occupation.PNG) | ![](../imgs/workclass.PNG)  |
+
 
 
 <br>
