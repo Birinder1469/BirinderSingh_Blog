@@ -31,8 +31,8 @@ I loaded the data and since its a binary classification problem I converted the 
 
 ## Exploratory Data Analysis
 
-The categorical columns such as ``` 'workclass', 'education', 'education-num',
-       'marital-status', 'occupation', 'relationship', 'race', 'income_class'  ``` contain the following unique categories : <br>
+The categorical columns such as ``` 'Occupation','Workclass', 'Education_Label', 'Education_Number',
+       'relationship', 'race', 'income_class'  ``` contain the following unique categories : <br>
 
 ![](../imgs/categorical_varoables.PNG)
 
