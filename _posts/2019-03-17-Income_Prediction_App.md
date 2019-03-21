@@ -126,12 +126,14 @@ Before I can apply any machine learning model I need to transform my data in the
 I did the following assignments to make my data ready to be fed into the ML model.
 
 `Sex`
-Males : 1
-Females : 0
+
+Males : `1`
+Females : `0`
 
 ` Race `
-Whites : 1
-Non Whites : 0
+
+Whites : `1`
+Non Whites : `0`
 This assignment is because data is skewed with entries mostly for White people.
 
 `Education`
@@ -144,6 +146,6 @@ Bachelors,  Masters,  Doctorate, Prof-school : `2`
 
 `Native_Country`
 
-United_States : 1
-Rest : 0
+United_States : `1`
+Rest : `0`
 This is because most of the data is available for the United States natives.
