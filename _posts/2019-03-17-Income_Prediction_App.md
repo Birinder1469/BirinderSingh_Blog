@@ -98,11 +98,7 @@ The Executive and Managerial roles are the most paid ones it seems followed by  
  As we saw above the data for United states natives is overwhelmingly higher than other countries.
  The proportion of people who got wealthy (>$50k) from different natives is very high for France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
-<center>
-
-![Data_available_1](../imgs/Analysis_Income_prediction_workhours.png)
-
-</center>
+![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
 
 `Hours per week`
  The people in the higher income group work mostly between 35-60 hours a week.
