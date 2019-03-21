@@ -127,25 +127,25 @@ I did the following assignments to make my data ready to be fed into the ML mode
 
 `Sex`
 
-Males : `1`
+Males : `1` <br>
 Females : `0`
 
 ` Race `
 
-Whites : `1`
-Non Whites : `0`
+Whites : `1`<br>
+Non Whites : `0` <br>
 This assignment is because data is skewed with entries mostly for White people.
 
 `Education`
 
 The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence I am dividing this category into 3 classes.
 
-11th,  9th, 7th-8th,  5th-6th,  10th,  Preschool,  12th,  1st-4th : `0`
-HS-grad,  Some-college,  Assoc-acdm,  Assoc-voc : `1`
-Bachelors,  Masters,  Doctorate, Prof-school : `2`
+11th,  9th, 7th-8th,  5th-6th,  10th,  Preschool,  12th,  1st-4th : `0` <br>
+HS-grad,  Some-college,  Assoc-acdm,  Assoc-voc : `1` <br>
+Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
 
 `Native_Country`
 
-United_States : `1`
-Rest : `0`
-This is because most of the data is available for the United States natives.
+United_States : `1` <br>
+Rest : `0`<br>
+This is because most of the data is available for the United States natives.<br>
