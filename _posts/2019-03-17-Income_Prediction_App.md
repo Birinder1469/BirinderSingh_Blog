@@ -25,6 +25,8 @@ Link to the Data Set : <br>
 | `Attribute Characteristics:` | Categorical, Integer  | `Number of Attributes:` | 14  | `Date Donated:`  | 1996-05-01  |
 |`Associated Tasks:`  | Classification  | `Missing Values?` | Yes  | `Number of Web Hits:`  | 1427251  |
 
+![](../imgs/DataDscription1.PNG)
+
 * taken from UCI website
 
 This is how the dataset looks like :
