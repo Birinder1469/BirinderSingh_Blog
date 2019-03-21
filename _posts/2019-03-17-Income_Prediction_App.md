@@ -31,7 +31,7 @@ I loaded the data and since its a binary classification problem I converted the 
 
 ## Exploratory Data Analysis
 
-| Occupation | Workclass|
+| Occupation | Workclass |
 |--|--|
 | ![](../imgs/occupation.PNG) | ![](../imgs/workclass.PNG)  |
 
