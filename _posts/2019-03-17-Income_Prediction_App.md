@@ -23,7 +23,7 @@ Characteristics of the data are as shown below : <br>
 
 ![](../imgs/DataDscription1.PNG)
 
-Out of the total 48842 entries, Training dataset contains 32561 and the remaining 16281 are the Test dataset entries.
+Out of the total `48842` entries, Training dataset contains `32561` and the remaining `16281` are the Test dataset entries.
 
 I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the target column. The training data set head with 16 columns is shown below :
 
@@ -32,11 +32,13 @@ I loaded the data and since its a binary classification problem I converted the 
 ## Exploratory Data Analysis
 
 The categorical columns such as ``` 'Occupation','Workclass', 'Education_Label', 'Education_Number',
-       'relationship', 'race', 'income_class'  ``` contain the following unique categories : <br>
+       'Relationship', 'Race', 'Income_class'  ``` contain the following unique categories : <br>
 
 ![](../imgs/categorical_varoables.PNG)
 
-The level of education has been represented in words `Education` as well as corresponding numeric value `Education-Number` with largest value for the highest level of education attained which is `Doctorate`.
+The level of education has been represented in words `Education` as well as corresponding numeric value `Education-Number` where Pre school is considered as basic level of education with numeric value 1 and the largest value for the highest level of education attained which is `Doctorate`.
+
+Lets see how much data is available for each of the variable.
 
 <br>
 
@@ -44,13 +46,21 @@ The level of education has been represented in words `Education` as well as corr
 
 <br>
 
+Native country column has majority of the data from United States.
+
 ![Data_available_1](../imgs/Data_available_1.png)
 
 <br>
 
+I notice some '?' in workclass and native country and occupation level. After these entries with '?'
+I lost around 2399 rows of which most of them were from occupation column.
+The target variable/Income_Class contains around 22600 entries for the category of people earning <\$50k and around 7500 entries of people earning more than \$50k. This is important observation indicating that our dataset is biased towards people earning less than $50k.
+
 ![Data_available_1](../imgs/Analysis_Income_prediction.png)
 
 <br>
+
+
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
 
