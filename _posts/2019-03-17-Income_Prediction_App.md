@@ -25,17 +25,18 @@ Characteristics of the data are as shown below : <br>
 
 Out of the total 48842 entries, Training dataset contains 32561 and the remaining 16281 are the Test dataset entries.
 
-I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the target column. The training data set head is shown below :
+I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the target column. The training data set head with 16 columns is shown below :
 
 ![](../imgs/Head_UCI_Adultdata.PNG)
 
 ## Exploratory Data Analysis
 
-| Occupation | Workclass |
-|--|--|
-| ![](../imgs/occupation.PNG) | ![](../imgs/workclass.PNG)  |
+The categorical columns such as ``` 'workclass', 'education', 'education-num',
+       'marital-status', 'occupation', 'relationship', 'race', 'income_class'  ``` contain the following unique categories : <br>
 
+![](../imgs/categorical_varoables.PNG)
 
+The level of education has been represented in words `Education` as well as corresponding numeric value `Education-Number` with largest value for the highest level of education attained which is `Doctorate`.
 
 <br>
 
