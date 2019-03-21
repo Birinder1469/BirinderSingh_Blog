@@ -17,7 +17,7 @@ The motivation to do the analysis is to build an entire pipeline starting from t
 
 ## Dataset
 The dataset is available on the UCI website under the name of Adult Data Set/Census Income data.  
-Link to the Data Set : [AdultDataSet](https://archive.ics.uci.edu/ml/datasets/adult)
+Link to the Data Set : [AdultDataSetUrl](https://archive.ics.uci.edu/ml/datasets/adult)
 
 Characteristics of the data are as shown below : <br>
 
@@ -25,10 +25,11 @@ Characteristics of the data are as shown below : <br>
 
 Out of the total 48842 entries, Training dataset contains 32561 and the remaining 16281 are the Test dataset entries.
 
-I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` as  `0` and income `>$50k` as `1` as can be seen in the target column. The training data set head is shown below :
+I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the target column. The training data set head is shown below :
 
 ![](../imgs/Head_UCI_Adultdata.PNG)
 
+<kbd> <img src="../imgs/Head_UCI_Adultdata.PNG"> </kbd>
 
 
 ## Exploratory Data Analysis
