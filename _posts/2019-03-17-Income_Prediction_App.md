@@ -419,5 +419,5 @@ Try it yourself !
 
 Please let me know your feedback. All the analysis is available on my GitHub the url of which is given below.
 
-GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction)
+GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction) <br>
 Email address : birinder1469@gmail.com
