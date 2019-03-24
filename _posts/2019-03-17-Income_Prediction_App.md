@@ -297,18 +297,13 @@ model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-
 ```
 model_xgb_rs.fit(X_train,y_train)
 
-print('The best parameters for XG Boost are : ',model_xgb_rs.best_params_ )
+The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
 ```
 
 
 ```
 model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30, booster='gbtree', random_state=123)
 model_xgb_best.fit(X_train,y_train)
-print('The train score is : ', "{00:.2f}%".format(round(model_xgb_best.score(X_train, y_train),4)*100))
-print('The Test score is : ',"{00:.2f}%".format(round(model_xgb_best.score(X_test, y_test),4)*100))
-
-train_acc_xgb="{00:.2f}%".format(round(model_xgb_best.score(X_train, y_train),4)*100)
-test_acc_xgb="{00:.2f}%".format(round(model_xgb_best.score(X_test, y_test),4)*100)
 
 The train score is :  87.39%
 The Test score is :  86.81%
@@ -317,3 +312,5 @@ The Test score is :  86.81%
 
 
 ![](../imgs/Model_Accuracies.PNG)
+
+![](../imgs/Model_Accuracies1.PNG)
