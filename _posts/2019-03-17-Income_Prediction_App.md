@@ -170,3 +170,20 @@ The people working in private sector jobs were put together in category 0. Peopl
 - Exec-managerial', ' Prof-specialty',  ' Protective-serv',' Tech-support : `2`
 
 Looking at the Figure D specifically the distribution of income some occupations are believed to be earning high such as Managerial roles so I assigned them high pay category `2`. Similarly Middle `1` for Sales etc. and Lower Pay categories `0` for professions like Farming etc.
+
+Lastly for
+
+`Marital Status`
+
+- Never-married : `0`
+- Married-civ-spouse, Married-AF-spouse : `1`
+- Divorced, Married-spouse-absent, Separated, Widowed : `2`
+
+
+For the marital status I have assigned three categories. The unmarried people. The people in marriage and another category for those who have separated due to some reason.
+
+After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. A quick look into the dataframe :
+
+![](../imgs/Model_BuildingRead.PNG)
+
+*Figure H*
