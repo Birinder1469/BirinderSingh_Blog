@@ -79,7 +79,7 @@ The wealthy people are generally highly educated. Professors, Doctorate and or m
 level people earn well  Lets investigate who among low education levels are wealthy what they do how come they can earn so much at such young age. Most of the people with education level less than 12th standard work in Private jobs
 
 `Work class`
-The Self employed people have a higher proportion of being rich (>50k $) followed by people working in Federal jobs
+The Self employed people have a higher proportion of being rich (>\$50k) followed by people working in Federal jobs
 
 `Marital Status`
 The Married couple from Armed forces and Civilian spouse are in high income category but the dataset contains very few entries for Armed force category hence we wont consider them as much of a valid observation
@@ -106,7 +106,7 @@ The Executive and Managerial roles are the most paid ones it seems followed by  
  This goes up to 100 as well but there are less of such people.
 
  `Race`
- We notice that we have too little data for races other than White(Figure A). Still I tried to compare the  proportions of each race who were wealthy (>50k$). For the whites ~ 26% people are earning >50k while from the available  data ~28% Asian Pac Islander earn greater than $50k
+ We notice that we have too little data for races other than White(Figure A). Still I tried to compare the  proportions of each race who were wealthy (>\$50k). For the whites ~ 26% people are earning >\$50k while from the available  data ~28% Asian Pac Islander earn greater than \$50k
 
 <br>
 
@@ -185,7 +185,7 @@ For the marital status I have assigned three categories. The unmarried people. T
 
 After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. I am left with 11 features `age`, `workclass`, `education`, `marital-status`, `occupation`, `race`,
        `sex`, `capital-gain`, `capital-loss`, `hours-per-week`,
-       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  >\$50k or <=\$50k.
+       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  `>\$50k` or `<=\$50k`.
 
 A quick look at the final DataFrame containing 11 features and 1 target variable :
 
@@ -200,11 +200,30 @@ After the transformation of the data above I got the DataFrame containing the tr
 For the training the model I split the training dataset into training and validation dataset by allocating 20% of the data to the validation dataset.
 
 The [sklearn.model_selection.train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) module was used for doing this split.
-Since its a binary classification problem I will use the following models to predict the classes.
+Since its a binary classification problem I will use the following models the prediction.
 
- 1 - Logistic regresion
- 2 - Decision Trees / Random Forest
- 3 - XGBoost
+ 1 - Logistic regresion <br>
+ 2 - Decision Trees / Random Forest <br>
+ 3 - XGBoost <br>
 
+##### RandomForestClassifier
 
- After the final model is chosen, I will check the performance on Test Data.
+```
+model=RandomForestClassifier()
+
+model.fit(X_train,y_train)
+print('The train score is : ', "{00:.2f}%".format(round(model.score(X_train, y_train),4)*100))
+print('The Validation score is : ',"{00:.2f}%".format(round(model.score(X_valid, y_valid),4)*100))
+print('The Test score is : ',"{00:.2f}%".format(round(model.score(X_test, y_test),4)*100))
+
+```
+Training the Random Forest  Classifier without optimization gives me the following accuracies :
+
+```
+The train score is :  93.87%
+The Validation score is :  84.40%
+The Test score is :  83.94%
+
+```
+
+As you can notice the Accuracy on the training dataset is ~94% where as the validation and test accuracies are quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`. 
