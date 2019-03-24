@@ -212,6 +212,7 @@ model.fit(X_train,y_train)
 Training the Random Forest  Classifier without optimization gives me the following accuracies :
 
 ```
+- results -
 The train score is :  93.60%
 The Test score is :  84.06%
 ```
@@ -230,6 +231,7 @@ model_grid.fit(X_train,y_train)
 
 print('The Best Features for Random Forest Are : ',model_grid.best_params_)
 
+- results -
 The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
 ```
 
@@ -242,6 +244,7 @@ model_best.fit(X_train,y_train)
 ```
 
 ```
+- results -
 The train score is :  87.26%
 The Test score is :  86.30%
 ```
@@ -256,6 +259,7 @@ model_lr.fit(X_train,y_train)
 ```
 
 ```
+- results -
 The train score is :  82.87%
 The Test score is :  82.74%
 ```
@@ -270,6 +274,7 @@ model_lr=LogisticRegression()
 model_grid_lr=GridSearchCV(model_lr,param_dist,cv=10, n_jobs=-1)
 model_grid_lr.fit(X_train,y_train)
 
+- results -
 The Best Features for Logistic Regression are :  {'C': 10.0, 'penalty': 'l1'}
 ```
 
@@ -279,6 +284,7 @@ The best parameter search gives me the C value of 10 and l1 regularization as th
 model_lr_best=LogisticRegression(C=10, penalty='l1')
 model_lr_best.fit(X_train,y_train)
 
+- results -
 The train score is :  82.87%
 The Test score is :  82.73%
 ```
@@ -299,6 +305,7 @@ model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-
 ```
 model_xgb_rs.fit(X_train,y_train)
 
+- results -
 The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
 ```
 
@@ -309,9 +316,9 @@ model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
 
 model_xgb_best.fit(X_train,y_train)
 
+- results -
 The train score is :  87.39%
 The Test score is :  86.81%
-
 ```
 
 The final comparison of the best scores of the model are as follows :
