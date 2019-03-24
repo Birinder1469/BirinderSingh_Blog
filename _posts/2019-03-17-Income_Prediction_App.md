@@ -363,7 +363,7 @@ curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 10, "observa
 
 The output will look something like this :
 
-![](../imgs/OutPut_heroku.PNG)
+![](../imgs/OutPut_Heroku.PNG)
 
 Please Note :
 - Every time you are making a prediction using the above command please increase the "id" by 1 as it stores the output in the unique id and does not overwrite previous ids.
