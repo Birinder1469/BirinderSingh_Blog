@@ -185,11 +185,11 @@ For the marital status I have assigned three categories. The unmarried people. T
 
 After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. I am left with 11 features `age`, `workclass`, `education`, `marital-status`, `occupation`, `race`,
        `sex`, `capital-gain`, `capital-loss`, `hours-per-week`,
-       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  >\$$50k or <=\$$50k.
+       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  >\$50k or <=\$50k.
 
 A quick look at the final DataFrame containing 11 features and 1 target variable :
 
-![](../imgs/Model_BuildingRead.png)
+![](../imgs/Model_BuildingRead.PNG)
 
 *Figure H*
 
@@ -199,13 +199,12 @@ After the transformation of the data above I got the DataFrame containing the tr
 
 For the training the model I split the training dataset into training and validation dataset by allocating 20% of the data to the validation dataset.
 
-The [sklearn.model_selection.train_test_split] (https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) module was used for doing this split.
+The [sklearn.model_selection.train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) module was used for doing this split.
 Since its a binary classification problem I will use the following models to predict the classes.
 
  1 - Logistic regresion
- 2 - SVM
- 3 - Decision Trees / Random Forest
- 4 - Neural network (Non parametric)
- 5 - knn
+ 2 - Decision Trees / Random Forest
+ 3 - XGBoost
+
 
  After the final model is chosen, I will check the performance on Test Data.
