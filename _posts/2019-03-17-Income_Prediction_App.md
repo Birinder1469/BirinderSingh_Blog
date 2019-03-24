@@ -206,16 +206,11 @@ Since its a binary classification problem I will use the following models the pr
  2 - Decision Trees / Random Forest <br>
  3 - XGBoost <br>
 
-##### RandomForestClassifier
+#### RandomForestClassifier
 
 ```
 model=RandomForestClassifier()
-
 model.fit(X_train,y_train)
-print('The train score is : ', "{00:.2f}%".format(round(model.score(X_train, y_train),4)*100))
-print('The Validation score is : ',"{00:.2f}%".format(round(model.score(X_valid, y_valid),4)*100))
-print('The Test score is : ',"{00:.2f}%".format(round(model.score(X_test, y_test),4)*100))
-
 ```
 Training the Random Forest  Classifier without optimization gives me the following accuracies :
 
@@ -223,7 +218,6 @@ Training the Random Forest  Classifier without optimization gives me the followi
 The train score is :  93.87%
 The Validation score is :  84.40%
 The Test score is :  83.94%
-
 ```
 
-As you can notice the Accuracy on the training dataset is ~94% where as the validation and test accuracies are quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`. 
+As you can notice the Accuracy on the training dataset is ~94% where as the validation and test accuracies are quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
