@@ -249,6 +249,7 @@ That's great!. The training accuracy has decreased overall but the test accuracy
 
 #### Logistic Regression
 
+Lets see how the Logistic regression performs without any optimization of the parameters.
 ```
 model_lr=LogisticRegression()
 model_lr.fit(X_train,y_train)
@@ -259,6 +260,8 @@ The train score is :  82.87%
 The Test score is :  82.74%
 ```
 
+The score is quite low compared to the Random Forest results we obtained above. Lets see if the optimization improves the results. I will do a grid search on the regularization parameter C and check if the l1 regularization us required or l2.
+
 ```
 param_dist = dict({'C' : np.logspace(-3,3,7), "penalty":["l1","l2"]})
 
@@ -267,8 +270,10 @@ model_lr=LogisticRegression()
 model_grid_lr=GridSearchCV(model_lr,param_dist,cv=10, n_jobs=-1)
 model_grid_lr.fit(X_train,y_train)
 
-print('The Best Features for Logistic Regression are : ',model_grid_lr.best_params_)
+The Best Features for Logistic Regression are :  {'C': 10.0, 'penalty': 'l1'}
 ```
+
+The best parameter search gives me the C value of 10 and l1 regularization as the best combination. It seems the model needs to remove couple of features that is why l1 regularization has been chosen over l2. The training the model using these best parameters :
 
 ```
 model_lr_best=LogisticRegression(C=10, penalty='l1')
@@ -277,3 +282,4 @@ model_lr_best.fit(X_train,y_train)
 The train score is :  82.87%
 The Test score is :  82.73%
 ```
+The train and test scores are still low. I will probably ignore this model going forward.
