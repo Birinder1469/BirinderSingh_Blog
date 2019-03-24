@@ -185,5 +185,6 @@ For the marital status I have assigned three categories. The unmarried people. T
 After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. A quick look into the dataframe :
 
 ![](../imgs/Model_BuildingRead.PNG)
+![](../imgs/Model_BuildingRead.png)
 
 *Figure H*
