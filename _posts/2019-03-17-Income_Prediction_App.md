@@ -367,21 +367,21 @@ Please Note :
 - You are already familiar of the input categories for each variable. For instance
 In the sample command above <br>
 
-age: 45 (Numeric) <br>
+`Age`: 45 (Numeric) <br>
 
-capital-gain: 0 (numeric) <br>
+`Capital-gain`: 0 (numeric) <br>
 
-capital-loss:0 (numeric) <br>
+`Capital-loss`: 0 (numeric) <br>
 
-hours-per-week:25 (numeric) <br>
+`Hours-per-week`: 25 (numeric) <br>
 
-`workclass`
+`Workclass`
 - Private : `0`
 - State-government, Federal-government, Local-government : `1`
 - Self-employed-no-income, Self-employed-income, Without-pay, Never-worked : `2`
 
 `Education`
-- Preschool ,$$1^{st}-4^{th}$$,$$5^{th} - 6^{th}$$ ,$$7^{th}-8^{th}$$, $$9^{th}$$, $$10^{th}$$,  $$11^{th}, 12^{th} $$   : `0` <br>
+- Preschool ,$$1^{st} - 12^{th} $$   : `0` <br>
 - HS-graduate,  Some-college,  Associate-acdm,  Associate-voc : `1` <br>
 - Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
 
@@ -392,9 +392,9 @@ hours-per-week:25 (numeric) <br>
 - Divorced, Married-spouse-absent, Separated, Widowed : `2`
 
 `Occupation`
-- ' Private-house-servant', ' Farming-fishing',' Armed-Forces',' Machine-operator or inspector',' Other-service',' Handlers-cleaners', ' Admin-clerical' : `0`
-- Craft-repair', ' Sales', ' Transport-moving : `1`
-- Exec-managerial', ' Prof-specialty',  ' Protective-services',' Tech-support : `2`
+- Private-house-servant, Farming-fishing, Armed-Forces, Machine-operator or inspector, Other-service, Handlers-cleaners,  Admin-clerical : `0`
+- Craft-repair,  Sales,  Transport-moving : `1`
+- Exec-managerial, Prof-specialty,   Protective-services, Tech-support : `2`
 
 ` Race `
 - White : `1`<br>
