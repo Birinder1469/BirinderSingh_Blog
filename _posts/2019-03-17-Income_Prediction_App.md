@@ -136,7 +136,7 @@ This assignment is because data is skewed with entries mostly for White people.
 
 The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence I am dividing this category into 3 classes.
 
-11th,  9th, 7th-8th,  5th-6th,  10th,  Preschool,  12th,  1st-4th : `0` <br>
+11th,  9th, 7th-8th,  $5^{th}$- $6^{th}$,  10th,  Preschool,  12th,  1st-4th : `0` <br>
 HS-grad,  Some-college,  Assoc-acdm,  Assoc-voc : `1` <br>
 Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
 
@@ -145,3 +145,13 @@ Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
 United_States : `1` <br>
 Rest : `0`<br>
 This is because most of the data is available for the United States natives.<br>
+
+`workclass`
+
+Private : 0
+
+State-gov, Federal-gov, Local-gov : 1
+
+Self-emp-not-inc, Self-emp-inc, Without-pay, Never-worked : 2
+
+The people working in provate sector jobs were put together in category 0. People working in one way or the other with the government were put in another category 1. Remaining people who were either self employed or without income were put together into category 1.
