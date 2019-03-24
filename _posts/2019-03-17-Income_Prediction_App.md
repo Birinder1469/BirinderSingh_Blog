@@ -43,13 +43,14 @@ Lets see how much data is available for each of the variable.
 <br>
 
 ![Data_available](../imgs/Data_available.png)
+*Figure A*
 
 <br>
 
 Native country column has majority of the data from United States.
 
 ![Data_available_1](../imgs/Data_available_1.png)
-
+*Figure B*
 <br>
 
 I notice some '?' in workclass and native country and occupation level. After these entries with '?'
@@ -59,18 +60,18 @@ The target variable/Income_Class contains around 22600 entries for the category 
 Now lets see what proportion of people in each category earn in which income bracket.
 
 ![Data_available_1](../imgs/Analysis_Income_prediction.png)
-
+*Figure C*
 <br>
 
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
-
+*Figure D*
 <br>
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
-
+*Figure E*
 <br>
 
 `Education`
@@ -99,7 +100,7 @@ The Executive and Managerial roles are the most paid ones it seems followed by  
  The proportion of people who got wealthy (>$50k) from different natives is very high for France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
 ![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
-
+*Figure G*
 `Hours per week`
  The people in the higher income group work mostly between 35-60 hours a week.
  This goes up to 100 as well but there are less of such people.
@@ -110,7 +111,7 @@ The Executive and Managerial roles are the most paid ones it seems followed by  
 <br>
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
-
+*Figure H*
 <br>
 
  `Income vs Age`
@@ -123,13 +124,14 @@ I did the following assignments to make my data ready to be fed into the ML mode
 
 `Sex`
 
-Males : `1` <br>
-Females : `0`
+- Males : `1` <br>
+- Females : `0`
 
 ` Race `
 
-Whites : `1`<br>
-Non Whites : `0` <br>
+- Whites : `1`<br>
+- Non Whites : `0` <br>
+
 This assignment is because data is skewed with entries mostly for White people.
 
 `Education`
@@ -144,16 +146,27 @@ The income bracket looks distinct for students up to standard 12th level of educ
 
 `Native_Country`
 
-United_States : `1` <br>
-Rest : `0`<br>
+- United_States : `1` <br>
+- Rest : `0`<br>
+
 This is because most of the data is available for the United States natives.<br>
 
 `workclass`
 
-Private : 0
+- Private : `0`
 
-State-gov, Federal-gov, Local-gov : 1
+- State-gov, Federal-gov, Local-gov : `1`
 
-Self-emp-not-inc, Self-emp-inc, Without-pay, Never-worked : 2
+- Self-emp-not-inc, Self-emp-inc, Without-pay, Never-worked : `2`
 
-The people working in provate sector jobs were put together in category 0. People working in one way or the other with the government were put in another category 1. Remaining people who were either self employed or without income were put together into category 1.
+The people working in private sector jobs were put together in category 0. People working in one way or the other with the government were put in another category 1. Remaining people who were either self employed or without income were put together into category 1.
+
+`Occupation`
+
+- ' Priv-house-serv', ' Farming-fishing',' Armed-Forces',' Machine-op-inspct',' Other-service',' Handlers-cleaners', ' Adm-clerical' : `0`
+
+- Craft-repair', ' Sales', ' Transport-moving : `1`
+
+- Exec-managerial', ' Prof-specialty',  ' Protective-serv',' Tech-support : `2`
+
+Looking at the Figure D specifically the distribution of income some occupations are believed to be earning high such as Managerial roles so I assigned them high pay category `2`. Similarly Middle `1` for Sales etc. and Lower Pay categories `0` for professions like Farming etc.
