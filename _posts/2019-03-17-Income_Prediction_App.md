@@ -319,8 +319,28 @@ The train score is :  87.39%
 The Test score is :  86.81%
 ```
 
-The final comparison of the best scores of the model are as follows :
+The final comparison of the scores of the model are as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
 
-Random Forest
+I am okay with the results from the Random Forest Classifier to be used for further analysis.
+
+Now that I had narrowed down the model I combined my training and test datasets to have larger data to train for and get a more robust model.
+
+```
+# Combining the Train and Test dataset
+
+Entire_X=pd.concat([X_train,X_test])
+Entire_y=pd.concat([y_train,y_test])
+
+# Training RandomForestClassifier on larger dataset
+
+model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
+model_best.fit(Entire_X,Entire_y)
+```
+
+### Deployment of the Machine learning model
+
+Now that my model was ready I decided to deploy it on the Heroku cloud platform [url](https://www.heroku.com/platform#platform-diagram-detail).
+
+![Heroku](../imgs/heroku_platform.PNG)
