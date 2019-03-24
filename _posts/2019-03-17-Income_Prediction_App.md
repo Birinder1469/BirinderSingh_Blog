@@ -290,7 +290,9 @@ The train and test scores are still low. I will probably ignore this model going
 model_xgb=XGBClassifier(n_estimators=30,booster='gbtree')
 parameters_xgb=dict({'max_depth':np.arange(1,30), 'learning_rate':np.arange(0,1,0.01)})
 
-model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-1, random_state=123)
+model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-1,
+  random_state=123)
+
 ```
 
 
@@ -302,7 +304,9 @@ The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
 
 
 ```
-model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30, booster='gbtree', random_state=123)
+model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
+  booster='gbtree', random_state=123)
+
 model_xgb_best.fit(X_train,y_train)
 
 The train score is :  87.39%
@@ -310,7 +314,8 @@ The Test score is :  86.81%
 
 ```
 
-
-![](../imgs/Model_Accuracies.PNG)
+The final comparison of the best scores of the model are as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
+
+Random Forest
