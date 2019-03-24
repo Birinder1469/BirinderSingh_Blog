@@ -355,32 +355,69 @@ Now that you know everything about how the model was built, just use the followi
 Bash(Windows) or Terminal(Mac) and get the output probability of earning more than \$50k.
 
 ```
-curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 10, "observation":
+curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 15, "observation":
   {"age": 45, "workclass":0 , "education": 1, "marital-status": 0,
     "occupation": 1, "race": 1, "sex": 0, "capital-gain": 0,
       "capital-loss":0,"hours-per-week":25,"native-country":1}}' -H "Content-Type:application/json"
 ```
 
-The output will look something like this :
-
-![](../imgs/OutPut_Heroku.PNG)
-
-![](../imgs/OutPut_Heroku1.PNG)
-
-
 Please Note :
 - Every time you are making a prediction using the above command please increase the "id" by 1 as it stores the output in the unique id and does not overwrite previous ids.
 
-- You are already aware of the input categories for each variable. For instance
-In the sample command above
+- You are already familiar of the input categories for each variable. For instance
+In the sample command above <br>
+
 age: 45 (Numeric) <br>
-"workclass":0
-"education": 1
-"marital-status": 0
-  "occupation": 1
-  "race": 1
-  "sex": 0
-  "capital-gain": 0
-  "capital-loss":0
-  "hours-per-week":25
-  "native-country":1
+
+capital-gain: 0 (numeric) <br>
+
+capital-loss:0 (numeric) <br>
+
+hours-per-week:25 (numeric) <br>
+
+`workclass`
+- Private : `0`
+- State-government, Federal-government, Local-government : `1`
+- Self-employed-no-income, Self-employed-income, Without-pay, Never-worked : `2`
+
+`Education`
+- Preschool ,$$1^{st}-4^{th}$$,$$5^{th} - 6^{th}$$ ,$$7^{th}-8^{th}$$, $$9^{th}$$, $$10^{th}$$,  $$11^{th}, 12^{th} $$   : `0` <br>
+- HS-graduate,  Some-college,  Associate-acdm,  Associate-voc : `1` <br>
+- Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
+
+`Marital Status`
+
+- Never-married : `0`
+- Married-civilian-spouse, Married-ArmedForces-spouse : `1`
+- Divorced, Married-spouse-absent, Separated, Widowed : `2`
+
+`Occupation`
+- ' Private-house-servant', ' Farming-fishing',' Armed-Forces',' Machine-operator or inspector',' Other-service',' Handlers-cleaners', ' Admin-clerical' : `0`
+- Craft-repair', ' Sales', ' Transport-moving : `1`
+- Exec-managerial', ' Prof-specialty',  ' Protective-services',' Tech-support : `2`
+
+` Race `
+- White : `1`<br>
+- Non White : `0` <br>
+
+`sex` :
+- Males : `1` <br>
+- Females : `0` <br>
+
+`Native_Country`
+
+- United_States : `1` <br>
+- Rest : `0`<br>
+
+
+The output will look something like this :
+
+  ![](../imgs/OutPut_Heroku1.PNG)
+
+In this output the `proba` output is the probability that you will earn greater than $50k.
+Try it yourself !
+
+Please let me know your feedback. All the analysis is available on my GitHub the url of which is given below.
+
+GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction)
+Email address : birinder1469@gmail.com
