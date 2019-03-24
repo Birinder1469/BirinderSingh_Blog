@@ -136,7 +136,7 @@ This assignment is because data is skewed with entries mostly for White people.
 
 The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence I am dividing this category into 3 classes.
 
-$$11^{th},  9^{th}$$, $$7^{th}-8^{th}$$,  $$5^{th} - 6^{th}$$ ,  $$10^{th},  Preschool,  12^{th},  1^{st}-4^{th}$$ : `0` <br>
+Preschool ,$$1^{st}-4^{th}$$,$$5^{th} - 6^{th}$$ ,$$7^{th}-8^{th}$$, $$9^{th}$$, $$10^{th}  $$11^{th}, 12^{th}   : `0` <br>
 HS-grad,  Some-college,  Assoc-acdm,  Assoc-voc : `1` <br>
 Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
 
