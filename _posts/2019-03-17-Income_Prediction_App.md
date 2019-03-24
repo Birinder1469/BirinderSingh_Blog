@@ -221,3 +221,33 @@ The Test score is :  83.94%
 ```
 
 As you can notice the Accuracy on the training dataset is ~94% where as the validation and test accuracies are quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
+
+
+```
+# Applying Randomized search to find the optimum parameters
+
+param_dist = dict({'max_depth' : np.arange(1,30), 'max_features': np.arange(1,12)})
+
+model_rf=RandomForestClassifier(n_estimators=30)
+model_grid=RandomizedSearchCV(model_rf,param_dist,cv=10, n_jobs=-1, n_iter=20, random_state=123)
+model_grid.fit(X_train,y_train)
+
+print('The Best Features for Random Forest Are : ',model_grid.best_params_)
+
+The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
+```
+
+Applying the random search for Max features and the Max depth of the tree for the random search I get 8 as the maximum number of features and 11 as the maximum depth of the tree.
+Training the model again with the best features I get accuracies :  
+
+```
+model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
+model_best.fit(X_train,y_train)
+```
+
+```
+The train score is :  87.43%
+The Validation score is :  86.23%
+The Test score is :  86.33%
+```
+That's great!. The training accuracy has decreased overall but the test accuracy has gone up and there does not seem to overfitting now.
