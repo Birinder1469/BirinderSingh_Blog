@@ -344,3 +344,40 @@ model_best.fit(Entire_X,Entire_y)
 Now that my model was ready I decided to deploy it on the Heroku cloud platform [url](https://www.heroku.com/platform#platform-diagram-detail).
 
 ![Heroku](../imgs/heroku_platform.PNG)
+
+I will not go much into the detail of the procedure. In case you are interested please follow this GitHub repository for detailed instructions of how to deploy on the Heroku platform.
+
+[Heroku_deploy_GitHub_url](https://github.com/LDSSA/heroku-model-deploy).
+
+### How can you use the model
+
+Now that you know everything about how the model was built, just use the following command in the
+Bash(Windows) or Terminal(Mac) and get the output probability of earning more than \$50k.
+
+```
+curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 10, "observation":
+  {"age": 45, "workclass":0 , "education": 1, "marital-status": 0,
+    "occupation": 1, "race": 1, "sex": 0, "capital-gain": 0,
+      "capital-loss":0,"hours-per-week":25,"native-country":1}}' -H "Content-Type:application/json"
+```
+
+The output will look something like this :
+
+![](../imgs/OutPut_heroku.PNG)
+
+Please Note :
+- Every time you are making a prediction using the above command please increase the "id" by 1 as it stores the output in the unique id and does not overwrite previous ids.
+
+- You are already aware of the input categories for each variable. For instance
+In the sample command above
+age: 45 (Numeric) <br>
+"workclass":0
+"education": 1
+"marital-status": 0
+  "occupation": 1
+  "race": 1
+  "sex": 0
+  "capital-gain": 0
+  "capital-loss":0
+  "hours-per-week":25
+  "native-country":1
