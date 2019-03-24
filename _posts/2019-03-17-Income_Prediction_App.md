@@ -229,8 +229,6 @@ model_rf=RandomForestClassifier(n_estimators=30)
 model_grid=RandomizedSearchCV(model_rf,param_dist,cv=10, n_jobs=-1, n_iter=20, random_state=123)
 model_grid.fit(X_train,y_train)
 
-print('The Best Features for Random Forest Are : ',model_grid.best_params_)
-
 - results -
 The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
 ```
