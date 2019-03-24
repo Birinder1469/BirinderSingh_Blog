@@ -197,10 +197,7 @@ A quick look at the final DataFrame containing 11 features and 1 target variable
 
 After the transformation of the data above I got the DataFrame containing the train and test dataset. I split them again so I have Training DataFrame with 32561 rows and test dataset with 16281 rows.
 
-For the training the model I split the training dataset into training and validation dataset by allocating 20% of the data to the validation dataset.
-
-The [sklearn.model_selection.train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) module was used for doing this split.
-Since its a binary classification problem I will use the following models the prediction.
+Since its a binary classification problem I will use the following models for the prediction.
 
  1 - Logistic regresion <br>
  2 - Decision Trees / Random Forest <br>
@@ -215,12 +212,11 @@ model.fit(X_train,y_train)
 Training the Random Forest  Classifier without optimization gives me the following accuracies :
 
 ```
-The train score is :  93.87%
-The Validation score is :  84.40%
-The Test score is :  83.94%
+The train score is :  93.60%
+The Test score is :  84.06%
 ```
 
-As you can notice the Accuracy on the training dataset is ~94% where as the validation and test accuracies are quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
+As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
 
 
 ```
@@ -246,8 +242,38 @@ model_best.fit(X_train,y_train)
 ```
 
 ```
-The train score is :  87.43%
-The Validation score is :  86.23%
-The Test score is :  86.33%
+The train score is :  87.26%
+The Test score is :  86.30%
 ```
-That's great!. The training accuracy has decreased overall but the test accuracy has gone up and there does not seem to overfitting now.
+That's great!. The training accuracy has decreased overall but the test accuracy has gone up and there does not seem to overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.26% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.3% correct predictions. The model seems to be doing good job.
+
+#### Logistic Regression
+
+```
+model_lr=LogisticRegression()
+model_lr.fit(X_train,y_train)
+```
+
+```
+The train score is :  82.87%
+The Test score is :  82.74%
+```
+
+```
+param_dist = dict({'C' : np.logspace(-3,3,7), "penalty":["l1","l2"]})
+
+model_lr=LogisticRegression()
+
+model_grid_lr=GridSearchCV(model_lr,param_dist,cv=10, n_jobs=-1)
+model_grid_lr.fit(X_train,y_train)
+
+print('The Best Features for Logistic Regression are : ',model_grid_lr.best_params_)
+```
+
+```
+model_lr_best=LogisticRegression(C=10, penalty='l1')
+model_lr_best.fit(X_train,y_train)
+
+The train score is :  82.87%
+The Test score is :  82.73%
+```
