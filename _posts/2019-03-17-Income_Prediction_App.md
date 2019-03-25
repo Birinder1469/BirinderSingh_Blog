@@ -195,11 +195,11 @@ A quick look at the final DataFrame containing 11 features and 1 target variable
 
 ### Fitting the Machine Learning model
 
-After the transformation of the data above I got the DataFrame containing the train and test dataset. I split them again so I have Training DataFrame with 32561 rows and test dataset with 16281 rows.
+After the transformation of the data I got the DataFrame containing the train and test dataset. I split them again so I have Training DataFrame with 32561 rows and test dataset with 16281 rows.
 
 Since its a binary classification problem I will use the following models for the prediction.
 
- 1 - Logistic Regresion <br>
+ 1 - Logistic Regression <br>
  2 - Decision Trees / Random Forest <br>
  3 - XGBoost technique <br>
 
@@ -221,7 +221,7 @@ The train score is :  93.60%
 The Test score is :  84.06%
 ```
 
-As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
+As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
 
 
 ```
@@ -238,7 +238,7 @@ The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
 ```
 
 Applying the random search for Max features and the Max depth of the tree for the random search I get 8 as the maximum number of features and 11 as the maximum depth of the tree.
-Training the model again with the best features I get accuracies :  
+Training the model again with obtained best features I get following accuracies :  
 
 ```
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
@@ -250,11 +250,13 @@ model_best.fit(X_train,y_train)
 The train score is :  87.26%
 The Test score is :  86.30%
 ```
-That's great!. The training accuracy has decreased overall but the test accuracy has gone up and there does not seem to overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.26% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.3% correct predictions. The model seems to be doing good job.
+Isn't that great! The training accuracy has decreased overall but the test accuracy has gone up indicating no overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.26% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.3% correct predictions. The model seems to be doing good job.
 
 #### XGBoost Technique
 
-[XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) gained lot of popularity recently and has been widely used in the kaggle competitions believed to be performing well on huge dataset. It sequentially improves the prediction of the t-1 trees before fitting the $$t^{th}$$ tree. It relies on reducing the bias on several simple trees sequentially.
+[XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) gained lot of popularity recently and has been widely used in the kaggle competitions. It is believed to perform well on huge datasets. It sequentially improves the prediction of the t-1 trees before fitting the $$t^{th}$$ tree. It relies on reducing the bias on several simple trees sequentially.
+
+Lets find the set of best combination of maximum depth and learning rate for XGBoost technique.
 
 ```
 model_xgb=XGBClassifier(n_estimators=30,booster='gbtree')
@@ -272,7 +274,7 @@ model_xgb_rs.fit(X_train,y_train)
 - results -
 The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
 ```
-
+The best combination as obtained from the random search is max_depth : 4 and the learning rate : 0.85. Now training the model using these parameters I obtain following accuracies.
 
 ```
 model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
@@ -284,6 +286,8 @@ model_xgb_best.fit(X_train,y_train)
 The train score is :  87.39%
 The Test score is :  86.81%
 ```
+
+The test accuracy has gone up but the improvement is not substantial compared to the Random Forest.
 
 #### Logistic Regression
 
@@ -299,7 +303,7 @@ The train score is :  82.87%
 The Test score is :  82.74%
 ```
 
-The score is quite low compared to the Random Forest results we obtained above. Lets see if the optimization improves the results. I will do a grid search on the regularization parameter C and check if the l1 regularization us required or l2.
+The score is quite low compared to the Random Forest results we obtained above. Lets see if the optimization improves the results. I will do a grid search on the regularization parameter `C` and check if the `l1` regularization us required or `l2`.
 
 ```
 param_dist = dict({'C' : np.logspace(-3,3,7), "penalty":["l1","l2"]})
@@ -325,13 +329,13 @@ The Test score is :  82.73%
 ```
 The train and test scores are still low. I will probably ignore this model going forward.
 
-The final comparison of the scores of the model are as follows :
+The final comparison of the scores of the model is as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
 
 I am okay with the results from the Random Forest Classifier to be used for further analysis.
 
-Now that I had narrowed down the model I combined my training and test datasets to have larger data to train for and get a more robust model.
+Now that I have narrowed down the model I will combine my training and test datasets to have larger data to train and get a more robust model.
 
 ```
 # Combining the Train and Test dataset
@@ -344,13 +348,11 @@ Entire_y=pd.concat([y_train,y_test])
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
 model_best.fit(Entire_X,Entire_y)
 ```
-
-
-
+At this stage I have the Random Forest classifier trained on the entire dataset which I am pretty confident to deploy.
 
 ### Deployment of the Machine learning model
 
-Now that my model was ready I decided to deploy it on the Heroku cloud platform [url](https://www.heroku.com/platform#platform-diagram-detail).
+Now that my model is ready I will deploy it on the Heroku cloud platform [url](https://www.heroku.com/platform#platform-diagram-detail).
 
 ![Heroku](../imgs/heroku_platform.PNG)
 
@@ -358,7 +360,7 @@ I will not go much into the detail of the procedure. In case you are interested 
 
 [Heroku_deploy_GitHub_url](https://github.com/LDSSA/heroku-model-deploy).
 
-### How can you use the model
+### How you can use the model
 
 Now that you know everything about how the model was built, just use the following command in the
 Bash(Windows) or Terminal(Mac) and get the output probability of earning more than \$50k.
@@ -373,16 +375,15 @@ curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 15, "observa
 Please Note :
 - Every time you are making a prediction using the above command please increase the "id" by 1 as it stores the output in the unique id and does not overwrite previous ids.
 
-- You are already familiar of the input categories for each variable. For instance
-In the sample command above <br>
+- For your convenience below is the list of values to be used for each variable/predictor .<br>
 
-`Age`: 45 (Numeric) <br>
+`Age`: Numeric input <br>
 
-`Capital-gain`: 0 (numeric) <br>
+`Capital-gain`: Numeric Input <br>
 
-`Capital-loss`: 0 (numeric) <br>
+`Capital-loss`: Numeric Input <br>
 
-`Hours-per-week`: 25 (numeric) <br>
+`Hours-per-week`: Numeric Input <br>
 
 `Workclass`
 - Private : `0`
