@@ -199,11 +199,15 @@ After the transformation of the data above I got the DataFrame containing the tr
 
 Since its a binary classification problem I will use the following models for the prediction.
 
- 1 - Logistic regresion <br>
+ 1 - Logistic Regresion <br>
  2 - Decision Trees / Random Forest <br>
- 3 - XGBoost <br>
+ 3 - XGBoost technique <br>
+
+The total error in our machine learning model is composited of the Bias and the Variance components. To minimize the error we can either reduce the bias or the variance. The two techniques Random Forest and XGBoost deals with one of them each.
 
 #### RandomForestClassifier
+
+Random Forest is a ensemble technique in which several decision trees are trained separately and then the results from all of them are combined to prepare an overall model. Random forest relies on reducing the variance of large number of complex models with low bias. Here the composition models are not weak but too complex.
 
 ```
 model=RandomForestClassifier()
@@ -248,6 +252,39 @@ The Test score is :  86.30%
 ```
 That's great!. The training accuracy has decreased overall but the test accuracy has gone up and there does not seem to overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.26% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.3% correct predictions. The model seems to be doing good job.
 
+#### XGBoost Technique
+
+[XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) gained lot of popularity recently and has been widely used in the kaggle competitions believed to be performing well on huge dataset. It sequentially improves the prediction of the t-1 trees before fitting the $$t^{th}$$ tree. It relies on reducing the bias on several simple trees sequentially.
+
+```
+model_xgb=XGBClassifier(n_estimators=30,booster='gbtree')
+parameters_xgb=dict({'max_depth':np.arange(1,30), 'learning_rate':np.arange(0,1,0.01)})
+
+model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-1,
+  random_state=123)
+
+```
+
+
+```
+model_xgb_rs.fit(X_train,y_train)
+
+- results -
+The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
+```
+
+
+```
+model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
+  booster='gbtree', random_state=123)
+
+model_xgb_best.fit(X_train,y_train)
+
+- results -
+The train score is :  87.39%
+The Test score is :  86.81%
+```
+
 #### Logistic Regression
 
 Lets see how the Logistic regression performs without any optimization of the parameters.
@@ -288,37 +325,6 @@ The Test score is :  82.73%
 ```
 The train and test scores are still low. I will probably ignore this model going forward.
 
-#### XGBoost
-
-```
-model_xgb=XGBClassifier(n_estimators=30,booster='gbtree')
-parameters_xgb=dict({'max_depth':np.arange(1,30), 'learning_rate':np.arange(0,1,0.01)})
-
-model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-1,
-  random_state=123)
-
-```
-
-
-```
-model_xgb_rs.fit(X_train,y_train)
-
-- results -
-The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
-```
-
-
-```
-model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
-  booster='gbtree', random_state=123)
-
-model_xgb_best.fit(X_train,y_train)
-
-- results -
-The train score is :  87.39%
-The Test score is :  86.81%
-```
-
 The final comparison of the scores of the model are as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
@@ -338,6 +344,9 @@ Entire_y=pd.concat([y_train,y_test])
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
 model_best.fit(Entire_X,Entire_y)
 ```
+
+
+
 
 ### Deployment of the Machine learning model
 
@@ -421,3 +430,10 @@ Please let me know your feedback. All the analysis is available on my GitHub the
 
 GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction) <br>
 Email address : birinder1469@gmail.com
+
+
+#### Resources
+
+1. Bias Variance concept :     [Understanding the Bias-Variance Tradeoff](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229) <br>
+2. RandomForest Vs XGBoost:      [StackExchange](https://stats.stackexchange.com/questions/77018/is-random-forest-a-boosting-algorithm) <br>
+3. XGBoost Tutorial: [XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
