@@ -12,7 +12,7 @@ comments: true
 
 ### Motivation
 
-The motivation to do the analysis is to build an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model and then deployment on a microservice [Heroku](https://www.heroku.com/) so that it can be used for analysis by anyone. The task is to is to determine whether a person makes over `$50k` a year.
+The motivation to do the analysis is to build an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model and then deployment on a microservice [Heroku](https://www.heroku.com/) so it can be used for prediction by anyone. The task is to is to determine the probability that a person makes over `$50k` a year.
 
 
 ### Dataset
@@ -25,7 +25,7 @@ Characteristics of the data are as shown below : <br>
 
 Out of the total `48842` entries, Training dataset contains `32561` and the remaining `16281` are the Test dataset entries.
 
-I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the target column. The training data set head with 16 columns is shown below :
+I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the `target` column. The training data set head with 16 columns is shown below :
 
 ![](../imgs/Head_UCI_Adultdata.PNG)
 
@@ -36,21 +36,21 @@ The categorical columns such as ``` 'Occupation','Workclass', 'Education_Label',
 
 ![](../imgs/categorical_varoables.PNG)
 
-The level of education has been represented in words `Education` as well as corresponding numeric value `Education-Number` where Pre school is considered as basic level of education with numeric value 1 and the largest value for the highest level of education attained which is `Doctorate`.
+The level of education has been represented in words `Education` as well as corresponding numeric value `Education-Number` where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is `Doctorate`.
 
 Lets see how much data is available for each of the variable.
 
 <br>
 
 ![Data_available](../imgs/Data_available.png)
-*Figure A*
+``**Figure A**``
 
 <br>
 
 Native country column has majority of the data from United States.
 
 ![Data_available_1](../imgs/Data_available_1.png)
-*Figure B*
+`**Figure B**`
 <br>
 
 I notice some '?' in workclass and native country and occupation level. After these entries with '?'
@@ -60,18 +60,18 @@ The target variable/Income_Class contains around 22600 entries for the category 
 Now lets see what proportion of people in each category earn in which income bracket.
 
 ![Data_available_1](../imgs/Analysis_Income_prediction.png)
-*Figure C*
+`**Figure C**`
 <br>
 
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
-*Figure D*
+`**Figure D**`
 <br>
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
-*Figure E*
+`**Figure E**`
 <br>
 
 `Education`
@@ -100,7 +100,7 @@ The Executive and Managerial roles are the most paid ones it seems followed by  
  The proportion of people who got wealthy (>$50k) from different natives is very high for France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
 ![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
-*Figure G*
+`**Figure G**`
 `Hours per week`
  The people in the higher income group work mostly between 35-60 hours a week.
  This goes up to 100 as well but there are less of such people.
@@ -111,7 +111,7 @@ The Executive and Managerial roles are the most paid ones it seems followed by  
 <br>
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
-*Figure H*
+`**Figure H**`
 <br>
 
  `Income vs Age`
@@ -191,7 +191,7 @@ A quick look at the final DataFrame containing 11 features and 1 target variable
 
 ![](../imgs/Model_BuildingRead.PNG)
 
-*Figure H*
+`**Figure H**`
 
 ### Fitting the Machine Learning model
 
@@ -333,6 +333,8 @@ The final comparison of the scores of the model is as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
 
+`**Figure I**`
+
 I am okay with the results from the Random Forest Classifier to be used for further analysis.
 
 Now that I have narrowed down the model I will combine my training and test datasets to have larger data to train and get a more robust model.
@@ -423,6 +425,8 @@ Please Note :
 The output will look something like this :
 
   ![](../imgs/OutPut_Heroku1.PNG)
+
+`**Figure J**`
 
 In this output the `proba` output is the probability that you will earn greater than $50k.
 Try it yourself !
