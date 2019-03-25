@@ -17,7 +17,7 @@ The motivation to do the analysis is to build an entire pipeline starting from t
 
 ### Dataset
 The dataset is available on the UCI website under the name of Adult Data Set/Census Income data.  
-Link to the Data Set : [AdultDataSetUrl](https://archive.ics.uci.edu/ml/datasets/adult)
+Link to the Data Set : [Adult_IncomeDataSet_url](https://archive.ics.uci.edu/ml/datasets/adult)
 
 Characteristics of the data are as shown below : <br>
 
