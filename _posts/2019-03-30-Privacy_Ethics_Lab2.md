@@ -50,11 +50,18 @@ do to minimize these risks?
 
 `Response :`
 Anticipating possible harms that a new technology can have is easier said than done. Based on the business requirements the companies put more effort to improve the model accuracy and subsequent revenue inflow rather than having board meetings to decide what social impact the new technology is likely to have. For instance when the world had come together to increase the participation of women in the corporate world, The most hyped application of making the hiring process automated was in fact discriminating against the women. Amazon built an AI tool to hire people but had to shut it down because it was discriminating against women [URL](https://www.businessinsider.com/amazon-built-ai-to-hire-people-discriminated-against-women-2018-10).
+
+![](../imgs/Amazon_Shut.PNG)
+
+
 Nevertheless with the infiltration of AI in all the domains its the need of an hour to be cautious of the damage that the technology can have on the sentiments of the user base. Some of the important discriminatory incidents we can avert besides the one mentioned above are :
 
 - Disability : I wonder how the ML model will react to some one with speech impediment. Some people with dyslexia are not fluent while speaking. The ML model might classify them wrongly and hurt the sentiments big time.
 - Ethnicities : How can the ML model identify the people from different cultures with different accents while doing speech recognition. Also in the Image analysis how can the computer distinguish between several different communities from Asia who look pretty much similar (distinguish mongoloids from Chinese).
-- I was startled to learn that some of the communities from Africa were identified as Gorilla by the Computer vision model. [source : Lecture 3 slides] This prediction could be extremely hurting to the individual and needs to be addressed in the beginning.
+- I was startled to learn that some of the communities from Africa were identified as Gorilla by the Computer vision model [URL](https://www.theguardian.com/technology/2018/jan/12/google-racism-ban-gorilla-black-people). This prediction could be extremely hurting to the individual and needs to be addressed in the beginning. Google however had to take some immediate measures to control the damage.
+
+![](../imgs/AI_gorilla_black.PNG)
+
 - Based on the choice of movies some one is watching on Netflix segregating the people into categories could hurt the feelings and probably stereotype the image of the person.
 
 Some efforts the companies can make are
