@@ -330,7 +330,7 @@ The final comparison of the scores of the model is as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
 
-`**Figure I**`
+`**Figure 11**`
 
 Confusion matrices for different models :
 
@@ -341,6 +341,7 @@ Confusion matrices for different models :
 Where the format of the Confusion Matrix is as follows :
 
 ![](../imgs/cf_format.PNG)
+`**Figure 12**`
 
 We can notice that all the models are performing well on detection of category 0 which is for `Income < 50k`, Random Forest seems to be doing the best though. The More important prediction to us is the `Income>50k` because the training data has much less entries for this category 7841 vs 24720. Comparing the three models its clear that the Random Forest is performing the best to predict the `income>50k`. This is a motivation to use the Random Forest model going forward.
 
@@ -377,6 +378,7 @@ I will not go much into the detail of the procedure. In case you are interested 
 Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
 
 ![](../imgs/Birinder_prediction.PNG)
+`**Figure 13**`
 
 It means I have 52% chance of earning more than `>50k` based on the trained model.
 
@@ -443,8 +445,7 @@ Please Note :
 The output will look something like this :
 
   ![](../imgs/OutPut_Heroku1.PNG)
-
-`**Figure J**`
+`**Figure 14**`
 
 In this output the `proba` output is the probability that you will earn greater than $50k.
 Try it yourself !
