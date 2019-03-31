@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Income Prediction using Machine Learning"
+title:  "Income Prediction using Machine Learning Model - Heroku platform "
 date:   2019-03-17
 excerpt: "Machine Learning"
 tag:
@@ -202,14 +202,14 @@ Before moving forward lets split the train and test data again. The training Dat
 
  1 - [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) <br>
  2 - [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) <br>
- 3 - [XGBoost](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
+ 3 - [XGBoost technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
  4 - [SVM](https://scikit-learn.org/stable/modules/svm.html) <br>
 
 The total error in our machine learning model is composited of the Bias and the Variance components. To minimize the error we can either reduce the bias or the variance. The two techniques Random Forest and XGBoost deals with one of them each.
 
 #### RandomForestClassifier
 
-Random Forest is a ensemble technique in which several decision trees are trained separately and then the results from all of them are combined to prepare an overall model. Random forest relies on reducing the variance of large number of complex models with low bias. Here the composition models are not weak but too complex.
+Random Forest is a non parametric ensemble technique in which several decision trees are trained separately and then the results from all of them are averaged to improve the predictive accuracy and control over-fitting. Random forest relies on reducing the variance of large number of complex models with low bias. Here the composition models(separate decision trees) are not weak but too complex.
 
 ```
 model=RandomForestClassifier()
@@ -223,7 +223,7 @@ The train score is :  93.60%
 The Test score is :  84.06%
 ```
 
-As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but the generalization is not expected to be that great on any unseen data. To correct this let me do the Random Search of the best parameters : `Max_features`, `Max_depth`.
+As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but less likely to perform well on the unseen data. To correct this lets do a random search of best hyperparameters `Max_features`, `Max_depth` using sklearn's [RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).
 
 
 ```
@@ -239,8 +239,8 @@ model_grid.fit(X_train,y_train)
 The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
 ```
 
-Applying the random search for Max features and the Max depth of the tree for the random search I get 8 as the maximum number of features and 11 as the maximum depth of the tree.
-Training the model again with obtained best features I get following accuracies :  
+The best hyper parameter values obtained are 8 and 11 for maximum number of features and maximum depth of the tree respectively.
+Training the model again with best features the accuracies are:   
 
 ```
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
@@ -258,7 +258,7 @@ Isn't that great! The training accuracy has decreased overall but the test accur
 
 [XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) gained lot of popularity recently and has been widely used in the kaggle competitions. It is believed to perform well on huge datasets. It sequentially improves the prediction of the t-1 trees before fitting the $$t^{th}$$ tree. It relies on reducing the bias on several simple trees sequentially.
 
-Lets find the set of best combination of maximum depth and learning rate for XGBoost technique.
+Lets find the set of best combination of `maximum depth` and `learning rate` for XGBoost technique using `RandomizedSearchCV` and fit the model.
 
 ```
 model_xgb=XGBClassifier(n_estimators=30,booster='gbtree')
@@ -276,7 +276,7 @@ model_xgb_rs.fit(X_train,y_train)
 - results -
 The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
 ```
-The best combination as obtained from the random search is max_depth : 4 and the learning rate : 0.85. Now training the model using these parameters I obtain following accuracies.
+The best combination as obtained from the random search is max_depth : 4 and the learning rate : 0.85. Now training the model using these parameters we obtain following accuracies.
 
 ```
 model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
@@ -293,19 +293,8 @@ The test accuracy has gone up but the improvement is not substantial compared to
 
 #### Logistic Regression
 
-Lets see how the Logistic regression performs without any optimization of the parameters.
-```
-model_lr=LogisticRegression()
-model_lr.fit(X_train,y_train)
-```
-
-```
-- results -
-The train score is :  82.87%
-The Test score is :  82.74%
-```
-
-The score is quite low compared to the Random Forest results we obtained above. Lets see if the optimization improves the results. I will do a grid search on the regularization parameter `C` and check if the `l1` regularization us required or `l2`.
+Logistic regression uses the Sigmoid loss function and is interpretable being a parametric model.
+Lets do a sklearn's [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) on the regularization parameter `C` and check if the `l1` regularization is required or `l2`.
 
 ```
 param_dist = dict({'C' : np.logspace(-3,3,7), "penalty":["l1","l2"]})
@@ -319,7 +308,7 @@ model_grid_lr.fit(X_train,y_train)
 The Best Features for Logistic Regression are :  {'C': 10.0, 'penalty': 'l1'}
 ```
 
-The best parameter search gives me the C value of 10 and l1 regularization as the best combination. It seems the model needs to remove couple of features that is why l1 regularization has been chosen over l2. The training the model using these best parameters :
+The best parameter search gives the C value of 10 and l1 regularization as the best combination. It seems the model needs to remove couple of features that is why l1 regularization has been chosen over l2. The training the model using these best parameters :
 
 ```
 model_lr_best=LogisticRegression(C=10, penalty='l1')
@@ -329,7 +318,13 @@ model_lr_best.fit(X_train,y_train)
 The train score is :  82.87%
 The Test score is :  82.73%
 ```
-The train and test scores are still low. I will probably ignore this model going forward.
+The train and test scores are still low. Lets try a one last model.
+
+#### Support Vector Machine
+
+The output accuracy values for SVM can be compared in the final comparison matrix.
+
+### Model evaluation
 
 The final comparison of the scores of the model is as follows :
 
@@ -337,9 +332,21 @@ The final comparison of the scores of the model is as follows :
 
 `**Figure I**`
 
-I am okay with the results from the Random Forest Classifier to be used for further analysis.
+Confusion matrices for different models :
 
-Now that I have narrowed down the model I will combine my training and test datasets to have larger data to train and get a more robust model.
+| ![](../imgs/cf_rf.PNG) | ![](../imgs/cf_lr.PNG) |
+|---|---|
+|  ![](../imgs/cf_xgb.PNG)|  ![](../imgs/cf_svm.PNG)|
+
+Where the format of the Confusion Matrix is as follows :
+
+![](../imgs/cf_format.PNG)
+
+We can notice that all the models are performing well on detection of category 0 which is for `Income < 50k`, Random Forest seems to be doing the best though. The More important prediction to us is the `Income>50k` because the training data has much less entries for this category 7841 vs 24720. Comparing the three models its clear that the Random Forest is performing the best to predict the `income>50k`. This is a motivation to use the Random Forest model going forward.
+
+Now that we have narrowed down the model lets combine the training and test datasets to have larger data to train to have a more robust model.
+
+#### Combining the Train and Test data for robust Random Forest classification model
 
 ```
 # Combining the Train and Test dataset
@@ -352,11 +359,11 @@ Entire_y=pd.concat([y_train,y_test])
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
 model_best.fit(Entire_X,Entire_y)
 ```
-At this stage I have the Random Forest classifier trained on the entire dataset which I am pretty confident to deploy.
+At this stage we have the Random Forest classifier trained on the entire dataset which we can now deploy on Heroku.
 
 ### Deployment of the Machine learning model
 
-Now that my model is ready I will deploy it on the Heroku cloud platform [url](https://www.heroku.com/platform#platform-diagram-detail).
+Now that the model is ready I will deploy it on the Heroku cloud platform [url](https://www.heroku.com/platform#platform-diagram-detail).
 
 ![Heroku](../imgs/heroku_platform.PNG)
 
@@ -364,13 +371,22 @@ I will not go much into the detail of the procedure. In case you are interested 
 
 [Heroku_deploy_GitHub_url](https://github.com/LDSSA/heroku-model-deploy).
 
+
+### Prediction for me
+
+Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
+
+![](../imgs/Birinder_prediction.PNG)
+
+It means I have 52% chance of earning more than `>50k` based on the trained model.
+
 ### How you can use the model
 
 Now that you know everything about how the model was built, just use the following command in the
-Bash(Windows) or Terminal(Mac) and get the output probability of earning more than \$50k.
+Bash(Windows) or Terminal(Mac) and get the output probability of earning more than `\$50k`.
 
 ```
-curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 15, "observation":
+curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 18, "observation":
   {"age": 45, "workclass":0 , "education": 1, "marital-status": 0,
     "occupation": 1, "race": 1, "sex": 0, "capital-gain": 0,
       "capital-loss":0,"hours-per-week":25,"native-country":1}}' -H "Content-Type:application/json"
@@ -441,6 +457,7 @@ Email address : birinder1469@gmail.com
 
 #### Resources
 
+0. I am currently a student of Master of Data Science, The University of British Columbia Vancouver
 1. Bias Variance concept :     [Understanding the Bias-Variance Tradeoff](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229) <br>
 2. RandomForest Vs XGBoost:      [StackExchange](https://stats.stackexchange.com/questions/77018/is-random-forest-a-boosting-algorithm) <br>
 3. XGBoost Tutorial: [XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
