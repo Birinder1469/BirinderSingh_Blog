@@ -377,7 +377,7 @@ I will not go much into the detail of the procedure. In case you are interested 
 
 Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
 
-![](../imgs/Birinder_Prediction.PNG)
+![](../imgs/Birinder_Prediction.PNG) <br>
 `**Figure 13**`
 
 It means I have 52% chance of earning more than `>50k` based on the trained model.
