@@ -12,7 +12,7 @@ comments: true
 
 ### Motivation
 
-To address my curiosity if I would have earned well in 1990s with similar circumstances I have today. I got hold of the Income data from UCI machine learning repository. I built an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model comparing different ML models and then deployment on a microservice [Heroku](https://www.heroku.com/) so it can be used for prediction by anyone. The task at hand is to determine the probability that a person makes over `$50k` a year.
+To address my curiosity if I would earn well in 1990s with similar circumstances I have today. I got hold of the Income data from UCI machine learning repository. I built an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model comparing different ML models and then deployment on a microservice [Heroku](https://www.heroku.com/) so it can be used for prediction by anyone. The task at hand is to determine the probability that a person makes over `$50k` a year.
 
 
 ### Dataset
@@ -444,7 +444,7 @@ Please Note :
 
 The output will look something like this :
 
-  ![](../imgs/OutPut_Heroku1.PNG)
+  ![](../imgs/OutPut_Heroku1.PNG) <br>
 `**Figure 14**`
 
 In this output the `proba` output is the probability that you will earn greater than $50k.
