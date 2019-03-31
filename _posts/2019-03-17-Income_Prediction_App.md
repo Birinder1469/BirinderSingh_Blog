@@ -63,7 +63,7 @@ The target variable/Income_Class contains around `24720` entries for the categor
 Now lets see what proportion of people in each variable above lie in which income bracket.
 Please note these are proportions and while making any conclusion we should have a look at Figure 3 and Figure 4 above to see how much data exists in each category.
 
-![Data_available_1](../imgs/Analysis_Income_prediction.png)
+![Data_available_1](../imgs/Analysis_Income_prediction_native.png)
 `**Figure 5 : Proportion of people earning >50k with different Native countries**`
 <br>
 
