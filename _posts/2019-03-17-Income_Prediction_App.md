@@ -63,7 +63,7 @@ The target variable/Income_Class contains around `24720` entries for the categor
 Now lets see what proportion of people in each variable above lie in which income bracket.
 Please note these are proportions and while making any conclusion we should have a look at Figure 3 and Figure 4 above to see how much data exists in each category.
 
-![Data_available_1](../imgs/Analysis_Income_prediction_native.png)
+![Data_available_10](../imgs/Analysis_Income_prediction_native.png)
 `**Figure 5 : Proportion of people earning >50k with different Native countries**`
 <br>
 
@@ -377,7 +377,7 @@ I will not go much into the detail of the procedure. In case you are interested 
 
 Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
 
-![](../imgs/Birinder_prediction.PNG)
+![](../imgs/Birinder_Prediction.PNG)
 `**Figure 13**`
 
 It means I have 52% chance of earning more than `>50k` based on the trained model.
