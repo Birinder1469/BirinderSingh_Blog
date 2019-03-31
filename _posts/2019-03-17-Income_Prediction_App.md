@@ -211,13 +211,13 @@ The total error in our machine learning model is composited of the Bias and the 
 
 Random Forest is a non parametric ensemble technique in which several decision trees are trained separately and then the results from all of them are averaged to improve the predictive accuracy and control over-fitting. Random forest relies on reducing the variance of large number of complex models with low bias. Here the composition models(separate decision trees) are not weak but too complex.
 
-```
+```ruby
 model=RandomForestClassifier()
 model.fit(X_train,y_train)
 ```
 Training the Random Forest  Classifier without optimization gives me the following accuracies :
 
-```
+```ruby
 - results -
 The train score is :  93.60%
 The Test score is :  84.06%
@@ -226,7 +226,7 @@ The Test score is :  84.06%
 As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but less likely to perform well on the unseen data. To correct this lets do a random search of best hyperparameters `Max_features`, `Max_depth` using sklearn's [RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).
 
 
-```
+```ruby
 # Applying Randomized search to find the optimum parameters
 
 param_dist = dict({'max_depth' : np.arange(1,30), 'max_features': np.arange(1,12)})
@@ -242,12 +242,12 @@ The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
 The best hyper parameter values obtained are 8 and 11 for maximum number of features and maximum depth of the tree respectively.
 Training the model again with best features the accuracies are:   
 
-```
+```ruby
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
 model_best.fit(X_train,y_train)
 ```
 
-```
+```ruby
 - results -
 The train score is :  87.26%
 The Test score is :  86.30%
@@ -260,7 +260,7 @@ Isn't that great! The training accuracy has decreased overall but the test accur
 
 Lets find the set of best combination of `maximum depth` and `learning rate` for XGBoost technique using `RandomizedSearchCV` and fit the model.
 
-```
+```ruby
 model_xgb=XGBClassifier(n_estimators=30,booster='gbtree')
 parameters_xgb=dict({'max_depth':np.arange(1,30), 'learning_rate':np.arange(0,1,0.01)})
 
@@ -270,7 +270,7 @@ model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-
 ```
 
 
-```
+```ruby
 model_xgb_rs.fit(X_train,y_train)
 
 - results -
@@ -278,7 +278,7 @@ The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
 ```
 The best combination as obtained from the random search is max_depth : 4 and the learning rate : 0.85. Now training the model using these parameters we obtain following accuracies.
 
-```
+```ruby
 model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
   booster='gbtree', random_state=123)
 
@@ -296,7 +296,7 @@ The test accuracy has gone up but the improvement is not substantial compared to
 Logistic regression uses the Sigmoid loss function and is interpretable being a parametric model.
 Lets do a sklearn's [GridSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html) on the regularization parameter `C` and check if the `l1` regularization is required or `l2`.
 
-```
+```ruby
 param_dist = dict({'C' : np.logspace(-3,3,7), "penalty":["l1","l2"]})
 
 model_lr=LogisticRegression()
@@ -310,7 +310,7 @@ The Best Features for Logistic Regression are :  {'C': 10.0, 'penalty': 'l1'}
 
 The best parameter search gives the C value of 10 and l1 regularization as the best combination. It seems the model needs to remove couple of features that is why l1 regularization has been chosen over l2. The training the model using these best parameters :
 
-```
+```ruby
 model_lr_best=LogisticRegression(C=10, penalty='l1')
 model_lr_best.fit(X_train,y_train)
 
@@ -349,7 +349,7 @@ Now that we have narrowed down the model lets combine the training and test data
 
 #### Combining the Train and Test data for robust Random Forest classification model
 
-```
+```ruby
 # Combining the Train and Test dataset
 
 Entire_X=pd.concat([X_train,X_test])
