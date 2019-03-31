@@ -387,7 +387,7 @@ It means I have 52% chance of earning more than `>50k` based on the trained mode
 Now that you know everything about how the model was built, just use the following command in the
 Bash(Windows) or Terminal(Mac) and get the output probability of earning more than `\$50k`.
 
-```
+```ruby
 curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 18, "observation":
   {"age": 45, "workclass":0 , "education": 1, "marital-status": 0,
     "occupation": 1, "race": 1, "sex": 0, "capital-gain": 0,
