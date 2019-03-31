@@ -12,7 +12,7 @@ comments: true
 
 ### Motivation
 
-The motivation to do the analysis is to build an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model and then deployment on a microservice [Heroku](https://www.heroku.com/) so it can be used for prediction by anyone. The task is to is to determine the probability that a person makes over `$50k` a year.
+To address my curiosity if I would have earned well in 1990s with similar circumstances I have today. I got hold of the Income data from UCI machine learning repository. I built an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model comparing different ML models and then deployment on a microservice [Heroku](https://www.heroku.com/) so it can be used for prediction by anyone. The task at hand is to determine the probability that a person makes over `$50k` a year.
 
 
 ### Dataset
@@ -23,105 +23,108 @@ Characteristics of the data are as shown below : <br>
 
 ![](../imgs/DataDscription1.PNG)
 
-Out of the total `48842` entries, Training dataset contains `32561` and the remaining `16281` are the Test dataset entries.
+Out of the total `48842` entries, Training dataset contains `32561` and the remaining `16281` are the Test dataset entries. For now lets only load the training dataset for exploratory data analysis and keep the test data unseen till we come to training machine learning models.
 
-I loaded the data and since its a binary classification problem I converted the entries with income `<=$50` to  `0` and income `>$50k` to `1` as can be seen in the `target` column. The training data set head with 16 columns is shown below :
+Its a binary classification problem, lets assign `0` to the entries with income `<=$50k` and `1` to income `>$50k` and add new `target` column. The training data set head with 16 columns looks as shown below :
 
 ![](../imgs/Head_UCI_Adultdata.PNG)
 
+``**Figure 1**``
+
 ### Exploratory Data Analysis
 
-The categorical columns such as ``` 'Occupation','Workclass', 'Education_Label', 'Education_Number',
+The categorical variables ``` 'Occupation','Workclass', 'Education_Label', 'Education_Number',
        'Relationship', 'Race', 'Income_class'  ``` contain the following unique categories : <br>
 
 ![](../imgs/categorical_varoables.PNG)
+``**Figure 2**``
 
-The level of education has been represented in words `Education` as well as corresponding numeric value `Education-Number` where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is `Doctorate`.
+The level of education has been represented in words in `Education` column as well as corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is `Doctorate`.
 
-Lets see how much data is available for each of the variable.
+Lets see how much data is available for each of the variable in the dataset.
 
 <br>
 
 ![Data_available](../imgs/Data_available.png)
-``**Figure A**``
+``**Figure 3**``
 
 <br>
 
-Native country column has majority of the data from United States.
+We can notice that native country column has majority of the data from United States.
 
 ![Data_available_1](../imgs/Data_available_1.png)
-`**Figure B**`
+`**Figure 4**`
 <br>
 
-I notice some '?' in workclass and native country and occupation level. After these entries with '?'
-I lost around 2399 rows of which most of them were from occupation column.
-The target variable/Income_Class contains around 22600 entries for the category of people earning <\$50k and around 7500 entries of people earning more than \$50k. This is important observation indicating that our dataset is biased towards people earning less than \$50k.
+Did you notice there are some '?' in workclass, native country and occupation level. Its hard to make a guess what these entries could be. Probably some people did not want to disclose these details. If we remove these entries we will loose 2399 rows of which most of them are in the occupation column. Lets keep them for now.<br>
 
-Now lets see what proportion of people in each category earn in which income bracket.
+The target variable/Income_Class contains around `24720` entries for the category of people earning `<=\$50k` or category 0 and around `7841` entries of people earning more than `\$50k` or category `1`. This is important observation indicating that our dataset is biased towards people earning less than `\$50k`, checking the [confusion matrix](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) would be a good idea while comparing the ML models.
+
+Now lets see what proportion of people in each variable above lie in which income bracket.
+Please note these are proportions and while making any conclusion we should have a look at Figure 3 and Figure 4 above to see how much data exists in each category.
 
 ![Data_available_1](../imgs/Analysis_Income_prediction.png)
-`**Figure C**`
+`**Figure 5 : Proportion of people earning >50k with different Native countries**`
 <br>
 
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
-`**Figure D**`
+`**Figure 6**`
 <br>
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
-`**Figure E**`
+`**Figure 7**`
 <br>
 
 `Education`
-The wealthy people are generally highly educated. Professors, Doctorate and or masters education
-level people earn well  Lets investigate who among low education levels are wealthy what they do how come they can earn so much at such young age. Most of the people with education level less than 12th standard work in Private jobs
+Broadly people earning >50k are well educated. Professors or Doctorate and Master's
+level people earn well. Upon investigating people with low education levels also earning `>$50k`, we can notice from Figure7, most of the people with education level less than 12th standard work in Private jobs. Probably some college dropouts or smart students having side income.
 
 `Work class`
-The Self employed people have a higher proportion of being rich (>\$50k) followed by people working in Federal jobs
+The Self employed people have a higher proportion of people having income `>$50k` followed by people working in Federal jobs.
 
 `Marital Status`
-The Married couple from Armed forces and Civilian spouse are in high income category but the dataset contains very few entries for Armed force category hence we wont consider them as much of a valid observation
+The Married couple with spouse in Armed forces or a Civilian are in high income category but the dataset contains very few entries for Armed force spouse .category to be considered a valid observation.
 
 `Occupation`
-The Executive and Managerial roles are the most paid ones it seems followed by  Professors and Protective services Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not that much paid.
+The Executive and Managerial roles are the most paid ones followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
 
 `Relation ship`
- Its a little surprising for me to see Husbands having less proportion than Wives with high income,
- I notice that the data for wives is just ~1400  entries and for the husbands is ~ 12500
- because of which the proportion is a little misleading
+Its overwhelming clear from the plot that proportion of wives with high income is more than the husbands, But when we confirm from Figure 4 the data for wives is just ~1400  entries and for the husbands is ~ 12500 because of which the proportion is a little misleading.
 
 `Gender`
- The proportion of males with high income is more than the females
+ The proportion of males with high income is more than the females.
 
 `Native Country`
- As we saw above the data for United states natives is overwhelmingly higher than other countries.
- The proportion of people who got wealthy (>$50k) from different natives is very high for France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
+ As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
+
+`Race`
+ We notice that we have too little data for races other than White(Figure 4). Still I tried to compare the  proportions of each race who are earning well (>\$50k). For the whites ~ 26% people are earning `>\$50k` while from the available  data ~28% Asian Pac Islander earn greater than `\$50k`.
+
+Checking the working hours of people earning well. <br>
 
 ![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
-`**Figure G**`
-`Hours per week`
- The people in the higher income group work mostly between 35-60 hours a week.
- This goes up to 100 as well but there are less of such people.
+`**Figure 8**`
 
- `Race`
- We notice that we have too little data for races other than White(Figure A). Still I tried to compare the  proportions of each race who were wealthy (>\$50k). For the whites ~ 26% people are earning >\$50k while from the available  data ~28% Asian Pac Islander earn greater than \$50k
+`Hours per week`
+ From the distribution above we can say that the people in the higher income group work mostly between 35-60 hours a week. This goes up to 100 as well but there are less of number of those people.
 
 <br>
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
-`**Figure H**`
+`**Figure 9**`
 <br>
 
  `Income vs Age`
- Generally people between the age group of 30-50 are wealthy. The youngsters up to the age of 27 are under  the low income category. This makes sense as this is the age when the students are studying or just getting in  to the employment
+ Generally people between the age group of 30-50 are earning `>50k`. The youngsters up to the age of 27 are under  the low income category. This makes sense as this is the age when the students are either studying or just getting in to their first jobs.
 
-### Transforming input for ML Model
+### Transforming input data for Machine Learning Model
 
-Before I can apply any machine learning model I need to transform my data in the form that my machine learning model understands. As already discussed in the data set section I have total `48842` entries out of which Training dataset contains `32561` and the remaining `16281` are the Test dataset entries. For the transformation I applied the following transformations on both the training and test dataset together. Before training my ML model I will split them again so that the test dataset remains unseen.  
+Before applying any machine learning model we would need to transform the data in the form that machine learning model understands. As already discussed in the data set section we have total `48842` entries out of which Training dataset contains `32561` and the remaining `16281` are the Test dataset entries. Now is the time to bring train and test data together for transformation, However before training the models we will split them again.
 
-I did the following assignments to make my data ready to be fed into the ML model.
+Following assignments were made to make the data ready to be fed into the ML model.
 
 `Sex`
 
@@ -137,13 +140,13 @@ This assignment is because data is skewed with entries mostly for White people.
 
 `Education`
 
-The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence I am dividing this category into 3 classes.
+The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence it makes sense to dovide theem into 3 classes.
 
-- Preschool ,$$1^{st}-4^{th}$$,$$5^{th} - 6^{th}$$ ,$$7^{th}-8^{th}$$, $$9^{th}$$, $$10^{th}$$,  $$11^{th}, 12^{th} $$   : `0` <br>
+- Preschool,$$1^{st}-12^{th} $$   : `0` - Low income <br>
 
-- HS-grad,  Some-college,  Assoc-acdm,  Assoc-voc : `1` <br>
+- HS-grad,  Some-college,  Assoc-acdm,  Assoc-voc : `1` - Medium income<br>
 
-- Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
+- Bachelors,  Masters,  Doctorate, Prof-school : `2` - High income<br>
 
 `Native_Country`
 
@@ -160,7 +163,7 @@ This is because most of the data is available for the United States natives.<br>
 
 - Self-emp-not-inc, Self-emp-inc, Without-pay, Never-worked : `2`
 
-The people working in private sector jobs were put together in category 0. People working in one way or the other with the government were put in another category 1. Remaining people who were either self employed or without income were put together into category 1.
+The people working in private sector jobs were put together in category `0`. People working in one way or the other with the government were put in another category `1`. Remaining people who were either self employed or without income were put together into category `2`.
 
 `Occupation`
 
@@ -170,7 +173,7 @@ The people working in private sector jobs were put together in category 0. Peopl
 
 - Exec-managerial', ' Prof-specialty',  ' Protective-serv',' Tech-support : `2`
 
-Looking at the Figure D specifically the distribution of income some occupations are believed to be earning high such as Managerial roles so I assigned them high pay category `2`. Similarly Middle `1` for Sales etc. and Lower Pay categories `0` for professions like Farming etc.
+Looking at the `Figure 6` specifically the distribution of income per occupation some occupations are likely to be earn high such as Managerial roles so it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for Sales etc. and lower income category `0` for professions like Farming etc.
 
 Lastly for
 
@@ -181,27 +184,26 @@ Lastly for
 - Divorced, Married-spouse-absent, Separated, Widowed : `2`
 
 
-For the marital status I have assigned three categories. The unmarried people. The people in marriage and another category for those who have separated due to some reason.
+For the marital status there are broadly 3 categories. The unmarried people `0`. The people in marriage `1` and another category for those who have separated due to some reason `2`.
 
-After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. I am left with 11 features `age`, `workclass`, `education`, `marital-status`, `occupation`, `race`,
+After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. We have 11 features `age`, `workclass`, `education`, `marital-status`, `occupation`, `race`,
        `sex`, `capital-gain`, `capital-loss`, `hours-per-week`,
-       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  `>\$50k` or `<=\$50k`.
+       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  `>\$50k` or `1` and `<=\$50k` or `0`.
 
 A quick look at the final DataFrame containing 11 features and 1 target variable :
 
 ![](../imgs/Model_BuildingRead.PNG)
 
-`**Figure H**`
+`**Figure 10**`
 
-### Fitting the Machine Learning model
+### Fitting the Machine learning models
 
-After the transformation of the data I got the DataFrame containing the train and test dataset. I split them again so I have Training DataFrame with 32561 rows and test dataset with 16281 rows.
+Before moving forward lets split the train and test data again. The training DataFrame with 32561 rows and test dataset with 16281 rows. We are dealing with binary classification problem here and lets try the following ML models.
 
-Since its a binary classification problem I will use the following models for the prediction.
-
- 1 - Logistic Regression <br>
- 2 - Decision Trees / Random Forest <br>
- 3 - XGBoost technique <br>
+ 1 - [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) <br>
+ 2 - [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) <br>
+ 3 - [XGBoost](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
+ 4 - [SVM](https://scikit-learn.org/stable/modules/svm.html) <br>
 
 The total error in our machine learning model is composited of the Bias and the Variance components. To minimize the error we can either reduce the bias or the variance. The two techniques Random Forest and XGBoost deals with one of them each.
 
