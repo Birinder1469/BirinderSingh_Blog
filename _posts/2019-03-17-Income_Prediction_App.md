@@ -332,6 +332,8 @@ The final comparison of the scores of the model is as follows :
 
 `**Figure 11**`
 
+<kbd><img src="../imgs/cf_rf.PNG" /></kbd>
+
 Confusion matrices for different models :
 
 | ![](../imgs/cf_rf.PNG) | ![](../imgs/cf_lr.PNG) |
