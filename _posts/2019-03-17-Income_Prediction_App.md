@@ -328,7 +328,7 @@ The output accuracy values for SVM can be compared in the final comparison matri
 
 The final comparison of the scores of the model is as follows :
 
-![](../imgs/Model_Accuracies1.PNG)
+<kbd><img src="../imgs/Model_Accuracies1.PNG" /></kbd>
 
 `**Figure 11**`
 
@@ -340,7 +340,7 @@ Confusion matrices for different models :
 
 Where the format of the Confusion Matrix is as follows :
 
-![](../imgs/cf_format.PNG)
+<kbd><img src="../imgs/cf_format.PNG" /></kbd>
 `**Figure 12**`
 
 We can notice that all the models are performing well on detection of category 0 which is for `Income < 50k`, Random Forest seems to be doing the best though. The More important prediction to us is the `Income>50k` because the training data has much less entries for this category 7841 vs 24720. Comparing the three models its clear that the Random Forest is performing the best to predict the `income>50k`. This is a motivation to use the Random Forest model going forward.
