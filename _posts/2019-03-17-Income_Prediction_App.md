@@ -388,7 +388,7 @@ Now that you know everything about how the model was built, just use the followi
 Bash(Windows) or Terminal(Mac) and get the output probability of earning more than `\$50k`.
 
 ```ruby
-curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 18, "observation":
+curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 19, "observation":
   {"age": 45, "workclass":0 , "education": 1, "marital-status": 0,
     "occupation": 1, "race": 1, "sex": 0, "capital-gain": 0,
       "capital-loss":0,"hours-per-week":25,"native-country":1}}' -H "Content-Type:application/json"
