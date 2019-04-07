@@ -107,7 +107,7 @@ Its overwhelming clear from the plot that proportion of wives with high income i
  As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
 `Race`
- We notice that we have too little data for races other than White(Figure 4). Still I tried to compare the  proportions of each race who are earning well (>$50k). For the whites ~ 26% people are earning `>\$50k` while from the available  data ~28% Asian Pac Islander earn greater than `\$50k`.
+ We notice that we have too little data for races other than White(Figure 4). Even then if we try to compare the  proportions of each race are earning well (>$50k). For the whites ~ 26% people are earning `>\$50k` while from the available  data ~28% Asian Pac Islander earn greater than `\$50k`.
 
 Checking the working hours of people earning well. <br>
 
@@ -124,13 +124,13 @@ Checking the working hours of people earning well. <br>
 <br>
 
  `Income vs Age`
- Generally people between the age group of 30-50 are earning `>50k`. The youngsters up to the age of 27 are under  the low income category. This makes sense as this is the age when the students are either studying or just getting in to their first jobs.
+ Generally people between the age group of 30-50 are earning `>$50k`. The youngsters up to the age of 27 are under  the low income category. This makes sense as this is the age when the students are either studying or just getting in to their first jobs.
 
 ### Transforming input data for Machine Learning Model
 
 Before applying any machine learning model we would need to transform the data in the form that machine learning model understands. As already discussed in the data set section we have total `48842` entries out of which Training dataset contains `32561` and the remaining `16281` are the Test dataset entries. Now is the time to bring train and test data together for transformation, However before training the models we will split them again.
 
-Following assignments were made to make the data ready to be fed into the ML model.
+Following assignments were made to make the data ready to be fed into the ML model. The categories were relabeled in the following form :
 
 `Sex`
 
@@ -146,7 +146,7 @@ This assignment is because data is skewed with entries mostly for White people.
 
 `Education`
 
-The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence it makes sense to dovide theem into 3 classes.
+The income bracket looks distinct for students up to standard 12th level of education followed by Associates and then high income group which includes people with Bachelors degree or above, Hence it makes sense to divide them into 3 classes.
 
 - Preschool,$$1^{st}-12^{th} $$   : `0` - Low income <br>
 
@@ -173,13 +173,13 @@ The people working in private sector jobs were put together in category `0`. Peo
 
 `Occupation`
 
-- ' Priv-house-serv', ' Farming-fishing',' Armed-Forces',' Machine-op-inspct',' Other-service',' Handlers-cleaners', ' Adm-clerical' : `0`
+- Priv-house-serv, Farming-fishing, Armed-Forces, Machine-op-inspct,Other-service, Handlers-cleaners, Adm-clerical : `0`
 
-- Craft-repair', ' Sales', ' Transport-moving : `1`
+- Craft-repair, Sales, Transport-moving : `1`
 
-- Exec-managerial', ' Prof-specialty',  ' Protective-serv',' Tech-support : `2`
+- Exec-managerial, Prof-specialty,  Protective-serv, Tech-support : `2`
 
-Looking at the `Figure 6` specifically the distribution of income per occupation some occupations are likely to be earn high such as Managerial roles so it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for Sales etc. and lower income category `0` for professions like Farming etc.
+Looking at `Figure 6` specifically the distribution of income per occupation some occupations are likely to be earn high such as managerial roles so it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for Sales craft repair etc. and the lower income category `0` for professions like Farming etc.
 
 Lastly for
 
@@ -211,17 +211,19 @@ Before moving forward lets split the train and test data again. The training Dat
  3 - [XGBoost technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
  4 - [SVM](https://scikit-learn.org/stable/modules/svm.html) <br>
 
-The total error in our machine learning model is composited of the Bias and the Variance components. To minimize the error we can either reduce the bias or the variance. The two techniques Random Forest and XGBoost deals with one of them each.
 
 #### RandomForestClassifier
 
 Random Forest is a non parametric ensemble technique in which several decision trees are trained separately and then the results from all of them are averaged to improve the predictive accuracy and control over-fitting. Random forest relies on reducing the variance of large number of complex models with low bias. Here the composition models(separate decision trees) are not weak but too complex.
 
+Bias Variance concept refresher :     [Understanding the Bias-Variance Tradeoff](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229)
+
+Training the Random Forest  Classifier without optimization gives me the following accuracies :
+
 ```python
 model=RandomForestClassifier()
 model.fit(X_train,y_train)
 ```
-Training the Random Forest  Classifier without optimization gives me the following accuracies :
 
 ```python
 - results -
@@ -231,6 +233,7 @@ The Test score is :  84.06%
 
 As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but less likely to perform well on the unseen data. To correct this lets do a random search of best hyperparameters `Max_features`, `Max_depth` using sklearn's [RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).
 
+Overfitting concept refresher : [Overfitting vs. Underfitting: A Conceptual Explanation](https://towardsdatascience.com/overfitting-vs-underfitting-a-conceptual-explanation-d94ee20ca7f9)
 
 ```python
 # Applying Randomized search to find the optimum parameters
@@ -332,7 +335,7 @@ The output accuracy values for SVM can be compared in the final comparison matri
 
 ### Model evaluation
 
-The final comparison of the scores of the model is as follows :
+The final comparison of the scores of the models is as follows :
 
 ![](../imgs/Model_Accuracies1.PNG)
 
@@ -349,7 +352,7 @@ Where the format of the Confusion Matrix is as follows :
 ![](../imgs/cf_format.PNG)
 `**Figure 12**`
 
-We can notice that all the models are performing well on detection of category 0 which is for `Income < 50k`, Random Forest seems to be doing the best though. The More important prediction to us is the `Income>50k` because the training data has much less entries for this category 7841 vs 24720. Comparing the three models its clear that the Random Forest is performing the best to predict the `income>50k`. This is a motivation to use the Random Forest model going forward.
+We can notice that all the models are performing well on detection of category 0 which is for `Income < 50k`, Random Forest seems to be doing the best though predicting 11806 out of 11806 + 629 `<50k` observations. The More important prediction to us is the `Income>50k` because the training data has much less entries for this category 7841 vs 24720. Comparing the three models its clear that the Random Forest is performing the best to predict the `income>50k`. This is a motivation to use the Random Forest model going forward.
 
 Now that we have narrowed down the model lets combine the training and test datasets to have larger data to train to have a more robust model.
 
@@ -378,15 +381,6 @@ I will not go much into the detail of the procedure. In case you are interested 
 
 [Heroku_deploy_GitHub_url](https://github.com/LDSSA/heroku-model-deploy).
 
-
-### Prediction for me
-
-Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
-
-![](../imgs/Birinder_Prediction.PNG) <br>
-`**Figure 13**`
-
-It means I have 52% chance of earning more than `>50k` based on the trained model.
 
 ### How you can use the model
 
@@ -451,7 +445,7 @@ Please Note :
 The output will look something like this :
 
   ![](../imgs/OutPut_Heroku1.PNG) <br>
-`**Figure 14**`
+`**Figure 13**`
 
 In this output the `proba` output is the probability that you will earn greater than $50k.
 Try it yourself !
@@ -461,6 +455,15 @@ Please let me know your feedback. All the analysis is available on my GitHub the
 GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction) <br>
 Email address : birinder1469@gmail.com
 
+
+### Prediction for me
+
+Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
+
+![](../imgs/Birinder_Prediction.PNG) <br>
+`**Figure 14**`
+
+It means I have 52% chance of earning more than `>50k` based on the trained model.
 
 #### Resources
 
