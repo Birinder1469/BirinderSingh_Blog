@@ -450,11 +450,6 @@ The output will look something like this :
 In this output the `proba` output is the probability that you will earn greater than $50k.
 Try it yourself !
 
-Please let me know your feedback. All the analysis is available on my GitHub the url of which is given below.
-
-GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction) <br>
-Email address : birinder1469@gmail.com
-
 
 ### Prediction for me
 
@@ -464,6 +459,11 @@ Since I started this analysis to beat my curiosity of my likely salary I gave th
 `**Figure 14**`
 
 It means I have 52% chance of earning more than `>50k` based on the trained model.
+
+Please let me know your feedback. All the analysis is available on my GitHub the URL of which is given below.
+
+GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction) <br>
+Email address : birinder1469@gmail.com
 
 #### Resources
 
