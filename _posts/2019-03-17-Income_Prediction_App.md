@@ -227,8 +227,8 @@ model.fit(X_train,y_train)
 
 ```python
 - results -
-The train score is :  93.60%
-The Test score is :  84.06%
+The train score is :  93.49%
+The Test score is :  84.14%
 ```
 
 As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but less likely to perform well on the unseen data. To correct this lets do a random search of best hyperparameters `Max_features`, `Max_depth` using sklearn's [RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).
@@ -252,14 +252,14 @@ The best hyper parameter values obtained are 8 and 11 for maximum number of feat
 Training the model again with best features the accuracies are:   
 
 ```python
-model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=123)
+model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=213)
 model_best.fit(X_train,y_train)
 ```
 
 ```python
 - results -
-The train score is :  87.26%
-The Test score is :  86.30%
+The train score is :  87.44%
+The Test score is :  86.36%
 ```
 Isn't that great! The training accuracy has decreased overall but the test accuracy has gone up indicating no overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.26% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.3% correct predictions. The model seems to be doing good job.
 
@@ -283,18 +283,18 @@ model_xgb_rs=RandomizedSearchCV(model_xgb,parameters_xgb,cv=5,n_iter=20,n_jobs=-
 model_xgb_rs.fit(X_train,y_train)
 
 - results -
-The best parameters for XG Boost are :  {'max_depth': 4, 'learning_rate': 0.85}
+The best parameters for XG Boost are :  {'max_depth': 3, 'learning_rate': 0.5}
 ```
 The best combination as obtained from the random search is max_depth : 4 and the learning rate : 0.85. Now training the model using these parameters we obtain following accuracies.
 
 ```python
-model_xgb_best=XGBClassifier(learning_rate=0.85, max_depth=4, n_estimators=30,
-  booster='gbtree', random_state=123)
+model_xgb_best=XGBClassifier(learning_rate=0.5, max_depth=3, n_estimators=30,
+  booster='gbtree', random_state=21)
 
 model_xgb_best.fit(X_train,y_train)
 
 - results -
-The train score is :  87.39%
+The train score is :  86.82%
 The Test score is :  86.81%
 ```
 
@@ -324,8 +324,8 @@ model_lr_best=LogisticRegression(C=10, penalty='l1')
 model_lr_best.fit(X_train,y_train)
 
 - results -
-The train score is :  82.87%
-The Test score is :  82.73%
+The train score is :  82.88%
+The Test score is :  82.74%
 ```
 The train and test scores are still low. Lets try a one last model.
 
