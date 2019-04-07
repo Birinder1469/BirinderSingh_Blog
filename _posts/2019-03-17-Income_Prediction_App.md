@@ -411,6 +411,8 @@ Please Note :
 - Private : `0`
 - State-government, Federal-government, Local-government : `1`
 - Self-employed-no-income, Self-employed-income, Without-pay, Never-worked : `2`
+- Another category is Unknown category : `-1` in case the workclass is missing the prediction will be based on other features.
+
 
 `Education`
 - Preschool ,$$1^{st} - 12^{th} $$   : `0` <br>
@@ -427,6 +429,7 @@ Please Note :
 - Private-house-servant, Farming-fishing, Armed-Forces, Machine-operator or inspector, Other-service, Handlers-cleaners,  Admin-clerical : `0`
 - Craft-repair,  Sales,  Transport-moving : `1`
 - Exec-managerial, Prof-specialty,   Protective-services, Tech-support : `2`
+- Another category is Unknown category `-1`, in case the occupation is missing the prediction will be based on other features.
 
 ` Race `
 - White : `1`<br>
