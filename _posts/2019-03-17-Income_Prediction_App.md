@@ -285,7 +285,7 @@ model_xgb_rs.fit(X_train,y_train)
 - results -
 The best parameters for XG Boost are :  {'max_depth': 3, 'learning_rate': 0.5}
 ```
-The best combination as obtained from the random search is max_depth : 4 and the learning rate : 0.85. Now training the model using these parameters we obtain following accuracies.
+The best combination as obtained from the random search is max_depth : 3 and the learning rate : 0.5. Now training the model using these parameters we obtain following accuracies.
 
 ```python
 model_xgb_best=XGBClassifier(learning_rate=0.5, max_depth=3, n_estimators=30,
@@ -317,7 +317,7 @@ model_grid_lr.fit(X_train,y_train)
 The Best Features for Logistic Regression are :  {'C': 10.0, 'penalty': 'l1'}
 ```
 
-The best parameter search gives the C value of 10 and l1 regularization as the best combination. It seems the model needs to remove couple of features that is why l1 regularization has been chosen over l2. The training the model using these best parameters :
+The best parameter search gives the C value of 10 and l1 regularization as the best combination. It seems the model needs to remove couple of features that is why l1 regularization has been chosen over l2. Training the model using these best parameters :
 
 ```python
 model_lr_best=LogisticRegression(C=10, penalty='l1')
