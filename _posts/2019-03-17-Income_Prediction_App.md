@@ -12,18 +12,19 @@ comments: true
 
 ### Motivation
 
-To address my curiosity if I would earn well in 1990s with similar circumstances I have today. I got hold of the Income data from UCI machine learning repository. I built an entire pipeline starting from the Exploratory Data Analysis to choice of Machine Learning model comparing different ML models and then deployment on a microservice [Heroku](https://www.heroku.com/) so it can be used for prediction by anyone. The task at hand is to determine the probability that a person makes over `$50k` a year.
+To address my curiosity how much I would earn based on my current circumstances. I came across Income data from UCI machine learning repository and I decided to build an entire pipeline starting from the [exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) to choice of machine learning model, comparing the performance of different ML models and then deployment on a microservice [Heroku](https://www.heroku.com/) to let any one use it with a one line command. The task at hand is to determine the probability that a person makes over `$50k` a year.
 
 
 ### Dataset
-The dataset is available on the UCI website under the name of Adult Data Set/Census Income data.  
-Link to the Data Set : [Adult_IncomeDataSet_url](https://archive.ics.uci.edu/ml/datasets/adult)
+The dataset is available on the UCI website under the name of Adult Data Set.
 
-Characteristics of the data are as shown below : <br>
+Link to the Data Set : [Adult Income Data Set_URL](https://archive.ics.uci.edu/ml/datasets/adult)
+
+Description of the dataset : <br>
 
 ![](../imgs/DataDscription1.PNG)
 
-Out of the total `48842` entries, Training dataset contains `32561` and the remaining `16281` are the Test dataset entries. For now lets only load the training dataset for exploratory data analysis and keep the test data unseen till we come to training machine learning models.
+Out of the total `48842` entries, training dataset contains `32561` entries and the remaining `16281` are the test dataset entries. There are 14 features and 1 response column(income class) containing values `<=$50k` and `>$50k`. For now lets only load the training dataset for exploratory data analysis and keep the test data unseen till we come to validating the machine learning models.
 
 Its a binary classification problem, lets assign `0` to the entries with income `<=$50k` and `1` to income `>$50k` and add new `target` column. The training data set head with 16 columns looks as shown below :
 
@@ -33,15 +34,15 @@ Its a binary classification problem, lets assign `0` to the entries with income 
 
 ### Exploratory Data Analysis
 
-The categorical variables ``` 'Occupation','Workclass', 'Education_Label', 'Education_Number',
-       'Relationship', 'Race', 'Income_class'  ``` contain the following unique categories : <br>
+Out of 14 we have 9 categorical features ``` Marital-status ```, ```Race```, ```sex```, ```Occupation```,```Workclass```,``` Education_Label```, ```Education_Number```,
+       ```Relationship```,  ```Native-country``` and 1 response ```Income_class``` which is also categorical. The list of unique categories in each of them except Native country which we will see below has lot many country names but over 90% entries only from Unites States : <br>
 
 ![](../imgs/categorical_varoables.PNG)
 ``**Figure 2**``
 
 The level of education has been represented in words in `Education` column as well as corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is `Doctorate`.
 
-Lets see how much data is available for each of the variable in the dataset.
+Lets see how much data is available for each of the feature in the dataset.
 
 <br>
 
@@ -50,15 +51,18 @@ Lets see how much data is available for each of the variable in the dataset.
 
 <br>
 
-We can notice that native country column has majority of the data from United States.
+As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States.
 
 ![Data_available_1](../imgs/Data_available_1.png)
 `**Figure 4**`
 <br>
 
-Did you notice there are some '?' in workclass, native country and occupation level. Its hard to make a guess what these entries could be. Probably some people did not want to disclose these details. If we remove these entries we will loose 2399 rows of which most of them are in the occupation column. Lets keep them for now.<br>
+Broadly the representation of different categories within each feature is not the same.
+We have much more data for white people compared to any other race. The people working in private sector jobs dominate the training data set.
 
-The target variable/Income_Class contains around `24720` entries for the category of people earning `<=\$50k` or category 0 and around `7841` entries of people earning more than `\$50k` or category `1`. This is important observation indicating that our dataset is biased towards people earning less than `\$50k`, checking the [confusion matrix](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) would be a good idea while comparing the ML models.
+The target variable/Income_Class contains around `24720` entries for the category of people earning `<=$50k` or category 0 and around `7841` entries of people earning more than `$50k` or category `1`. This is important observation indicating that our dataset is biased towards people earning less than `$50k`, checking the [confusion matrix](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) will be a good idea while comparing the ML models. We will discuss this later when we compare the models.
+
+Did you notice there are some ```?``` in ```workclass```, ```native country``` and ```occupation``` level. Its hard to make a guess what these entries could be. Probably some people did not want to disclose these details. If we remove these entries we will loose 2399 entries of which most of them are in the occupation column. Lets keep them for now.<br>
 
 Now lets see what proportion of people in each variable above lie in which income bracket.
 Please note these are proportions and while making any conclusion we should have a look at Figure 3 and Figure 4 above to see how much data exists in each category.
@@ -78,21 +82,23 @@ Please note these are proportions and while making any conclusion we should have
 `**Figure 7**`
 <br>
 
+###### Please Note : I chose not to combine the available data plot (Fig 3,4) and proportions (Fig 5,6,7) plot as a combined plot would have masked the categories with very few entries for each feature.
+
 `Education`
-Broadly people earning >50k are well educated. Professors or Doctorate and Master's
-level people earn well. Upon investigating people with low education levels also earning `>$50k`, we can notice from Figure7, most of the people with education level less than 12th standard work in Private jobs. Probably some college dropouts or smart students having side income.
+Broadly people earning >\$50k are well educated. Professors or Doctorate and Master's
+level people earn well. Its worth noting that some students educated less than 12th standard also earn >$50k. Upon investigating in the Fig 7, most of them work in Private jobs. Probably some college dropouts or smart students having side income.
 
 `Work class`
 The Self employed people have a higher proportion of people having income `>$50k` followed by people working in Federal jobs.
 
 `Marital Status`
-The Married couple with spouse in Armed forces or a Civilian are in high income category but the dataset contains very few entries for Armed force spouse .category to be considered a valid observation.
+The Married couple with spouse in Armed forces or a Civilian are in high income category but the dataset contains very few entries for spouse in Armed force to be considered a valid observation.
 
 `Occupation`
-The Executive and Managerial roles are the most paid ones followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
+The Executive and Managerial roles are the most paid followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
 
 `Relation ship`
-Its overwhelming clear from the plot that proportion of wives with high income is more than the husbands, But when we confirm from Figure 4 the data for wives is just ~1400  entries and for the husbands is ~ 12500 because of which the proportion is a little misleading.
+Its overwhelming clear from the plot that proportion of wives with high income is more than the husbands, but when we confirm from Figure 4 the data for wives is just ~1400  entries and for the husbands is ~ 12500 because of which the proportion is a little misleading.
 
 `Gender`
  The proportion of males with high income is more than the females.
@@ -101,7 +107,7 @@ Its overwhelming clear from the plot that proportion of wives with high income i
  As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
 `Race`
- We notice that we have too little data for races other than White(Figure 4). Still I tried to compare the  proportions of each race who are earning well (>\$50k). For the whites ~ 26% people are earning `>\$50k` while from the available  data ~28% Asian Pac Islander earn greater than `\$50k`.
+ We notice that we have too little data for races other than White(Figure 4). Still I tried to compare the  proportions of each race who are earning well (>$50k). For the whites ~ 26% people are earning `>\$50k` while from the available  data ~28% Asian Pac Islander earn greater than `\$50k`.
 
 Checking the working hours of people earning well. <br>
 
