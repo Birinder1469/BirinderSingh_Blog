@@ -107,9 +107,9 @@ Its overwhelming clear from the plot that proportion of wives with high income i
  As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
 `Race`
- We notice that we have too little data for races other than White(Figure 4). Even then if we try to compare the  proportions of each race are earning well (>$50k). For the whites ~ 26% people are earning `>\$50k` while from the available  data ~28% Asian Pac Islander earn greater than `\$50k`.
+ We notice that we have too little data for races other than White(Figure 4). Even then if we try to compare the  proportions of each race are earning well (`>$50k`). For the whites ~ 26% people are earning `>$50k` while from the available  data ~28% Asian Pac Islanders earn `>$50k`.
 
-Checking the working hours of people earning well. <br>
+Checking the working hours of people earning over `$50k`. <br>
 
 ![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
 `**Figure 8 : Distribution of weekly working hours across different income groups **`
@@ -168,6 +168,7 @@ This is because most of the data is available for the United States natives.<br>
 - State-gov, Federal-gov, Local-gov : `1`
 
 - Self-emp-not-inc, Self-emp-inc, Without-pay, Never-worked : `2`
+- Another category is Unknown category : `-1` in case the workclass is missing the prediction will be based on other features.
 
 The people working in private sector jobs were put together in category `0`. People working in one way or the other with the government were put in another category `1`. Remaining people who were either self employed or without income were put together into category `2`.
 
@@ -178,8 +179,9 @@ The people working in private sector jobs were put together in category `0`. Peo
 - Craft-repair, Sales, Transport-moving : `1`
 
 - Exec-managerial, Prof-specialty,  Protective-serv, Tech-support : `2`
+- Another category is Unknown category `-1`, in case the occupation is missing the prediction will be based on other features.
 
-Looking at `Figure 6` specifically the distribution of income per occupation some occupations are likely to be earn high such as managerial roles so it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for Sales craft repair etc. and the lower income category `0` for professions like Farming etc.
+Looking at `Figure 6` specifically the distribution of income per occupation some occupations are likely to earn high such as managerial roles so it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for sales, craft repair etc. and the lower income category `0` for professions like farming fishing etc.
 
 Lastly for
 
@@ -192,11 +194,11 @@ Lastly for
 
 For the marital status there are broadly 3 categories. The unmarried people `0`. The people in marriage `1` and another category for those who have separated due to some reason `2`.
 
-After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. We have 11 features `age`, `workclass`, `education`, `marital-status`, `occupation`, `race`,
-       `sex`, `capital-gain`, `capital-loss`, `hours-per-week`,
-       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  `>\$50k` or `1` and `<=\$50k` or `0`.
+After assigning categories to our feature variables we have our dataset in correct form to be used for building the Machine Leaning model. We have 11 features `age` quantitative , `workclass`, `education`, `marital-status`, `occupation`, `race`,
+       `sex`, `capital-gain` quantitative, `capital-loss` quantitative, `hours-per-week` quantitative,
+       `native-country` and 1 target variable `Income-Class` which is a binary class of people earning  `>$50k` or `1` and `<=$50k` or `0`.
 
-A quick look at the final DataFrame containing 11 features and 1 target variable :
+A quick look at the final DataFrame containing 11 features and 1 target variable (Income_Class) :
 
 ![](../imgs/Model_BuildingRead.PNG)
 
@@ -231,7 +233,7 @@ The train score is :  93.49%
 The Test score is :  84.14%
 ```
 
-As you can notice the Accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but less likely to perform well on the unseen data. To correct this lets do a random search of best hyperparameters `Max_features`, `Max_depth` using sklearn's [RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).
+As you can notice the accuracy on the training dataset is ~94% where as the  test accuracy is quite low compared to the training accuracy. This could most likely be the case of Overfitting. That means we are fitting too complex models so far. Since we have not defined any maximum depth of the tree it has the freedom to do quite well on the training dataset but less likely to perform well on the unseen data. To correct this lets do a random search of best hyperparameters `Max_features`, `Max_depth` using sklearn's [RandomizedSearchCV](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html).
 
 Overfitting concept refresher : [Overfitting vs. Underfitting: A Conceptual Explanation](https://towardsdatascience.com/overfitting-vs-underfitting-a-conceptual-explanation-d94ee20ca7f9)
 
@@ -261,11 +263,11 @@ model_best.fit(X_train,y_train)
 The train score is :  87.44%
 The Test score is :  86.36%
 ```
-Isn't that great! The training accuracy has decreased overall but the test accuracy has gone up indicating no overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.26% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.3% correct predictions. The model seems to be doing good job.
+Isn't that great! The training accuracy has decreased overall but the test accuracy has gone up indicating no overfitting now. Putting in perspective, while making predictions on the Training dataset on which the model was trained we were 87.44% accurate in prediction. For Test dataset which was unseen to the trained model we still managed to make 86.36% correct predictions. The model seems to be doing good job.
 
 #### XGBoost Technique
 
-[XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) gained lot of popularity recently and has been widely used in the kaggle competitions. It is believed to perform well on huge datasets. It sequentially improves the prediction of the t-1 trees before fitting the $$t^{th}$$ tree. It relies on reducing the bias on several simple trees sequentially.
+[XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) gained lot of popularity recently and has been widely used in the kaggle competitions. It is believed to perform well on huge datasets. It sequentially improves the prediction of the t-1 trees before fitting the $$t^{th}$$ tree. This boosting technique relies on reducing the bias on several simple trees sequentially.
 
 Lets find the set of best combination of `maximum depth` and `learning rate` for XGBoost technique using `RandomizedSearchCV` and fit the model.
 
@@ -298,7 +300,7 @@ The train score is :  86.82%
 The Test score is :  86.81%
 ```
 
-The test accuracy has gone up but the improvement is not substantial compared to the Random Forest.
+The test accuracy has gone up but the improvement is not substantial compared to the Random Forest. The training accuracy has dropped on the other hand.
 
 #### Logistic Regression
 
@@ -341,7 +343,7 @@ The final comparison of the scores of the models is as follows :
 
 `**Figure 11**`
 
-Confusion matrices for different models :
+Confusion matrices for different models om test dataset:
 
 | <kbd><img src="../imgs/cf_rf.PNG" /></kbd> | <kbd><img src="../imgs/cf_lr.PNG" /></kbd> |
 |---|---|
@@ -470,7 +472,11 @@ Email address : birinder1469@gmail.com
 
 #### Resources
 
-0. I am currently a student of Master of Data Science, The University of British Columbia Vancouver
+0. Master of Data Science, The University of British Columbia, Vancouver..
 1. Bias Variance concept :     [Understanding the Bias-Variance Tradeoff](https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229) <br>
 2. RandomForest Vs XGBoost:      [StackExchange](https://stats.stackexchange.com/questions/77018/is-random-forest-a-boosting-algorithm) <br>
 3. XGBoost Tutorial: [XGBoost Technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
+4. Random Forest Classifier scikit learn : [Random Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) <br>
+5. Logistic regression scikit learn : [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) <br>
+6. XGBoost tutorial : [XGBoost technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
+7. Support Vector Machines scikit learn : [SVM](https://scikit-learn.org/stable/modules/svm.html) <br>
