@@ -47,14 +47,14 @@ Lets see how much data is available for each of the feature in the dataset.
 <br>
 
 ![Data_available](../imgs/Data_available.png)
-``**Figure 3**``
+``**Figure 3 : Number of entries for different native countries **``
 
 <br>
 
 As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States.
 
 ![Data_available_1](../imgs/Data_available_1.png)
-`**Figure 4**`
+`**Figure 4 : Number of entries per category for each feature**`
 <br>
 
 Broadly the representation of different categories within each feature is not the same.
@@ -68,18 +68,18 @@ Now lets see what proportion of people in each variable above lie in which incom
 Please note these are proportions and while making any conclusion we should have a look at Figure 3 and Figure 4 above to see how much data exists in each category.
 
 ![Data_available_10](../imgs/Analysis_Income_prediction_native.png)
-`**Figure 5 : Proportion of people earning >50k with different Native countries**`
+`**Figure 5 : Proportion of people earning >$50k with different Native countries**`
 <br>
 
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
-`**Figure 6**`
+`**Figure 6 : Proportion of people earning >$50k within different categories**`
 <br>
 
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
-`**Figure 7**`
+`**Figure 7 : Number of people with education less than 12th standard earning >$50k **`
 <br>
 
 ###### Please Note : I chose not to combine the available data plot (Fig 3,4) and proportions (Fig 5,6,7) plot as a combined plot would have masked the categories with very few entries for each feature.
@@ -112,7 +112,7 @@ Its overwhelming clear from the plot that proportion of wives with high income i
 Checking the working hours of people earning well. <br>
 
 ![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
-`**Figure 8**`
+`**Figure 8 : Distribution of weekly working hours across different income groups **`
 
 `Hours per week`
  From the distribution above we can say that the people in the higher income group work mostly between 35-60 hours a week. This goes up to 100 as well but there are less of number of those people.
@@ -120,7 +120,7 @@ Checking the working hours of people earning well. <br>
 <br>
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
-`**Figure 9**`
+`**Figure 9 : Distribution of income among different age groups**`
 <br>
 
  `Income vs Age`
