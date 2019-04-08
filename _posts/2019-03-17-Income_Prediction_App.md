@@ -82,7 +82,7 @@ Please note these are proportions and while making any conclusion we should have
 `**Figure 7 : Number of people with education less than 12th standard earning >$50k **`
 <br>
 
-###### Please Note : I chose not to combine the available data plot (Fig 3,4) and proportions (Fig 5,6,7) plot as a combined plot would have masked the categories with very few entries for each feature.
+#### Please Note : I chose not to combine the available data plot (Fig 3,4) and proportions (Fig 5,6,7) plot as a combined plot would have masked the categories with very few entries for each feature.
 
 `Education`
 Broadly people earning >\$50k are well educated. Professors or Doctorate and Master's
