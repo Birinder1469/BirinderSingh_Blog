@@ -8,9 +8,6 @@ tag:
 - post
 - images
 comments: true
-toc: true
-toccolor: red
-urlcolor: red
 ---
 
 ### Motivation
