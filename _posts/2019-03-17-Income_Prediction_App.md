@@ -31,8 +31,18 @@ Its a binary classification problem, lets assign `0` to the entries with income 
 
 ### Exploratory Data Analysis
 
-Out of 14 we have 9 categorical features ``` Marital-status ```, ```Race```, ```sex```, ```Occupation```,```Workclass```,``` Education_Label```, ```Education_Number```,
-       ```Relationship```,  ```Native-country``` and 1 response ```Income_class``` which is also categorical. The list of unique categories in each of them except Native country which we will see below has lot many country names but over 90% entries only from Unites States : <br>
+Out of 14 we have 9 categorical features :  
+``Marital-status`` : marital status of the individual
+``Race`` : Race to which the individual belongs
+``sex`` : The gender of the individual,
+``Occupation`` : Occupation the individual is involved in,
+``Workclass``: What kind of occupation the individual is in such as Private, Government etc.,
+``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is `Doctorate`.
+``Relationship``: What kind of the relationship the person is involved as a Wife, Husband, Unmarried etc.  
+``Native-country`` the individual is native of which country
+``Income_class`` : The target variable either `>$50k` or `<=$50k`.
+
+which is also categorical. The list of unique categories in each of them except Native country which we will see below has lot many country names but over 90% entries only from Unites States : <br>
 
 ![](../imgs/categorical_varoables.PNG)
 ``**Figure 2**``
