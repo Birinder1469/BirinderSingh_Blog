@@ -14,6 +14,9 @@ comments: true
 
 To address my curiosity of how much I should earn based on my current circumstances. I came across Income data from UCI machine learning repository and I decided to build an entire pipeline starting from the [exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) to choice of machine learning model, comparing the performance of different ML models and then deployment on a microservice [Heroku](https://www.heroku.com/) to let any one use it with a one line command. The task at hand is to determine the probability that a person makes over `$50k` a year.
 
+My warning paragraph.
+{: .alert .alert-warning}
+
 ### Dataset
 The dataset is available on the UCI website under the name of Adult Income Data Set [URL](https://archive.ics.uci.edu/ml/datasets/adult)
 
