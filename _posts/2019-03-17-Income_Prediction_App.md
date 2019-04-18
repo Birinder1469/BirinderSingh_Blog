@@ -24,7 +24,7 @@ Description of the dataset : <br>
 
 ![](../imgs/DataDscription1.PNG)
 
-Out of the total `48842` entries, training dataset contains `32561` entries and the remaining `16281` are the test dataset entries. There are 14 features and 1 response column(income class) containing values `<=$50k` and `>$50k`. For now lets only load the training dataset for exploratory data analysis and keep the test data unseen till we come to validating the machine learning models.
+The data is based on the 1990s census data. Out of the total `48842` entries, training dataset contains `32561` entries and the remaining `16281` are the test dataset entries. There are 14 features and 1 response column(income class) containing values `<=$50k` and `>$50k`. For now lets only load the training dataset for exploratory data analysis and keep the test data unseen till we come to validating the machine learning models.
 
 Its a binary classification problem, lets assign `0` to the entries with income `<=$50k` and `1` to income `>$50k` and add new `target` column. The training data set head with 16 columns looks as shown below :
 

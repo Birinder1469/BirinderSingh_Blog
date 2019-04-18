@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Case studies in security and privacy, including real-world breaches1"
+title:  "Case studies in security and privacy, including real-world breaches"
 date:   2019-03-30
 excerpt: "Privacy and Ethics1"
 tag:
