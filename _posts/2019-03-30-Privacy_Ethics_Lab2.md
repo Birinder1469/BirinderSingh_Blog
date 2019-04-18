@@ -10,9 +10,6 @@ tag:
 comments: true
 ---
 
-
-### ANSWER 1 :
-
 * To what extent can and/or should a company monitor a customer?
 
 In my opinion the answer to this is quite subjective. On one hand
