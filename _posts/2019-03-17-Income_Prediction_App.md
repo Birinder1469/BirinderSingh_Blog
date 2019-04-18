@@ -42,7 +42,7 @@ Out of 14 we have 9 categorical features :
 ``Native-country`` the individual is native of which country
 ``Income_class`` : The target variable either `>$50k` or `<=$50k`.
 
-which is also categorical. The list of unique categories in each of them except Native country which we will see below has lot many country names but over 90% entries only from Unites States : <br>
+The list of unique categories in each of these features except Native country which we will see below has lot of country names : <br>
 
 ![](../imgs/categorical_varoables.PNG)
 ``**Figure 2**``
