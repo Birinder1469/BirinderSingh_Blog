@@ -16,7 +16,7 @@ To address my curiosity of how much I should earn based on my current circumstan
 
 
 ### Dataset
-The dataset is available on the UCI website under the name of [Adult Income Data Set_URL](https://archive.ics.uci.edu/ml/datasets/adult)
+The dataset is available on the UCI website under the name of Adult Income Data Set [URL](https://archive.ics.uci.edu/ml/datasets/adult)
 
 Description of the dataset : <br>
 
