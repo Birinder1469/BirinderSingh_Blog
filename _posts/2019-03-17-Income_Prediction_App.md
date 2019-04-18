@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Income Prediction using Machine Learning - Heroku platform "
+title:  "Predicting Income at Scale with Heroku"
 date:   2019-03-17
 excerpt: "Machine Learning"
 tag:
