@@ -368,7 +368,7 @@ The output accuracy values for SVM can be compared in the final comparison matri
 ### Model evaluation
 
 There are two main reasons we might need to look at both accuracy and confusion metrics for model evaluation.
-1. As discussed already our target classes are unbalanced. We have 7841 `>$50k` entries and 24741 `=<$50k` entries. we might need the confusion metric to see how well our model is predicting the `>$50k` class.
+1. As discussed already our target classes are unbalanced. We have 7841 `>$50k` entries and 24720 `=<$50k` entries. we might need the confusion metric to see how well our model is predicting the `>$50k` class.
 2. The target values are unbalanced but not severely unbalanced. 1:3 ratio is not extreme hence we also should check the model test and train accuracies to choose the best model. <br>
 The final accuracies of different models are as follows:
 
@@ -469,3 +469,4 @@ Email address : birinder1469@gmail.com
 5. Logistic regression scikit learn : [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) <br>
 6. XGBoost tutorial : [XGBoost technique](https://xgboost.readthedocs.io/en/latest/tutorials/model.html) <br>
 7. Support Vector Machines scikit learn : [SVM](https://scikit-learn.org/stable/modules/svm.html) <br>
+8. Why One Hot Encoding is not always the solution : [Medium Post](https://medium.com/data-design/visiting-categorical-features-and-encoding-in-decision-trees-53400fa65931)
