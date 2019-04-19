@@ -432,53 +432,8 @@ curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 19, "observa
 Please Note :
 - Every time you are making a prediction using the above command please increase the "id" by 1 as it stores the output in the unique id and does not overwrite previous ids.
 
-- For your convenience below is the list of values to be used for each variable/predictor .<br>
-
-`Age`: Numeric input <br>
-
-`Capital-gain`: Numeric Input <br>
-
-`Capital-loss`: Numeric Input <br>
-
-`Hours-per-week`: Numeric Input <br>
-
-`Workclass`
-- Private : `0`
-- State-government, Federal-government, Local-government : `1`
-- Self-employed-no-income, Self-employed-income, Without-pay, Never-worked : `2`
-- Another category is Unknown category : `-1` in case the workclass is missing the prediction will be based on other features.
-
-
-`Education`
-- Preschool ,$$1^{st} - 12^{th} $$   : `0` <br>
-- HS-graduate,  Some-college,  Associate-acdm,  Associate-voc : `1` <br>
-- Bachelors,  Masters,  Doctorate, Prof-school : `2`<br>
-
-`Marital Status`
-
-- Never-married : `0`
-- Married-civilian-spouse, Married-ArmedForces-spouse : `1`
-- Divorced, Married-spouse-absent, Separated, Widowed : `2`
-
-`Occupation`
-- Private-house-servant, Farming-fishing, Armed-Forces, Machine-operator or inspector, Other-service, Handlers-cleaners,  Admin-clerical : `0`
-- Craft-repair,  Sales,  Transport-moving : `1`
-- Exec-managerial, Prof-specialty,   Protective-services, Tech-support : `2`
-- Another category is Unknown category `-1`, in case the occupation is missing the prediction will be based on other features.
-
-` Race `
-- White : `1`<br>
-- Non White : `0` <br>
-
-`sex` :
-- Males : `1` <br>
-- Females : `0` <br>
-
-`Native_Country`
-
-- United_States : `1` <br>
-- Rest : `0`<br>
-
+- The `Age`, `Capital-gain`, `Capital-loss`, `Hours-per-week` are numeric inputs.
+- The integer values to be entered for different categorical feature are given in the `Transforming input data for Machine Learning Model` section above. <br>
 
 The output will look something like this :
 
