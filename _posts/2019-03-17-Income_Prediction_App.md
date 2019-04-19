@@ -24,11 +24,11 @@ Description of the dataset : <br>
 The data is based on the 1990s census data. Out of the total `48842` entries, training dataset contains `32561` entries and the remaining `16281` are the test dataset entries. There are 14 features and 1 response column(income class) containing values `<=$50k` and `>$50k`. For now lets only load the training dataset for exploratory data analysis and keep the test data unseen till we come to validating the machine learning models.
 
 Its a binary classification problem, lets assign `0` to the entries with income `<=$50k` and `1` to income `>$50k` and add new `target` column. The training data set head with 16 columns looks as shown below :
-
+<br>
 ![](../imgs/Head_UCI_Adultdata.PNG)
-
+<br>
 ``**Figure 1**``
-
+<br>
 ### Exploratory Data Analysis
 
 Out of 14 we have 9 categorical features :
@@ -44,19 +44,22 @@ Out of 14 we have 9 categorical features :
 
 The list of unique categories in each of these features except Native country which we will see below has lot of country names : <br>
 
+<br>
 
 ![](../imgs/categorical_varoables.PNG)
+<br>
 ``**Figure 2**``
 
+<br>
 Lets see how much data is available for each of the feature in the dataset.
 
 <br>
 
 ![Data_available](../imgs/Data_available.png)
-``**Figure 3 : Number of entries for different native countries **``
+``**Figure 3 : Number of people with different native countries **``
 <br>
 
-As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States.
+As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States and most of the respondents are US natives.
 
 ![Data_available](../imgs/occ-rac-age.PNG)
 ``**Figure 4 : Number of entries with different occupations, race and age groups **``
