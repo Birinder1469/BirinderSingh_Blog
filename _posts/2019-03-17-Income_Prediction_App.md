@@ -377,16 +377,12 @@ The final comparison of the scores of the models is as follows :
 
 `**Figure 11**`
 
-Confusion matrices for different models om test dataset:
+Confusion matrices for different models on test dataset:
 
-| <kbd><img src="../imgs/cf_rf.PNG" /></kbd> | <kbd><img src="../imgs/cf_lr.PNG" /></kbd> |
+| ![](../imgs/cf_rf.PNG) | ![](../imgs/cf_lr.PNG) |
 |---|---|
-| <kbd><img src="../imgs/cf_xgb.PNG" /></kbd>|  <kbd><img src="../imgs/cf_svm.PNG" /></kbd>|
+|![](../imgs/cf_xgb.PNG)|  ![](../imgs/cf_svm.PNG)|
 
-Where the format of the Confusion Matrix is as follows :
-
-![](../imgs/cf_format.PNG)
-`**Figure 12**`
 
 We notice that all the models are performing well on detection of category 0 which is for `Income <=$50k`, XGBoost seems to be doing slightly better correctly predicting 11781 out of (11781 + 654) = 12435, `<=$50k` observations. The more important prediction to judge the model here is the `Income >$50k` because the training data has much less entries for this category viz. 7841 vs 24720 for `<=$50k`. Comparing all the models the Random Forest and XGBoost are doing close enough job to predict the `Income >$50k` with slightly better prediction by Random Forest of 2358 correct predictions out of (2358+1488)= 3846 `>$50k` observations. The boosting technique XGBoost has not come up with any substantial improvement hence we can use the Random Forest classifier model going forward.
 
