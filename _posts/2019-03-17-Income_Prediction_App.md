@@ -37,7 +37,7 @@ Out of 14 features 9 are categorical namely:
 ``sex`` : The gender of the individual,
 ``Occupation`` : Occupation the individual is involved in,
 ``Workclass``: Work class of the individual such as Private, Government etc.,
-``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is Doctorate,
+``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education_Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is Doctorate,
 ``Relationship``: Relationship the person is involved such as a Wife, Husband or Unmarried,
 ``Native-country`` The native country of the individual,
 ``Income_class`` : The target variable either `>$50k` or `<=$50k`.
