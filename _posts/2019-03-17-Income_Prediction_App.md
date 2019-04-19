@@ -31,16 +31,16 @@ Its a binary classification problem, lets assign `0` to the entries with income 
 <br>
 ### Exploratory Data Analysis
 
-Out of 14 features 9 are categorical namely:<br>
-``Marital-status`` : marital status of the individual,<br>
-``Race`` : Race of the individual,<br>
-``sex`` : The gender of the individual,<br>
-``Occupation`` : Occupation the individual is involved in,<br>
-``Workclass``: Work class of the individual such as Private, Government etc.,<br>
-``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is Doctorate,<br>
-``Relationship``: Relationship the person is involved such as a Wife, Husband or Unmarried,<br>
-``Native-country`` The native country of the individual,<br>
-``Income_class`` : The target variable either `>$50k` or `<=$50k`.<br>
+Out of 14 features 9 are categorical namely:
+``Marital-status`` : marital status of the individual,
+``Race`` : Race of the individual,
+``sex`` : The gender of the individual,
+``Occupation`` : Occupation the individual is involved in,
+``Workclass``: Work class of the individual such as Private, Government etc.,
+``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is Doctorate,
+``Relationship``: Relationship the person is involved such as a Wife, Husband or Unmarried,
+``Native-country`` The native country of the individual,
+``Income_class`` : The target variable either `>$50k` or `<=$50k`.
 
 The list of unique categories in each of these features except Native country which we will see below has lot of country names : <br>
 
