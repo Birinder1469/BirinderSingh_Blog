@@ -412,7 +412,7 @@ Now that the model is ready I will deploy it on the Heroku cloud platform [url](
 
 ![Heroku](../imgs/heroku_platform.PNG)
 
-I will not go much into the detail of the procedure. In case you are interested please follow this GitHub repository for detailed instructions of how to deploy on the Heroku platform.
+I will not go much into the detail of the procedure which is quite straightforward. In case you are interested please follow this GitHub repository for detailed instructions of how to deploy on the Heroku platform.
 
 [Heroku_deploy_GitHub_url](https://github.com/LDSSA/heroku-model-deploy).
 
