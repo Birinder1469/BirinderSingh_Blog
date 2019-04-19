@@ -126,7 +126,7 @@ The Married couple with spouse in Armed forces or a Civilian are in high income 
 The Executive and Managerial roles are the most paid followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
 
 `Relationship`
-Its overwhelming clear from the plot that proportion of wives with high income is more than the husbands, but when we confirm from Figure 4 the data for wives is just ~1400  entries and for the husbands is ~ 12500 because of which the proportion is a little misleading.
+It is clear from the plot that proportion of wives with high income is more than the husbands, but when we confirm from Figure 6 the data for wives is just ~1400  entries and for the husbands is ~ 12500 because of which the proportion is a little misleading.
 
 `Gender`
  The proportion of males with high income is more than the females.
@@ -146,7 +146,7 @@ Its overwhelming clear from the plot that proportion of wives with high income i
 `**Figure 12 : Distribution of weekly working hours across different income groups **`
 
 `Hours per week`
- From the distribution above we can say that the people in the higher income group work mostly between 35-60 hours a week. This goes up to 100 as well but there are less of number of those people.
+ From the distribution above we can say that the people in the higher income group work mostly between 35-60 hours a week. This goes up to 100 as well but there are less number of those people.
 
 <br>
 
@@ -161,7 +161,7 @@ Its overwhelming clear from the plot that proportion of wives with high income i
 
 Before applying any machine learning model we would need to transform the data in the form that machine learning model understands. As already discussed in the data set section we have total `48842` entries out of which Training dataset contains `32561` and the remaining `16281` are the Test dataset entries. Now is the time to bring train and test data together for transformation, However before training the models we will split them again.
 
-Following assignments were made to make the data ready to be fed into the ML model. The categories were relabeled in the following form :
+Following assignments were made to make the data ready to be fed into the ML model. The categories were relabeled in the given form :
 
 `Sex`
 
@@ -205,14 +205,14 @@ The people working in private sector jobs were put together in category `0`. Peo
 
 `Occupation`
 
-- Priv-house-serv, Farming-fishing, Armed-Forces, Machine-op-inspct,Other-service, Handlers-cleaners, Adm-clerical : `0`
+- Priv-house-serv, Farming-fishing, Armed-Forces, Machine-op-inspct, Other-service, Handlers-cleaners, Adm-clerical : `0`
 
 - Craft-repair, Sales, Transport-moving : `1`
 
 - Exec-managerial, Prof-specialty,  Protective-serv, Tech-support : `2`
 - Another category is Unknown category `-1`, in case the occupation is missing the prediction will be based on other features.
 
-Looking at `Figure 6` specifically the distribution of income per occupation some occupations are likely to earn high such as managerial roles so it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for sales, craft repair etc. and the lower income category `0` for professions like farming fishing etc.
+Looking at `Figure 10` specifically the distribution of income per occupation, some occupations are likely to earn higher such as managerial positions hence it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for sales, craft repair etc. and the lower income category `0` for professions like farming fishing etc.
 
 Lastly for
 
@@ -233,7 +233,7 @@ A quick look at the final DataFrame containing 11 features and 1 target variable
 
 ![](../imgs/Model_BuildingRead.PNG)
 
-`**Figure 10**`
+`**Figure 14**`
 
 ### Fitting the Machine learning models
 
