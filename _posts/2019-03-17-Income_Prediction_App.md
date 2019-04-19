@@ -451,7 +451,7 @@ Since I started this analysis to beat my curiosity of my likely salary I gave th
 ![](../imgs/Birinder_Prediction.PNG) <br>
 `**Figure 14**`
 
-It means I have 52% chance of earning more than `>50k` based on the trained model.
+It means I have 52% chance of earning more than `>$50k` based on the trained model.
 
 Please let me know your feedback. All the analysis is available on my GitHub the URL of which is given below.
 
