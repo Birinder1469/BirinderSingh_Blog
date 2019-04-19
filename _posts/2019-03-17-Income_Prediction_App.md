@@ -85,7 +85,7 @@ The target variable/Income_Class contains around `24720` entries for the categor
 
 Did you notice there are some ```?``` in ```workclass```, ```native country``` and ```occupation``` level. Its hard to make a guess what these entries could be. Probably some people did not want to disclose these details. If we remove these entries we will loose 2399 entries of which most of them are in the occupation column. Lets keep them for now.<br>
 
-Now lets see what proportion of people in each variable above lie in which income bracket.
+Now lets see what proportion of people in each feature above lie in which income bracket.
 Please note these are proportions and while making any conclusion we should have a look at Figure 3 to Figure 6 above to see how much data exists in each category.
 
 ![Data_available_10](../imgs/Analysis_Income_prediction_native.png)
@@ -135,9 +135,9 @@ It is clear from the plot that proportion of wives with high income is more than
 <br>
 
 `Race`
- We notice that we have too little data for races other than White(Figure 4). Even then if we try to compare the  proportions of each race are earning well (`>$50k`). For the whites ~ 26% people are earning `>$50k` while from the available  data ~28% Asian Pac Islanders earn `>$50k`.
+ We notice that we have too little data for races other than white(Figure 4). Even then we can compare the proportion of people belonging to different races based on their income (`>$50k` or less). For the whites ~ 26% people are earning `>$50k` whereas from the available  data ~28% Asian Pac Islanders earn `>$50k`.
 
-#### Please Note : I chose not to combine the available data plots (Figure 3 - 6) and proportions (Figure 7 - 11) plots as a combined plot would have masked the categories with very few entries for each feature.
+#### Please Note : I chose not to combine the available data plots (Figure 3 - 6) and proportion plots (Figure 7 - 11) as a combined plot would have masked the categories with very few entries for each feature.
 
 
 
@@ -172,7 +172,7 @@ Following assignments were made to make the data ready to be fed into the ML mod
 - Whites : `1`<br>
 - Non Whites : `0` <br>
 
-This assignment is because data is skewed with entries mostly for White people.
+Since the data is skewed with entries mostly for White people only two categories should be okay.
 
 `Education`
 
@@ -211,7 +211,7 @@ The people working in private sector jobs were put together in category `0`. Peo
 - Exec-managerial, Prof-specialty,  Protective-serv, Tech-support : `2`
 - Another category is Unknown category `-1`, in case the occupation is missing the prediction will be based on other features.
 
-Looking at `Figure 10` specifically the distribution of income per occupation, some occupations are likely to earn higher such as managerial positions hence it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for sales, craft repair etc. and the lower income category `0` for professions like farming fishing etc.
+Looking at `Figure 10` some occupations are likely to earn higher such as managerial positions hence it makes sense to assign them high pay category `2`. Similarly we can have middle income category `1` for sales, craft repair etc. and the lower income category `0` for professions like farming fishing etc.
 
 Lastly for
 
@@ -368,13 +368,13 @@ The output accuracy values for SVM can be compared in the final comparison matri
 ### Model evaluation
 
 There are two main reasons we might need to look at both accuracy and confusion metrics for model evaluation.
-1. As discussed already our target classes are unbalanced. We have 7841 entries `>$50k` and 24741 `=<$50k` entries. we might need the confusion metric to see how well our model is predicting the `>$50k` class.
+1. As discussed already our target classes are unbalanced. We have 7841 `>$50k` entries and 24741 `=<$50k` entries. we might need the confusion metric to see how well our model is predicting the `>$50k` class.
 2. The target values are unbalanced but not severely unbalanced. 1:3 ratio is not extreme hence we also should check the model test and train accuracies to choose the best model. <br>
 The final accuracies of different models are as follows:
 
 ![](../imgs/Model_Accuracies1.PNG)
 
-`**Figure 11**`
+`**Figure 15**`
 
 Confusion matrices for different models on test dataset:
 
@@ -382,8 +382,9 @@ Confusion matrices for different models on test dataset:
 |---|---|
 |![](../imgs/cf_xgb.PNG)|  ![](../imgs/cf_svm.PNG)|
 
+`**Figure 16**`
 
-We notice that all the models are performing well on detection of category 0 which is for `Income <=$50k`, XGBoost seems to be doing slightly better correctly predicting 95% `<=$50k` observations. Comparing all the models the Random Forest and XGBoost are doing close enough job to predict the `Income >$50k`. Even the Train and Test accuracies for Random Forest and XGBoost technique are quite close. The boosting technique XGBoost has not come up with any substantial improvement hence we can use the Random Forest classifier model going forward.
+We notice that all the models are performing well on detection of category 0 which is for `Income <=$50k`, XGBoost seems to be doing slightly better, correctly predicting 95% `<=$50k` observations. Comparing all the models the Random Forest and XGBoost are doing close enough job to predict the `Income >$50k`. Even the Train and Test accuracies for Random Forest and XGBoost technique are quite close. The boosting technique XGBoost has not come up with any substantial improvement hence we can use the Random Forest classifier model going forward.
 
 Now that we have narrowed down the model lets combine the training and test datasets to have larger data to train to have a more robust model.
 
@@ -416,7 +417,7 @@ I will not go much into the detail of the procedure which is quite straightforwa
 ### How you can use the model
 
 Now that you know everything about how the model was built, just use the following command in the
-Bash(Windows) or Terminal(Mac) and get the output probability of earning more than `\$50k`.
+Bash(Windows) or Terminal(Mac) and get the output probability of earning more than `$50k`.
 
 ```ruby
 curl -X POST https://income-app-ml.herokuapp.com/predict -d '{"id": 19, "observation":
@@ -434,7 +435,7 @@ Please Note :
 The output will look something like this :
 
   ![](../imgs/OutPut_Heroku1.PNG) <br>
-`**Figure 13**`
+`**Figure 17**`
 
 In this output the `proba` output is the probability that you will earn greater than $50k.
 Try it yourself !
@@ -445,11 +446,11 @@ Try it yourself !
 Since I started this analysis to beat my curiosity of my likely salary I gave the model my details and the results are :
 
 ![](../imgs/Birinder_Prediction.PNG) <br>
-`**Figure 14**`
+`**Figure 18**`
 
 It means I have 52% chance of earning more than `>$50k` based on the trained model.
 
-Please let me know your feedback. All the analysis is available on my GitHub the URL of which is given below.
+Thanks for reading the post and please let me know your feedback. All the analysis is available on my GitHub.
 
 GitHub repository of analysis: [GitHub_Repository](https://github.com/Birinder1469/Income_Prediction) <br>
 Email address : birinder1469@gmail.com
