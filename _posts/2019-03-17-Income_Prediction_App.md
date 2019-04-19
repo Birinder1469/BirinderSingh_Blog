@@ -100,7 +100,7 @@ Please note these are proportions and while making any conclusion we should have
 `**Figure 8 : Proportion of people earning >$50k based on education, workclass and marital status**`
 <br>
 
-Broadly people earning `>\$50k` are well educated. Professors or Doctorate and Master's
+Broadly people earning `>$50k` are well educated. Professors or Doctorate and Master's
 level people earn well. Its worth noting that some students educated less than 12th standard also earn >$50k.
 
 Checking the work profiles of less educated people earning over `$50k`. <br>
@@ -109,17 +109,18 @@ Checking the work profiles of less educated people earning over `$50k`. <br>
 `**Figure 9 : Number of people with education less than 12th standard earning >$50k **`
 <br>
 
+`Education`
 Upon investigating in the Figure 9, most of the respondents with less education and good income (>$50k) work in Private jobs. Probably some college dropouts or smart students having side income.
 
 `Work class`
-The Self employed people have a higher proportion of people having income `>$50k` followed by people working in Federal jobs.
+The self employed people have a higher proportion of people having income `>$50k` followed by people working in Federal jobs.
 
 `Marital Status`
 The Married couple with spouse in Armed forces or a Civilian are in high income category but the dataset contains very few entries for spouse in Armed force to be considered a valid observation.
 
 ![Data_available_1](../imgs/prop_occ-rel-sex.PNG)
 
-`**Figure 10 : Proportion of people earning >$50k based on occupation, relationship and sex **`
+`**Figure 10 : Proportion of people earning >$50k based on occupation, relationship and sex **` <br>
 <br>
 `Occupation`
 The Executive and Managerial roles are the most paid followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
