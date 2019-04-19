@@ -44,6 +44,7 @@ Out of 14 we have 9 categorical features :
 
 The list of unique categories in each of these features except Native country which we will see below has lot of country names : <br>
 
+
 ![](../imgs/categorical_varoables.PNG)
 ``**Figure 2**``
 
@@ -55,45 +56,64 @@ Lets see how much data is available for each of the feature in the dataset.
 
 ![Data_available](../imgs/Data_available.png)
 ``**Figure 3 : Number of entries for different native countries **``
-
 <br>
 
 As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States.
 
-![Data_available_1](../imgs/Data_available_1.png)
-`**Figure 4 : Number of entries per category for each feature**`
+![Data_available](../imgs/occ-rac-age.png)
+``**Figure 4 : Number of entries with different occupations, race and age groups **``
+<br>
+Broadly the representation of different categories within some features is not the same.
+For instance we have much more data for white people compared to any other race. There is not much data for the aged people (>70 yrs old).
+
+![Data_available](../imgs/edu-mar-work.png)
+``**Figure 5 : Number of entries for education, marital status and work class **``
 <br>
 
-Broadly the representation of different categories within each feature is not the same.
-We have much more data for white people compared to any other race. The people working in private sector jobs dominate the training data set.
+ The people working in private sector jobs dominate the training data set. Most of the entries we have are for high school graduates.  
+
+
+<br>
+
+![Data_available](../imgs/sex-income-relation.png)
+``**Figure 6 : Number of entries for gender, income class and relationships **``
+
+
+
 
 The target variable/Income_Class contains around `24720` entries for the category of people earning `<=$50k` or category 0 and around `7841` entries of people earning more than `$50k` or category `1`. This is important observation indicating that our dataset is biased towards people earning less than `$50k`, checking the [confusion matrix](https://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) will be a good idea while comparing the ML models. We will discuss this later when we compare the models.
 
 Did you notice there are some ```?``` in ```workclass```, ```native country``` and ```occupation``` level. Its hard to make a guess what these entries could be. Probably some people did not want to disclose these details. If we remove these entries we will loose 2399 entries of which most of them are in the occupation column. Lets keep them for now.<br>
 
 Now lets see what proportion of people in each variable above lie in which income bracket.
-Please note these are proportions and while making any conclusion we should have a look at Figure 3 and Figure 4 above to see how much data exists in each category.
+Please note these are proportions and while making any conclusion we should have a look at Figure 3 to Figure 6 above to see how much data exists in each category.
 
 ![Data_available_10](../imgs/Analysis_Income_prediction_native.png)
-`**Figure 5 : Proportion of people earning >$50k with different Native countries**`
+`**Figure 7 : Proportion of people earning >$50k with different Native countries**`
 <br>
 
+`Native Country`
+ As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
 
 
-![Data_available_1](../imgs/Analysis_Income_prediction_1.png)
-`**Figure 6 : Proportion of people earning >$50k within different categories**`
+
+
+![Data_available_1](../imgs/prop_edu-wor-mar.png)
+
+`**Figure 8 : Proportion of people earning >$50k based on education, workclass and marital status**`
 <br>
-
-
-![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
-`**Figure 7 : Number of people with education less than 12th standard earning >$50k **`
-<br>
-
-#### Please Note : I chose not to combine the available data plot (Fig 3,4) and proportions (Fig 5,6,7) plot as a combined plot would have masked the categories with very few entries for each feature.
 
 `Education`
 Broadly people earning >\$50k are well educated. Professors or Doctorate and Master's
-level people earn well. Its worth noting that some students educated less than 12th standard also earn >$50k. Upon investigating in the Fig 7, most of them work in Private jobs. Probably some college dropouts or smart students having side income.
+level people earn well. Its worth noting that some students educated less than 12th standard also earn >$50k.
+
+Checking the working hours of people earning over `$50k`. <br>
+
+![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
+`**Figure 9 : Number of people with education less than 12th standard earning >$50k **`
+<br>
+
+Upon investigating in the Fig 7, most of them work in Private jobs. Probably some college dropouts or smart students having side income.
 
 `Work class`
 The Self employed people have a higher proportion of people having income `>$50k` followed by people working in Federal jobs.
@@ -101,6 +121,10 @@ The Self employed people have a higher proportion of people having income `>$50k
 `Marital Status`
 The Married couple with spouse in Armed forces or a Civilian are in high income category but the dataset contains very few entries for spouse in Armed force to be considered a valid observation.
 
+![Data_available_1](../imgs/prop_occ-rel-sex.png)
+
+`**Figure 10 : Proportion of people earning >$50k based on occupation, relationship and sex **`
+<br>
 `Occupation`
 The Executive and Managerial roles are the most paid followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
 
@@ -110,16 +134,19 @@ Its overwhelming clear from the plot that proportion of wives with high income i
 `Gender`
  The proportion of males with high income is more than the females.
 
-`Native Country`
- As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
+![Data_available_1](../imgs/prop_race.png)
+`**Figure 11 : Proportion of people earning >$50k for each Race **`
+<br>
 
 `Race`
  We notice that we have too little data for races other than White(Figure 4). Even then if we try to compare the  proportions of each race are earning well (`>$50k`). For the whites ~ 26% people are earning `>$50k` while from the available  data ~28% Asian Pac Islanders earn `>$50k`.
 
-Checking the working hours of people earning over `$50k`. <br>
+#### Please Note : I chose not to combine the available data plots (Fig 3 - 6) and proportions (Fig 7 - 11) plots as a combined plot would have masked the categories with very few entries for each feature.
+
+
 
 ![Data_available_2](../imgs/Analysis_Income_prediction_workhours.png)
-`**Figure 8 : Distribution of weekly working hours across different income groups **`
+`**Figure 12 : Distribution of weekly working hours across different income groups **`
 
 `Hours per week`
  From the distribution above we can say that the people in the higher income group work mostly between 35-60 hours a week. This goes up to 100 as well but there are less of number of those people.
@@ -127,7 +154,7 @@ Checking the working hours of people earning over `$50k`. <br>
 <br>
 
 ![Data_available_1](../imgs/Analysis_Income_predictionAge.png)
-`**Figure 9 : Distribution of income among different age groups**`
+`**Figure 13 : Distribution of income among different age groups**`
 <br>
 
  `Income vs Age`
