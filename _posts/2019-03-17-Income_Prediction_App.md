@@ -93,28 +93,23 @@ Please note these are proportions and while making any conclusion we should have
 `**Figure 7 : Proportion of people earning >$50k with different Native countries**`
 <br>
 
-`Native Country`
  As we saw above the data for United states natives is overwhelmingly higher than other countries (Figure 3). The proportion of people who earn well(>$50k) besides United States are natives from France, Taiwan, Iran. Again its worth noting  that the data for each of these countries is too less to make a sane judgement.
-
-
-
 
 ![Data_available_1](../imgs/prop_edu-wor-mar.PNG)
 
 `**Figure 8 : Proportion of people earning >$50k based on education, workclass and marital status**`
 <br>
 
-`Education`
-Broadly people earning >\$50k are well educated. Professors or Doctorate and Master's
+Broadly people earning `>\$50k` are well educated. Professors or Doctorate and Master's
 level people earn well. Its worth noting that some students educated less than 12th standard also earn >$50k.
 
-Checking the working hours of people earning over `$50k`. <br>
+Checking the work profiles of less educated people earning over `$50k`. <br>
 
 ![Data_available_1](../imgs/Analysis_Income_prediction_work_profile.png)
 `**Figure 9 : Number of people with education less than 12th standard earning >$50k **`
 <br>
 
-Upon investigating in the Fig 7, most of them work in Private jobs. Probably some college dropouts or smart students having side income.
+Upon investigating in the Figure 9, most of the respondents with less education and good income (>$50k) work in Private jobs. Probably some college dropouts or smart students having side income.
 
 `Work class`
 The Self employed people have a higher proportion of people having income `>$50k` followed by people working in Federal jobs.
@@ -142,7 +137,7 @@ Its overwhelming clear from the plot that proportion of wives with high income i
 `Race`
  We notice that we have too little data for races other than White(Figure 4). Even then if we try to compare the  proportions of each race are earning well (`>$50k`). For the whites ~ 26% people are earning `>$50k` while from the available  data ~28% Asian Pac Islanders earn `>$50k`.
 
-#### Please Note : I chose not to combine the available data plots (Fig 3 - 6) and proportions (Fig 7 - 11) plots as a combined plot would have masked the categories with very few entries for each feature.
+#### Please Note : I chose not to combine the available data plots (Figure 3 - 6) and proportions (Figure 7 - 11) plots as a combined plot would have masked the categories with very few entries for each feature.
 
 
 
