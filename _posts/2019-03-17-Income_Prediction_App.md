@@ -55,20 +55,20 @@ Let us see how much data is available for each of the feature in the dataset.
 
 
 ![Data_available](../imgs/Data_available.png)
-``**Figure 3 : Number of people with different native countries **``
+``**Figure 3: Number of people with different native countries **``
 <br>
 
 As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States and most of the respondents are US natives.
 
 ![Data_available](../imgs/occ-rac-age.PNG)
-``**Figure 4 : Number of entries with different occupations, race and age groups **``
+``**Figure 4: Number of entries with different occupations, race and age groups **``
 <br>
 
 Broadly the representation of different categories within some features is not the same.
 For instance we have much more data for white people compared to any other race. There is not much data for the aged people (>70 yrs old).
 
 ![Data_available](../imgs/edu-mar-work.PNG)
-``**Figure 5 : Number of entries for education, marital status and work class **``
+``**Figure 5: Number of entries for education, marital status and work class **``
 <br>
 
  The people working in private sector jobs dominate the training data set. Most of the entries we have are for high school graduates.
@@ -77,7 +77,7 @@ For instance we have much more data for white people compared to any other race.
 <br>
 
 ![Data_available](../imgs/sex-income-relation.PNG)
-``**Figure 6 : Number of entries for gender, income class and relationships **``
+``**Figure 6: Number of entries for gender, income class and relationship **``
 
 
 
