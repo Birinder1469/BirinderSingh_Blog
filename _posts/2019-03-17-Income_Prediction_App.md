@@ -31,14 +31,14 @@ Its a binary classification problem, lets assign `0` to the entries with income 
 
 ### Exploratory Data Analysis
 
-Out of 14 we have 9 categorical features :  
+Out of 14 we have 9 categorical features :
 ``Marital-status`` : marital status of the individual
 ``Race`` : Race to which the individual belongs
 ``sex`` : The gender of the individual,
 ``Occupation`` : Occupation the individual is involved in,
 ``Workclass``: What kind of occupation the individual is in such as Private, Government etc.,
 ``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is Doctorate.
-``Relationship``: What kind of the relationship the person is involved as a Wife, Husband, Unmarried etc.  
+``Relationship``: What kind of the relationship the person is involved as a Wife, Husband, Unmarried etc.
 ``Native-country`` the individual is native of which country
 ``Income_class`` : The target variable either `>$50k` or `<=$50k`.
 
@@ -70,7 +70,7 @@ For instance we have much more data for white people compared to any other race.
 ``**Figure 5 : Number of entries for education, marital status and work class **``
 <br>
 
- The people working in private sector jobs dominate the training data set. Most of the entries we have are for high school graduates.  
+ The people working in private sector jobs dominate the training data set. Most of the entries we have are for high school graduates.
 
 
 <br>
@@ -285,7 +285,7 @@ The Best Features for Random Forest Are :  {'max_features': 8, 'max_depth': 11}
 ```
 
 The best hyper parameter values obtained are 8 and 11 for maximum number of features and maximum depth of the tree respectively.
-Training the model again with best features the accuracies are:   
+Training the model again with best features the accuracies are:
 
 ```python
 model_best=RandomForestClassifier(max_features=8, max_depth=11, random_state=213)
@@ -371,7 +371,10 @@ The output accuracy values for SVM can be compared in the final comparison matri
 
 ### Model evaluation
 
-The final comparison of the scores of the models is as follows :
+There are two main reasons we might need to look at both accuracy and confusion metrics for model evaluation.
+1. As discussed already our target classes are unbalanced. We have 7841 entries `>$50k` and 24741 `=<$50k` entries. we might need the confusion metric to see how well our model is predicting the `>$50k` class.
+2. The target values are unbalanced but not severely unbalanced. 1:3 ratio is not extreme hence we also should check the model test and train accuracies to choose the best model. <br>
+The final accuracies of different models are as follows:
 
 ![](../imgs/Model_Accuracies1.PNG)
 
@@ -384,7 +387,7 @@ Confusion matrices for different models on test dataset:
 |![](../imgs/cf_xgb.PNG)|  ![](../imgs/cf_svm.PNG)|
 
 
-We notice that all the models are performing well on detection of category 0 which is for `Income <=$50k`, XGBoost seems to be doing slightly better correctly predicting 11781 out of (11781 + 654) = 12435, `<=$50k` observations. The more important prediction to judge the model here is the `Income >$50k` because the training data has much less entries for this category viz. 7841 vs 24720 for `<=$50k`. Comparing all the models the Random Forest and XGBoost are doing close enough job to predict the `Income >$50k` with slightly better prediction by Random Forest of 2358 correct predictions out of (2358+1488)= 3846 `>$50k` observations. The boosting technique XGBoost has not come up with any substantial improvement hence we can use the Random Forest classifier model going forward.
+We notice that all the models are performing well on detection of category 0 which is for `Income <=$50k`, XGBoost seems to be doing slightly better correctly predicting 95% `<=$50k` observations. Comparing all the models the Random Forest and XGBoost are doing close enough job to predict the `Income >$50k`. Even the Train and Test accuracies for Random Forest and XGBoost technique are quite close. The boosting technique XGBoost has not come up with any substantial improvement hence we can use the Random Forest classifier model going forward.
 
 Now that we have narrowed down the model lets combine the training and test datasets to have larger data to train to have a more robust model.
 
