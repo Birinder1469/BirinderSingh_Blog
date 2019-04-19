@@ -31,7 +31,7 @@ Its a binary classification problem, lets assign `0` to the entries with income 
 <br>
 ### Exploratory Data Analysis
 
-Out of 14 features 9 are categorical namely:
+Out of 14 features 9 are categorical namely:<br>
 ``Marital-status`` : marital status of the individual,<br>
 ``Race`` : Race of the individual,<br>
 ``sex`` : The gender of the individual,<br>
