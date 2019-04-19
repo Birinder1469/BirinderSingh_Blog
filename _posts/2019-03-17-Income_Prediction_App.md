@@ -33,13 +33,13 @@ Its a binary classification problem, lets assign `0` to the entries with income 
 
 Out of 14 we have 9 categorical features :
 ``Marital-status`` : marital status of the individual
-``Race`` : Race to which the individual belongs
+``Race`` : Race of the individual
 ``sex`` : The gender of the individual,
 ``Occupation`` : Occupation the individual is involved in,
-``Workclass``: What kind of occupation the individual is in such as Private, Government etc.,
+``Workclass``: Occupation of the individual such as Private, Government etc.,
 ``Education_Label`` and ``Education_Number`` The education level attained by individual in words and corresponding numeric value in `Education-Number` column where Pre school is considered as basic level of education with numeric value 1 and the largest numeric value 16 for the highest level of education attained which is Doctorate.
-``Relationship``: What kind of the relationship the person is involved as a Wife, Husband, Unmarried etc.
-``Native-country`` the individual is native of which country
+``Relationship``: Relationship the person is involved such as a Wife, Husband, Unmarried etc.
+``Native-country`` The native country of the individual
 ``Income_class`` : The target variable either `>$50k` or `<=$50k`.
 
 The list of unique categories in each of these features except Native country which we will see below has lot of country names : <br>
