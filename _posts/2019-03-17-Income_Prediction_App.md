@@ -51,9 +51,8 @@ The list of unique categories in each of these features except Native country wh
 ``**Figure 2**``
 
 <br>
-Lets see how much data is available for each of the feature in the dataset.
+Let us see how much data is available for each of the feature in the dataset.
 
-<br>
 
 ![Data_available](../imgs/Data_available.png)
 ``**Figure 3 : Number of people with different native countries **``
@@ -64,6 +63,7 @@ As mentioned above the native country column has most of the data from United St
 ![Data_available](../imgs/occ-rac-age.PNG)
 ``**Figure 4 : Number of entries with different occupations, race and age groups **``
 <br>
+
 Broadly the representation of different categories within some features is not the same.
 For instance we have much more data for white people compared to any other race. There is not much data for the aged people (>70 yrs old).
 
