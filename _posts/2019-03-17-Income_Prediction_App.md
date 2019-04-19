@@ -60,13 +60,13 @@ Lets see how much data is available for each of the feature in the dataset.
 
 As mentioned above the native country column has most of the data from United States. This is obvious because the survey was collected in the Unites States.
 
-![Data_available](../imgs/occ-rac-age.png)
+![Data_available](../imgs/occ-rac-age.PNG)
 ``**Figure 4 : Number of entries with different occupations, race and age groups **``
 <br>
 Broadly the representation of different categories within some features is not the same.
 For instance we have much more data for white people compared to any other race. There is not much data for the aged people (>70 yrs old).
 
-![Data_available](../imgs/edu-mar-work.png)
+![Data_available](../imgs/edu-mar-work.PNG)
 ``**Figure 5 : Number of entries for education, marital status and work class **``
 <br>
 
@@ -75,7 +75,7 @@ For instance we have much more data for white people compared to any other race.
 
 <br>
 
-![Data_available](../imgs/sex-income-relation.png)
+![Data_available](../imgs/sex-income-relation.PNG)
 ``**Figure 6 : Number of entries for gender, income class and relationships **``
 
 
@@ -98,7 +98,7 @@ Please note these are proportions and while making any conclusion we should have
 
 
 
-![Data_available_1](../imgs/prop_edu-wor-mar.png)
+![Data_available_1](../imgs/prop_edu-wor-mar.PNG)
 
 `**Figure 8 : Proportion of people earning >$50k based on education, workclass and marital status**`
 <br>
@@ -121,20 +121,20 @@ The Self employed people have a higher proportion of people having income `>$50k
 `Marital Status`
 The Married couple with spouse in Armed forces or a Civilian are in high income category but the dataset contains very few entries for spouse in Armed force to be considered a valid observation.
 
-![Data_available_1](../imgs/prop_occ-rel-sex.png)
+![Data_available_1](../imgs/prop_occ-rel-sex.PNG)
 
 `**Figure 10 : Proportion of people earning >$50k based on occupation, relationship and sex **`
 <br>
 `Occupation`
 The Executive and Managerial roles are the most paid followed by Professors and Protective services. Some of the job categories such as Clerical jobs, farming fishing and Cleaners and handlers are not paid quite well.
 
-`Relation ship`
+`Relationship`
 Its overwhelming clear from the plot that proportion of wives with high income is more than the husbands, but when we confirm from Figure 4 the data for wives is just ~1400  entries and for the husbands is ~ 12500 because of which the proportion is a little misleading.
 
 `Gender`
  The proportion of males with high income is more than the females.
 
-![Data_available_1](../imgs/prop_race.png)
+![Data_available_1](../imgs/prop_race.PNG)
 `**Figure 11 : Proportion of people earning >$50k for each Race **`
 <br>
 
