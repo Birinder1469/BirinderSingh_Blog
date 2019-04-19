@@ -452,7 +452,7 @@ It means I have 52% chance of earning more than `>$50k` based on the trained mod
 
 ### Way forward with One Hot Encoding
 
-We can also try to improve our classifier using binary attributes. Our current approach for encoding our data has the drawback that we put arbitrary order in our classes. For instance in case of workclass 0,1,2 the logistic regression interprets these values as continuous variables and plugs them into an optimization function. This will cause different classes to have different weight into our model, which sort of is not 100% correct. Each class is theoretically equally weighted compared to the rest of the classes. In order to fix this we can use dummy variables. We can try One hot encoding going forward.
+We can also try to improve our classifier using binary attributes. Our current approach for encoding our data has the drawback that we put arbitrary order in our classes. For instance in case of workclass 0,1,2 the logistic regression interprets these values as continuous variables and plugs them into an optimization function. This will cause different classes to have different weight into our model, which sort of is not 100% correct. Each class is theoretically equally weighted compared to the rest of the classes. In order to fix this we can use dummy variables. It will increase the dimensionality of our problem but still its worth trying.
 
 Thanks for reading the post and please let me know your feedback. All the analysis is available on my GitHub.
 
