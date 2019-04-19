@@ -44,7 +44,6 @@ Out of 14 features 9 are categorical namely:
 
 The list of unique categories in each of these features except Native country which we will see below has lot of country names : <br>
 
-<br>
 
 ![](../imgs/categorical_varoables.PNG)
 <br>
