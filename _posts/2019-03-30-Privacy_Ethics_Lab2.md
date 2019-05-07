@@ -14,7 +14,7 @@ font-family: Georgia
 
 <span style="color:blue; font-family: Georgia;font-size:1.5em;">To what extent can and/or should a company monitor a customer?</span>
 
-<span style="color:black; font-family: 'Bebas Neue'; font-size: 1em; ">
+<span style="color:red; font-family: 'Bebas Neue'; font-size: 1em; ">
 
 In my opinion the answer to this is quite subjective. On one hand
 we may categorize being monitored as breach of privacy but on the other hand when we benefit from the Amazon recommendations online we consider it the technological advancement. The best thing to do in this case is to provide users a choice before monitoring anything. Unknowingly tracking the mobile phone location,  purchase history is probably going to be unappreciated by any user. However if the company gives the users a vision or the reason for monitoring their activities then the user can take a wise decision if they are okay with that. In that case the onus is on the user to do the due diligence and be prepared for any repercussions. The companies also need to be extra cautious while tackling the responsibility of handling the user data. As it has been rightly said the Data is the new Oil for the world economy. The more data a company has the more power resides in its hand and to add to it the more responsibility on its shoulders. Any misuse of the data should be dealt strictly so that the companies do not take it on lighter note and not handle the data well. In case the company acquire the data it needs to ensure that the data if leaked in worst case scenario should not narrow down to the respective individual. This is the best case of de-identification.
