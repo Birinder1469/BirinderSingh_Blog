@@ -79,3 +79,5 @@ Its by trial and error that we improve. If something fails it teaches a lesson. 
 - Determine the tradeoff between value vs harm like Varada suggested companies can have sociologist and lawyers on the panel for such issues, in short risk assessment is crucial.
 - Ensure Data security protocol is ready before deployment. Linked In stored passwords in plain text file which was not a wise move of the organization of that reputation. Companies need to invest adequately in data security. [URL](https://www.computerworld.com/article/2504078/hackers-crack-more-than-60--of-breached-linkedin-passwords.html)
 - Educate the consumer : It is the responsibility of the organization to make the user be aware of the limitations of the application and the proper usage.
+
+</span>
