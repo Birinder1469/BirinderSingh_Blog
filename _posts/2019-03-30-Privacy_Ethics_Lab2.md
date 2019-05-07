@@ -21,7 +21,8 @@ we may categorize being monitored as breach of privacy but on the other hand whe
 Resource :
 [Importance of Monitoring the consumers](https://www.business.com/articles/people-are-talking-are-you-listening-the-importance-of-social-media-monitoring/)
 
-#### How do we strike a line between reasonable and excessive surveillance?   
+<span style="color:blue; font-family: Georgia;font-size:1.5em;">How do we strike a line between reasonable and excessive surveillance? </span>
+
 
 In my opinion the surveillance under permission from the user is reasonable and anything other than that for commercial or any other reason is excessive surveillance. I mention this because there may be some cases where the user lets say works in some highly confidential job and tracking his/her location is very risky for his job. On the other hand some other users like me won't be bothered if my location is recorded. Hence action taken by the company without the consent of the user should be discouraged. On top of it any data that the company acquires needs to be de identified so that no user is at risk of being narrowed down in case of data breach. Some may argue that there is no harm in using the technology like Amazon Echo to look for the criminals by identifying them through voice recognition. The plan sounds very robust, for sure it is much easier to catch the criminal from his voice signature by any public telephone line compared to finding him through CCTV cameras. However in my opinion this is unethical. The criminal is not criminal until proven guilty. Even then our law has the provision for the accused to ask for a lawyer before being interrogated. In the eyes of the law the criminal also has the rights and it is not justified to breach any one's privacy under the suspicion that he/she might have committed some crime.
 
@@ -30,7 +31,8 @@ In my opinion the surveillance under permission from the user is reasonable and 
 
 
 
-#### How can you, as a data scientist, control the level of surveillance of your data science products?
+<span style="color:blue; font-family: Georgia;font-size:1.5em;">How can you, as a data scientist, control the level of surveillance of your data science products? </span>
+
 
 As a data scientist my interest lies in drawing insights from the data. In the process it is my responsibility to handle the data wisely. For instance if my interest lies in finding if the drug is effective in treating some particular disease then the most important thing is how the patients react to the drug usage. It does not matter who the patient is. In this case the de identification can be in the best interest of both the patients and the researchers. Some of the de identification techniques to use can be suppressing the specifics, generalizing the observations, k anonymizing so that its tough to narrow down to an individual. On the other hand if I am building a recommender system on Netflix or amazon then I need to notify the user that the search history is been logged and if he/she is not okay then not do that. Handling data securely can be done by using hash functions or other cryptic techniques so that the transfer of data is safe.
 
@@ -40,7 +42,7 @@ As a data scientist my interest lies in drawing insights from the data. In the p
 [Ethical Data Scientist](https://towardsdatascience.com/5-principles-for-big-data-ethics-b5df1d105cd3)
 
 
-#### While developers cannot predict everything, they should be able to anticipate common discriminatory harms. What are examples of such harms? What might companies do to minimize these risks?
+<span style="color:blue; font-family: Georgia;font-size:1.5em;">While developers cannot predict everything, they should be able to anticipate common discriminatory harms. What are examples of such harms? What might companies do to minimize these risks? </span>
 
 
 Anticipating possible harms that a new technology can have is easier said than done. Based on the business requirements the companies put more effort to improve the model accuracy and subsequent revenue inflow rather than having board meetings to decide what social impact the new technology is likely to have. For instance when the world had come together to increase the participation of women in the corporate world, The most hyped application of making the hiring process automated was in fact discriminating against the women. Amazon built an AI tool to hire people but had to shut it down because it was discriminating against women [URL](https://www.businessinsider.com/amazon-built-ai-to-hire-people-discriminated-against-women-2018-10).
@@ -64,7 +66,10 @@ Some efforts the companies can make are
 - Train the model in a way that if the probability of classification is low the prediction is a new category :  `Other` which will be a neutral response.  
 
 
-#### Just because a technological capacity exists, does that mean it should be pursued? What factors should companies take into account when determining whether or not to launch a product?
+
+<span style="color:blue; font-family: Georgia;font-size:1.5em;">Just because a technological capacity exists, does that mean it should be pursued? What factors should companies take into account when determining whether or not to launch a product? </span>
+
+ 
 
 In my opinion any invention if pursued wisely can bring more welfare than harm. Technological advancements have made human life much simpler be it healthcare, communication or transportation.   
 Its by trial and error that we improve. If something fails it teaches a lesson. The onus lies on the companies, some of the efforts the companies can make before launching a product are:
