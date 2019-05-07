@@ -58,12 +58,9 @@ Here is a glimpse of some good old days from My Schlumberger Trainings and Appre
 
 *Appreciation Letter from Japanese Drilling Company*
 
-![](../imgs/PbS_Letter.JPG)
-
-*Performed by Schlumberger Award*
 <br>
 
-![](../imgs/PbS_Letter.JPG)
+![](../imgs/PbS_Letter.jpg)
 
 *Performed by Schlumberger Award*
 <br>
