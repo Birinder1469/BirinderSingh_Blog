@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Predicting Income at Scale with Heroku"
-date:   2019-03-17
+date:   2019-04-26
 excerpt: "Machine Learning"
 tag:
 - sample post
