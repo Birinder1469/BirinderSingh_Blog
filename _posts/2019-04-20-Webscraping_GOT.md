@@ -3,11 +3,12 @@ layout: post
 title:  "Web scraping on Game Of Thrones"
 date:   2019-04-20
 excerpt: "Web Scraping"
-feature: beautiful_soup.jpeg
 tag:
 - sample post
 - post
 - images
+- feature
+feature: ../imgs/beautiful_soup.jpeg
 comments: true
 ---
 
