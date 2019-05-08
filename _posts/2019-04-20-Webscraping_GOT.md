@@ -8,7 +8,7 @@ tag:
 - post
 - images
 - feature
-feature: ![](../imgs/beautiful_soup.jpg)
+feature: https://i.ytimg.com/vi/ng2o98k983k/maxresdefault.jpg
 comments: true
 ---
 
