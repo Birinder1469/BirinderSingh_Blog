@@ -81,7 +81,7 @@ The DataFrame looks like this :
   <img src="../imgs/Game_of_Thrones_title_card.jpg">
 </p>
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">The code is avalialble on my GitHub repository: [GitHub Repository](https://github.com/Birinder1469/web_scraping_GOT)</span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">The code is available on my GitHub repository: [GitHub Repository](https://github.com/Birinder1469/web_scraping_GOT)</span>
 <br>
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Reference</span>
 
