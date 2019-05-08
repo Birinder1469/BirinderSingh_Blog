@@ -8,7 +8,7 @@ tag:
 - post
 - images
 - feature
-feature: https://i.ytimg.com/vi/ng2o98k983k/maxresdefault.jpg
+feature: https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Game_of_Thrones_title_card.jpg/250px-Game_of_Thrones_title_card.jpg
 comments: true
 ---
 
