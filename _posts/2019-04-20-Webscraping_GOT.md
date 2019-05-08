@@ -14,19 +14,16 @@ comments: true
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">
 The season 8 of the Game Of Thrones is the topic of discussion these days. While discussing on the lunch table a friend gave me a challenge to list all the episodes of GOT for $1000. I am a GOT fan but failed to recite all the episode names. When i came back to my room i decided the check all the episode names. Again with Data Science tool box in hand i thought of doing something fancy. She had asked me the episode names, I scraped: <br> </span>
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">
-1. Episode names for all 8 seasons <br>
-2. Number of viewers for each episode <br>
-3. Duration of each episode </span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">1. Episode names for all 8 seasons.</span> <br>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">2. Number of viewers for each episode.</span> <br>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">3. Duration of each episode </span>
 <br>
 
 <br>
 
-Extracting season, episode name, Number of US viewers and the URL of wikipedia page for each episode.
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">Extracting season, episode name, Number of US viewers and the URL of wikipedia page for each episode.</span>
 
 ```python
-
-
 got_request=requests.get('https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes')
 got=BeautifulSoup(got_request.text)
 
@@ -59,11 +56,9 @@ GameOfThrones=pd.DataFrame({'Seasons':seasons,'Title':titles,'Viewers (Millions)
 
 
 
-Follow the URL of each episode wikipedia page and extracting the running time for each episode.
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">Follow the URL of each episode wikipedia page and extracting the running time for each episode.</span>
 
 ```python
-
-
 duration_list=[]
 
 for url_link in GameOfThrones.url:
@@ -86,7 +81,8 @@ This is just sample, actual DataFrame contains the details for all the episodes 
   <img src="../imgs/Game_of_Thrones_title_card.jpg">
 </p>
 
-
+The code is avalialble on my GitHub repository: [GitHub Repository](https://github.com/Birinder1469/web_scraping_GOT)
+<br>
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Reference</span>
 
 1. [Game of Thrones Wikipedia](https://en.wikipedia.org/wiki/Game_of_Thrones) <br>
