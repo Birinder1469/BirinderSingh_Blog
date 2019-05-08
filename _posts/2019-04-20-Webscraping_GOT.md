@@ -8,7 +8,7 @@ tag:
 - post
 - images
 - feature
-feature: ../imgs/beautiful_soup.jpeg
+feature: ../imgs/beautiful_soup.jpg
 comments: true
 ---
 
