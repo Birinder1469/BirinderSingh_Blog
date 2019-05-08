@@ -18,7 +18,7 @@ comments: true
 
 ![](../imgs/image_conv_concept.PNG)
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">In the below images the pictures are of size 200 by 200.</span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">The pictures below are of size 200 by 200.</span>
 
 
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Horizontal filter</span>
@@ -76,7 +76,7 @@ The beauty of the horizontal filter as you can imagine would most average the ve
 
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Edge detection filter</span>
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">Edge detection filter aims at identifying points in a digital image at which the image brightness changes sharply or, more formally, has discontinuities. For every point as you can see the filter below it finds the contrast with the neighboring points. Since the sum of the filter is 0 for any other portion of the image the sum will b zero but for the edges the pixel value will be very high compared to the surrounding pixels.</span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">Edge detection filter aims at identifying points in a digital image at which the image brightness changes sharply or, more formally, has discontinuities. For every point as you can see the filter below it finds the contrast with the neighboring points. Since the sum of the filter is 0 for any other portion of the image the sum will be zero but for the edges the pixel value will be very high compared to the surrounding pixels.</span>
 
 <br>
 
