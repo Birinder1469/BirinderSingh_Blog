@@ -75,13 +75,13 @@ The DataFrame looks like this :
 
 ![](../imgs/GOTR_dataframe.PNG)
 
-This is just sample, actual DataFrame contains the details for all the episodes till date.
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">This is just sample, actual DataFrame contains the details for all the episodes till date.</span>
 
 <p align="center">
   <img src="../imgs/Game_of_Thrones_title_card.jpg">
 </p>
 
-The code is avalialble on my GitHub repository: [GitHub Repository](https://github.com/Birinder1469/web_scraping_GOT)
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">The code is avalialble on my GitHub repository: [GitHub Repository](https://github.com/Birinder1469/web_scraping_GOT)</span>
 <br>
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Reference</span>
 
