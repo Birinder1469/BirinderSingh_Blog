@@ -8,7 +8,7 @@ tag:
 - post
 - images
 - feature
-feature: ../imgs/beautiful_soup.jpg
+feature: ![](../imgs/beautiful_soup.jpg)
 comments: true
 ---
 
@@ -55,8 +55,6 @@ GameOfThrones=pd.DataFrame({'Seasons':seasons,'Title':titles,'Viewers (Millions)
 
 
 ```
-
-
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">Follow the URL of each episode wikipedia page and extracting the running time for each episode.</span>
 
