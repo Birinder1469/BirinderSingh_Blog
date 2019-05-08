@@ -13,8 +13,8 @@ comments: true
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Motivation</span>
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">
-The season 8 of the Game Of Thrones is the topic of discussion these days. While discussing on the lunch table a friend gave me a challenge to list all the episodes of GOT for $1000. I am a GOT fan but failed to recite all the episode names. When i came back to my room i decided the check all the episode names. Again with Data Science tool box in hand i thought of doing something fancy. She had asked me the episode names, I scraped: <br>
-1. Episode names for all 8 seasons <br>
+The season 8 of the Game Of Thrones is the topic of discussion these days. While discussing on the lunch table a friend gave me a challenge to list all the episodes of GOT for $1000. I am a GOT fan but failed to recite all the episode names. When i came back to my room i decided the check all the episode names. Again with Data Science tool box in hand i thought of doing something fancy. She had asked me the episode names, I scraped: <br> </span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">1. Episode names for all 8 seasons <br>
 2. Number of viewers for each episode <br>
 3. Duration of each episode <br>
 </span>
