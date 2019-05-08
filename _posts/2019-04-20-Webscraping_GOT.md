@@ -21,9 +21,9 @@ The season 8 of the Game Of Thrones is the topic of discussion these days. While
 <br>
 
 
-```javascript
+```python
 
-# Extracting season, episode name, Number of US viewers and the URL of wikipedia page for each episode.
+## Extracting season, episode name, Number of US viewers and the URL of wikipedia page for each episode.
 
 got_request=requests.get('https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes')
 got=BeautifulSoup(got_request.text)
@@ -57,9 +57,9 @@ GameOfThrones=pd.DataFrame({'Seasons':seasons,'Title':titles,'Viewers (Millions)
 
 
 
-```javascript
+```python
 
-# Follow the URL of each episode wikipedia page and extracting the running time for each episode.
+## Follow the URL of each episode wikipedia page and extracting the running time for each episode.
 
 duration_list=[]
 
