@@ -14,11 +14,8 @@ comments: true
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">
 I have been in the state where I could not distinguish among the Population, Sample and Sampling distributions <br> </span>
-<br>
-
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">Let us create a synthetic dataset to investigate how much time on an average the people of a locality spend excercising. The below code creates a virually simulated population data (excercise_data) where the response variable is the number of hours spent per week on excercising by each of the 1,000,000 residents. We also create an resident_id column with a unique number for each person in the data set. The hours of excercising come from two separate normal distributions with different mean and standard deviations.</span>
-
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">The distribution of hours spent excercising by 1000000 residents is the population distribution. Let us see how it looks.</span>
 
@@ -58,6 +55,7 @@ I have been in the state where I could not distinguish among the Population, Sam
   <img src="../imgs/distributions_comparisons.PNG">
 </p>
 
+<span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Summary</span>
 
 - <span style="color:black; font-family: Tahoma;font-size:1.1em;">First is the population distribution, second plot is the sample of size 100 randomly chosen out of the population. Third is the plot of the means of the 10000 samples collected out of the population where each sample is of size 100.</span>
 
