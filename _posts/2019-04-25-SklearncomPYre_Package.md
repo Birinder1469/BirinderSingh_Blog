@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  " The Machine Learning Package - SklearncomPYre"
-date:   2019-02-18
+date:   2019-04-25
 excerpt: "Python Package"
 tag:
 - sample post
