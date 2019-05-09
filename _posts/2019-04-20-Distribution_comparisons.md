@@ -19,9 +19,9 @@ I have been in the state where I could not distinguish among the Population, Sam
 
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Analysis</span>
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">Let us create a synthetic dataset to investigate how much time on an average the people of a locality spend excercising. The below code creates a virually simulated population data (excercise_data) where the response variable is the number of hours spent per week on excercising by each of the 1,000,000 residents. We also create an resident_id column with a unique number for each person in the data set. The hours of excercising come from two separate normal distributions with different mean and standard deviations.</span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">Let us create a synthetic dataset to investigate how much time on an average the people of a locality spend exercising. The below code creates a virtually simulated population data (exercise_data) where the response variable is the number of hours spent per week on exercising by each of the 1,000,000 residents. We also create an resident_id column with a unique number for each person in the data set. The hours of exercising come from two separate normal distributions with different mean and standard deviations.</span>
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">The distribution of hours spent excercising by 1000000 residents is the population distribution. Let us see how it looks.</span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">The distribution of hours spent exercising by 1000000 residents is the population distribution. Let us see how it looks.</span>
 
 <br>
 <p align="center">
@@ -30,7 +30,7 @@ I have been in the state where I could not distinguish among the Population, Sam
 <br>
 
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">From the population we take sample of size 100 (randomly choose 100 residents). Now we can plot the hours of excercise for these 100 residents. This would be our Sample distribution.</span>
+<span style="color:black; font-family: Tahoma;font-size:1.1em;">From the population we take sample of size 100 (randomly choose 100 residents). Now we can plot the hours of exercise for these 100 residents. This would be our Sample distribution.</span>
 
 
 
@@ -65,10 +65,10 @@ I have been in the state where I could not distinguish among the Population, Sam
 - <span style="color:black; font-family: Tahoma;font-size:1.1em;">First is the population distribution, second plot is the sample of size 100 randomly chosen out of the population. Third is the plot of the means of the 10000 samples collected out of the population where each sample is of size 100.</span>
 
 
-- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The population distribution is showing the hours spent excercising by 1000000 residents vs the count of the residents in different bins. The mean of the population distribution is 7.67 Hours.</span>
+- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The population distribution is showing the hours spent exercising by 1000000 residents vs the count of the residents in different bins. The mean of the population distribution is 7.67 Hours.</span>
 
 
-- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The Sample distribution comprises of 100 residents and we see the hours spent excercising by each of them. The mean for this case could vary a lot and it is 7.9 Hours for the sample above.</span>
+- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The Sample distribution comprises of 100 residents and we see the hours spent exercising by each of them. The mean for this case could vary a lot and it is 7.9 Hours for the sample above.</span>
 
 
 - <span style="color:black; font-family: Tahoma;font-size:1.1em;">The sampling distribution shows a normal distribution with its mean same as the mean of the population. In sampling distribution we have 10000 samples of size 100 whose mean each has been computed and plotted on X axis.</span>
