@@ -15,8 +15,6 @@ comments: true
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">
 I have been in the state where I could not distinguish among the Population, Sample and Sampling distributions. In the following synthetic experiment I will try to distinguish between them.</span>
 
-<br>
-
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Analysis</span>
 
 <span style="color:black; font-family: Tahoma;font-size:1.1em;">Let us create a synthetic dataset to investigate how much time on an average the people of a locality spend exercising. The below code creates a virtually simulated population data (exercise_data) where the response variable is the number of hours spent per week on exercising by each of the 1,000,000 residents. We also create an resident_id column with a unique number for each person in the data set. The hours of exercising come from two separate normal distributions with different mean and standard deviations.</span>
