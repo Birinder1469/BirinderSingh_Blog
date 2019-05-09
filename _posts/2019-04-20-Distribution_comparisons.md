@@ -2,7 +2,7 @@
 layout: post
 title:  "Comparison of Distributions "
 date:   2019-04-20
-excerpt: "Population Sample and Sampling distributions comparison"
+excerpt: "Population, Sample and Sampling distribution comparison"
 tag:
 - sample post
 - post
