@@ -6,9 +6,7 @@ excerpt: "Properties of statistical distributions (mean, standard deviation, med
 tag:
 - sample
 - post
-- project
 comments: true
-project: true
 ---
 I was elected as the mayor of a small village in 1850. On the first day of my office I decided with my staff to prepare a report to analyze the age distribution of the population of my village.  My staff went on a survey, met all the people in the village and compiled their age in a record book. Upon analyzing I noticed that my village had 101 people in total and the age of the youngest member was 1 Year, and the oldest person had lived for 102 years.
 

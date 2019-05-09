@@ -8,9 +8,7 @@ tag:
 - post
 - images
 - test
-- project
 comments: true
-project: true
 ---
 
 ## Geophysicist
