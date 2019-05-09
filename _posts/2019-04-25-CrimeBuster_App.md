@@ -7,7 +7,9 @@ tag:
 - sample post
 - post
 - images
+- project
 comments: true
+project: true
 ---
 
 ## My first Shiny App

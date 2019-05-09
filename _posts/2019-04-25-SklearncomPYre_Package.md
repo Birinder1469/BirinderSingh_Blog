@@ -7,7 +7,9 @@ tag:
 - sample post
 - post
 - images
+- project
 comments: true
+project: true
 ---
 <h5 align="center">
  <br>
