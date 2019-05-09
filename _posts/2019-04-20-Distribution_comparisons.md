@@ -59,13 +59,13 @@ I have been in the state where I could not distinguish among the Population, Sam
 </p>
 
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">First is the population distribution, second plot is the sample of size 100 randomly chosen out of the population. Third is the plot of the means of the 10000 samples collected out of the population where each sample is of size 100.</span>
+- <span style="color:black; font-family: Tahoma;font-size:1.1em;">First is the population distribution, second plot is the sample of size 100 randomly chosen out of the population. Third is the plot of the means of the 10000 samples collected out of the population where each sample is of size 100.</span>
 
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">The population distribution is showing the hours spent excercising by 1000000 residents vs the count of the residents in different bins. The mean of the population distribution is 7.67 Hours.</span>
+- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The population distribution is showing the hours spent excercising by 1000000 residents vs the count of the residents in different bins. The mean of the population distribution is 7.67 Hours.</span>
 
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">The Sample distribution comprises of 100 residents and we see the hours spent excercising by each of them. The mean for this case could vary a lot and it is 7.9 Hours for the sample above.</span>
+- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The Sample distribution comprises of 100 residents and we see the hours spent excercising by each of them. The mean for this case could vary a lot and it is 7.9 Hours for the sample above.</span>
 
 
-<span style="color:black; font-family: Tahoma;font-size:1.1em;">The sampling distribution shows a normal distribution with its mean same as the mean of the population. In sampling distribution we have 10000 samples of size 100 whose mean each has been computed and plotted on X axis.</span>
+- <span style="color:black; font-family: Tahoma;font-size:1.1em;">The sampling distribution shows a normal distribution with its mean same as the mean of the population. In sampling distribution we have 10000 samples of size 100 whose mean each has been computed and plotted on X axis.</span>
