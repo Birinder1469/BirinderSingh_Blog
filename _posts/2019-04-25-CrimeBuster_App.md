@@ -8,6 +8,7 @@ tag:
 - post
 - images
 comments: true
+project: true
 ---
 
 ## My first Shiny App

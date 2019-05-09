@@ -9,6 +9,7 @@ tag:
 - images
 - test
 comments: true
+project: true
 ---
 
 ## Geophysicist
