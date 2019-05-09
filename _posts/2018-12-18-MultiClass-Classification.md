@@ -8,7 +8,6 @@ tag:
 - post
 - images
 comments: true
-project: true
 ---
 
 **Introduction**

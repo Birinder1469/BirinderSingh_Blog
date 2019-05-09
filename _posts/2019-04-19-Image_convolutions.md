@@ -8,7 +8,6 @@ tag:
 - post
 - images
 comments: true
-project: true
 ---
 
 <span style="color:blue;  font-family: Helvetica;font-size:1.5em;">Motivation</span>
