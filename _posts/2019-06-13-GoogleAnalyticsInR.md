@@ -28,7 +28,7 @@ suppressPackageStartupMessages(library(forecast)) # for the time series predicti
 
 ##### I have not shown here how I authorised the RGoogleAnalytics package to fetch data from my Google Analytics account as it contains some sensitive information of my account.
 
-```{r,eval=T}
+```{r}
 # Load the token
 load("./token_file")
 # Validate the token
@@ -37,7 +37,7 @@ ValidateToken(token)
 
 Lets make a query to get data between April 1, 2019 and June 09, 2019 from the Google Analytics when my blogpost was active also lets plot and see how the distributions looks like.
 
-```{r, echo=F,eval=TRUE,message = FALSE, warning = FALSE,error = FALSE}
+```{r}
 
 
 query.init <- Init(start.date = "2019-04-01",
