@@ -95,11 +95,11 @@ I also made a python package harnessing the power of scikit-learn, combining it 
 
 Upon completion of the program I got a job on the last day of my program. Overall I had amazing experience and the learning curve despite being very steep was worth putting an effort. I was interviewed by UBC Master of Data Science team and it has been shared on the University website. [Interview_URL](https://masterdatascience.ubc.ca/student-success-stories/mds-spotlight-meet-birinder-singh-mds-vancouver-%E2%80%93-class-2019)
 
-![UBC_Interview](../imgs/ubc_interview.png)
+![UBC_Interview](../imgs/ubc_interview.PNG)
 
 Upon finishing the program I have started working as Data Scientist at Integra Data and Analytic Solutions based in Calgary, Alberta.
 
-![Integradas](../imgs/Integradas.png)
+![Integradas](../imgs/Integradas.PNG)
 
 
 
