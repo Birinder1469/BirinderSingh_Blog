@@ -41,4 +41,4 @@ This add-on allows you to directly download multiple pictures from google search
 With not much effort I collected around 100 images for each of these Lakes.
 
 
-*Under progress*
+*Under progress* ........
