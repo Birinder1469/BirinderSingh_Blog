@@ -105,5 +105,5 @@ Upon finishing the program I have started working as Data Scientist at Integra D
 
 
 #### Contact :
-Please take out some time to check some of my work on my GitHub profile :
+Please feel free to checkout my GitHub:
 [BirinderSingh_GitHub](https://github.com/Birinder1469)
