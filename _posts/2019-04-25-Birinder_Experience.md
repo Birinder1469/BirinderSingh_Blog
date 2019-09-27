@@ -11,6 +11,7 @@ tag:
 comments: true
 ---
 
+
 ## Geophysicist
 #### Indian Institute of Technology, Roorkee
 
@@ -18,6 +19,7 @@ After qualifying the IIT JEE(Indian Institute of Technology [Joint Entrance Exam
 My experiences are shared on the University website [My Experiences](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet).
 For my final year thesis I worked on the Estimation of attenuation characteristics of Aswan reservoir region, Egypt under the supervision of Prof Sagarika Mukhopadhyay, Department of Earth Sciences, IIT Roorkee. For the first time I got a chance to work on the large volume of data comprising several earthquake records observed in the region of interest over last couple of decades. We were wasting lot of time analyzing these earthquake records manually. To make the procedure efficient I used MATLAB to reduce manual editing and manipulation of excel files. The task which otherwise would have taken more than a month and if there were to bring any change then god knows how much more could now be done in less than a week using these MATLAB scripts.
 After a year long hard work we successfully published our work in the prestigious Journal of Seismology [Estimation of attenuation characteristics of Aswan reservoir region, Egypt](https://link.springer.com/article/10.1007/s10950-015-9511-2).
+
 
 ## Petrophysicist and Well Placement Engineer
 #### Schlumberger Asia Services Ltd (2013-2016)
@@ -71,7 +73,7 @@ Here is a glimpse of some good old days from My Schlumberger Trainings and Appre
 
 
 
-## Data Scientist in Training
+## Data Science Training
 #### The University of British Columbia, Vancouver (2018-2019)
 
 I am currently part of the 2018 - 2019 cohort of the Master of Data Science(MDS) at The University of British Columbia.
@@ -90,6 +92,17 @@ The detailed curriculum is available on the program website : [Curriculum](https
 I made a Shiny dashboard `Crime Buster App` which is a classic tool for anyone who wants insights into regional crime situations in the United States of America. Potential users include citizens concerned with the safety of their local area or someone moving to a new location. This app is also potentially useful for sheriffs planning the deployment of their police force by providing visual depictions of past crime data [Blogpost_On_Shinydashbard](https://birinder1469.github.io/BirinderSingh_Blog/CrimeBuster_App/)
 
 I also made a python package harnessing the power of scikit-learn, combining it with pandas dataframes and matplotlib plots for easy, breezy, and beautiful machine learning exploration. The Python package facilitates efficient comparisons of machine learning classifiers and regression models [Blogpost_On_SklearncomPYre_Package](https://birinder1469.github.io/BirinderSingh_Blog/SklearncomPYre_Package/)
+
+Upon completion of the program I got a job on the last day of my program. Overall I had amazing experience and the learning curve despite being very steep was worth putting an effort. I was interviewed by UBC Master of Data Science team and it has been shared on the University website. [Interview_URL](https://masterdatascience.ubc.ca/student-success-stories/mds-spotlight-meet-birinder-singh-mds-vancouver-%E2%80%93-class-2019)
+
+![UBC_Interview](../imgs/ubc_interview.png)
+
+Upon finishing the program I have started working as Data Scientist at Integra Data and Analytic Solutions based in Calgary, Alberta.
+
+![Integradas](../imgs/Integradas.png)
+
+
+
 
 #### Contact :
 Please take out some time to check some of my work on my GitHub profile :
