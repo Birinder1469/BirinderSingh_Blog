@@ -85,7 +85,7 @@ In my case I used the 1st option. I simple organized different folders for train
 
 ![](../imgs/lakes_folders_edited.PNG)
 
-## Model building and validation
+## Loading data in Google Colab
 
 To do nearly everything in this course, we need access to a computer with an NVIDIA GPU.
 Several options have been discussed in the course at [platform_setup_url](https://course.fast.ai/index.html). Setting up a computer takes time and energy, I would rather concentrate my energy to focus on deep learning right now. Therefore, renting access to a computer that already has everything I need preinstalled and ready to go sounds more reasonable. Since I have been working on Google Colab for quite some time, I decided to build the model on Google Colab which comes with a free GPU instance.
@@ -105,13 +105,29 @@ data = ImageDataBunch.from_folder(path = '/content/lakes_detection_final',
         test="test").normalize()
 ```
 
-In the above code chunk we created a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. I have  Finally the images have been normalized in a way that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for RGB channels. I have intentionally not flipped the images as I think we wont add lot of value by flipping the image of Lakes while training the model.
+In the above code chunk we created a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. I have  Finally the images have been normalized in a way that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for RGB channels. I have intentionally not flipped the images as I think we wont add lot of value by flipping the image of Lakes while training the model. To know more abouot the trainsforms which can be applied to the dataset please follow the url: [get_transforms](https://docs.fast.ai/vision.transform.html).
 
 Lets look at some of the train images:
 
 ![](../imgs/trainimages_lakes.PNG)
 
 We notice the class of each image is displayed on the top of the image. This class label has been identified based on the folder structure. Any image in the Moraine folder will belong to the Lake Moraine and so on.
+
+
+We are dealing with 5 different lakes here. Lets confirm by looking at the dataset we just loaded. As we notice below our dataset has 5 labels viz. Lake Emerald, Grassi, Louise, Moraine and Minnewanka.
+
+![](../imgs/labels_lakes.PNG)
+
+## Model Training
+
+There are two options we have for training the model. The first is to train the model from scratch and the other is to utilize what we call Transfer learning. The concern with first approach is that we don't have sufficient data to be able to catch the intricate features.
+
+
+
+
+
+
+
 
 
 ## Testing the performance on the new data
