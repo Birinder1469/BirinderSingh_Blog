@@ -25,7 +25,7 @@ The number of lines of codes in fastai is generally 1/6th those in Keras.
 
 ## Motivation
 
-The 1st tutorial video was based on Pet detection which is classification of 25 breeds of dogs and 12 breeds of cats. Upon completion I decided to execute Image classification which was more relevant to me. I had recently moved to Calgary and already fallen in love with the Banff area which is home to several beautiful lakes. I realized whenever some one showed me a picture of a any of those lakes I could hardly tell which Lake that picture belonged to. I decided to build a classification problem for these Lakes. I choose the lakes I had visited viz.
+The 1st tutorial video was based on Pet detection which is classification of 25 breeds of dogs and 12 breeds of cats.  Gone are the days when we were fascinated with Dog and Cat classification, this problem has taken it to the next level by detecting even more intricate features detection hence the name fine grained image classification. Upon completion I decided to execute Image classification which was more relevant to me. I had recently moved to Calgary and already fallen in love with the Banff area which is home to several beautiful lakes. Whenever some one showed me a picture of a any of those lakes I could hardly tell which Lake that picture belonged to. I realized for me to be able to distinguish these lakes from each other I would need to identify more intricate differences similar to what Jeremy did for cat, dog breed identification. I decided to build a classification problem for these Lakes. I choose the lakes I had visited viz.
 
 1. Lake Moraine
 2. Lake Louise
@@ -33,7 +33,7 @@ The 1st tutorial video was based on Pet detection which is classification of 25 
 4. Lake Minnewanka
 5. Lake Emerald
 
-The first task was to collect the Images of these lakes to train our model. I used the add-on for Mozilla Firefox
+The first task was to collect the Images of these lakes to train my model. I used the add-on for Mozilla Firefox
 
 ![Google Image Downloader](../imgs/google_image_downloader.PNG)
 
