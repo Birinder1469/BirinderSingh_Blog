@@ -98,7 +98,7 @@ Lets load the dataset and create a Image Data Bunch.
 
 batch_size= 16
 
-data = ImageDataBunch.from_folder(path = '/content/lakes_detection_final',
+data = ImageDataBunch.from_folder(path = 'parent_directory/',
         ds_tfms=get_transforms(do_flip=False),
         size=224,
         bs=batch_size,
