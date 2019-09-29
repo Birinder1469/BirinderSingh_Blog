@@ -83,7 +83,7 @@ In the last five factory methods, a random split is performed between train and 
 In my case I used the 1st option. I simple organized different folders for train, validation and test data.
 
 
-![](../imgs/lakes_folders.PNG)
+![](../imgs/lakes_folders_edited.PNG)
 
 ## Model building and validation
 
