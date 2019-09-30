@@ -176,7 +176,11 @@ The `prediction` is the category of lake that has been predicted by the model.
 `actual` refers to the actual category of the lake. The `loss` is the value of the loss while predicting the category and the `probability` is the probability of the image belonging to the actual category of the lake.
 For instance for the first image we see:
 
-``Grassi/Emerald/5.93/0.00`` this means our model predicted this image is from ``Grassi Lake``. In reality the image is from `Emerald lake`. The `loss` while detecting this was 5.93. While predicting this Image our model gave 0 `probability` to the actual class which was Emerald lake.   
+``Grassi/Emerald/5.93/0.00`` this means our model predicted this image is from ``Grassi Lake``. In reality the image is from `Emerald lake`. The `loss` while detecting this was 5.93. While predicting this Image our model gave 0 `probability` to the actual class which was Emerald lake.
+
+Lets see the [Confusion matrix](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html) for the model performance. The diagonal entries are the correct predictions and non diagonal elements signify how much our model has incorrectly predicted for each category. We notice the model has performed poorly on the detection of Emerald lake. The Grassi lake has been predicted very well. This could be because of the input images we have used for training the model.    
+
+![](../imgs/lakes_confusion_matrix.PNG)
 
 
 
