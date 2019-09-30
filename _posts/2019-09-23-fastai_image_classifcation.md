@@ -120,12 +120,63 @@ We are dealing with 5 different lakes here. Lets confirm by looking at the datas
 
 ## Model Training
 
-There are two options we have for training the model. The first is to train the model from scratch and the other is to utilize what we call Transfer learning. The concern with first approach is that we don't have sufficient data to be able to catch the intricate features.
+There are two options we have for training the model. The first is to train the model from scratch which includes designing the network architecture ourselves and the other is to utilize what we call the [Transfer learning](https://docs.fast.ai/vision.learner.html).
+Transfer learning is a technique where we use a model trained on a very large dataset (usually ImageNet in computer vision) and then adapt it to our own dataset.
+
+In our case we will use the ResNet34(contains 34 layers) architecture with the model weights trained on the ImageNet dataset and replace the last few layers to suite our specific case. Our aim is the have the last layer give us the probability of the input image being any of the 5 labels of lakes. The one with highest probability will be chosen as the prediction for the input image.
+
+```
+# Download the ResNet34 model weights
+
+learn = cnn_learner(data, models.resnet34, metrics=error_rate)
+
+# We will train for 4 epochs (4 cycles through all our data).
+
+learn.fit_one_cycle(4)
+
+```
+
+The 'cnn_learner' factory method helps to automatically get a pretrained model from a given architecture with a custom head that is suitable for our data. We train our model for 4 epochs. An epoch is defined as a look through the data once. 4 Epochs means we have 4 cycles through our data. The results are as shown below.
+We notice that the error_rate has fallen to ~28% or we can say our model is around 72% accurate. This is not a great accuracy.
+
+![](../imgs/resnet34_4cycles.PNG)
 
 
+## Model Evaluation
+
+```
+# Look for the images with top losses
+
+interp = ClassificationInterpretation.from_learner(learn)
+losses,idxs = interp.top_losses()
+
+interp.plot_top_losses(9, figsize=(15,11))
+```
+
+Below are the top losses and the corresponding Images with highest losses.
+
+```
+# Top losses
+
+tensor([5.9310, 3.4642, 3.3008, 2.6140, 2.4885, 2.3212, 2.3197, 1.9972, 1.9669,
+        1.9248, 1.7802, 1.7560, 1.6066, 1.5754, 1.3843, 1.3363, 1.2030, 1.1969,
+        1.0201, 0.9424, 0.9262, 0.7708, 0.7560, 0.7550, 0.7249, 0.6982, 0.6869,
+        0.5669, 0.5280, 0.5184, 0.5173, 0.5171, 0.4213, 0.3496, 0.3265, 0.3263,
+        0.2940, 0.2421, 0.2144, 0.2093, 0.1944, 0.1845, 0.1601, 0.1589, 0.1545,
+        0.1488, 0.1342, 0.1334, 0.1256, 0.1232, 0.1000, 0.0721, 0.0721, 0.0672,
+        0.0643, 0.0585, 0.0530, 0.0515, 0.0413, 0.0336, 0.0309, 0.0307, 0.0290,
+        0.0237, 0.0230, 0.0223, 0.0191, 0.0181, 0.0117, 0.0090, 0.0072])
+```
 
 
+![](../imgs/predicted_top_losses.PNG)
 
+On top of the Images we have the ``prediction/actual/loss/probability``.
+The `prediction` is the category of lake that has been predicted by the model.    
+`actual` refers to the actual category of the lake. The `loss` is the value of the loss while predicting the category and the `probability` is the probability of the image belonging to the actual category of the lake.
+For instance for the first image we see:
+
+``Grassi/Emerald/5.93/0.00`` this means our model predicted this image is from ``Grassi Lake``. In reality the image is from `Emerald lake`. The `loss` while detecting this was 5.93. While predicting this Image our model gave 0 `probability` to the actual class which was Emerald lake.   
 
 
 
