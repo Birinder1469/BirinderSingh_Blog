@@ -105,7 +105,19 @@ data = ImageDataBunch.from_folder(path = 'parent_directory/',
         test="test").normalize()
 ```
 
+
+
+
+
 In the above code chunk we created a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. I have  Finally the images have been normalized in a way that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for RGB channels. I have intentionally not flipped the images as I think we wont add lot of value by flipping the image of Lakes while training the model. To know more abouot the trainsforms which can be applied to the dataset please follow the url: [get_transforms](https://docs.fast.ai/vision.transform.html).
+
+
+This is how the Image Data Bunch object looks like.
+
+![](../imgs/imagedatabunch.PNG)
+
+We can see the number of Images in the Train, Valid and Test dataset.
+
 
 Lets look at some of the train images:
 
@@ -184,24 +196,27 @@ Lets see the [Confusion matrix](https://scikit-learn.org/stable/auto_examples/mo
 
 ## Model Improvement
 
-In the above model training we took the model weights from the ResNet34 just replaced the last couple of fully connected layers to suit our dataset. We had just trained the last couple of layers. Now lets train the model from the beginning. We will use the ResNet34 architecture but the weights will be trained from scratch.
+In the above model training we took the model weights from the ResNet34 just replaced the last couple of fully connected layers to suit our dataset. We had just trained the last couple of layers. Now lets train the model from the beginning. We will use the ResNet34 architecture but the weights will be trained from scratch. There is another important parameter that we can improve upon, learning rate. Below we see how the loss varies with different learning rates. The default learning rate is 1e-3 which seems to correspond to the least loss. Changing the learning rate might not add any significant value but we can also try training the model weights from scratch specific to our dataset. Using the `unfreeze()` method we can instruct the model to train the weights for the entire network.
+
+![](../imgs/learning_rate_lakes.PNG)
+
+After unfreezing the network and training from scratch we get the following results.
+
 
 
 ![](../imgs/lakes_model_improved.PNG)
 
 
 
+![](../imgs/confusion_matrix_lr_imprved.PNG)
 
 
 
+We notice significant improvement in the model performance. The error_rate has fallen from 28% to 14%. This indicates accuracy of 86%.
 
-![](../imgs/learning_rate_lakes.PNG)
+## Prediction on the Test dataset
 
-
-
-
-## Testing the performance on the new data
-
+In the beginning kept some images for testing in the test folder. 
 
 
 
