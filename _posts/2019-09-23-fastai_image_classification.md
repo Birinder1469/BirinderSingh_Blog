@@ -216,7 +216,7 @@ We notice significant improvement in the model performance. The error_rate has f
 
 ## Prediction on the Test dataset
 
-In the beginning kept some images for testing in the test folder. 
+In the beginning kept some images for testing in the test folder.
 
 
 
