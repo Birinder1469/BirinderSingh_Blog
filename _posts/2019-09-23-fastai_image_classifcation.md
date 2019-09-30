@@ -182,6 +182,21 @@ Lets see the [Confusion matrix](https://scikit-learn.org/stable/auto_examples/mo
 
 ![](../imgs/lakes_confusion_matrix.PNG)
 
+## Model Improvement
+
+In the above model training we took the model weights from the ResNet34 just replaced the last couple of fully connected layers to suit our dataset. We had just trained the last couple of layers. Now lets train the model from the beginning. We will use the ResNet34 architecture but the weights will be trained from scratch.
+
+
+![](../imgs/lakes_model_improved.PNG)
+
+
+
+
+
+
+
+![](../imgs/learning_rate_lakes.PNG)
+
 
 
 
