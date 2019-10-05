@@ -139,9 +139,10 @@ learn.fit_one_cycle(4)
 ```
 
 The 'cnn_learner' factory method helps to automatically get a pretrained model from a given architecture with a custom head that is suitable for our data. We train our model for 4 epochs. An epoch is defined as a look through the data once. 4 Epochs means we have 4 cycles through our data. The results are as shown below.
-We notice that the error_rate has fallen to ~24% or we can say our model is around 76% accurate. This is not a great accuracy.
 
 ![](../imgs/resnet34_4cycles_final.png)
+
+We notice that the error_rate has fallen to ~24% or we can say our model is around 76% accurate. This is not a great accuracy.
 
 
 ## Model Evaluation
@@ -180,7 +181,7 @@ For instance for the first image we see:
 
 ``Grassi/Emerald/6.07/0.00`` this means our model predicted this image is from ``Grassi Lake``. In reality the image is from `Emerald lake`. The `loss` while detecting this was 6.07. While predicting this Image our model gave 0 `probability` to the actual class which was Emerald lake.
 
-Lets see the [Confusion matrix](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html) for the model performance. The diagonal entries are the correct predictions and non diagonal elements signify how much our model has incorrectly predicted for each category. We notice the model has performed poorly on the detection of Emerald lake. The Grassi lake has been predicted very well. This could be because of the input images we have used for training the model.    
+Lets see the [Confusion matrix](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html) for the model performance. The diagonal entries are the correct predictions and non diagonal elements signify how much our model has incorrectly predicted for each category. We notice the model has performed poorly on the detection of Emerald lake. The Grassi lake on the other hand has been predicted very well. This could be because of the input images we have used for training the model.    
 
 ![](../imgs/lakes_confusion_matrix_final.png)
 
