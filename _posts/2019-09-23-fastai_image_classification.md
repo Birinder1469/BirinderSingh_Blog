@@ -208,9 +208,22 @@ learn.fit_one_cycle(4)
 
 We notice significant improvement in the model performance. The error_rate has fallen from 24% to ~13%. This indicates accuracy of 87%. I notice some randomness in this part where we unfreeze the layers. Every time I train this model I get different results. Most of the time unfreezing is giving me better results than just training the last layers.  I am hoping to have more clarity on this in the subsequent lectures.
 
+## Prediction on test dataset
+
+In the beginning we kept some images in the test dataset which the model has still not seen.
+
+I made predictions on these images and below you can see some of the results.
+
+![](../imgs/prediction_fast_ai.png)
+
+In the above snapshot the `Prediction` corresponds to what the model predicted and the `Actual` is the filename or the actual label. We can see that the model has performed well on most of the images but has not detected the Emerald lake in one of the instances where the actual lake was Emerald but the model predicted it as Louise. Even if we see the confusion matrix of the improved model we notice the model has performed worst in detection of Emerald lake and works well otherwise. There could be a problem with the input dataset for Emerald lake. 
+
+
 We can further try some more complex model architectures. For instance we have used the ResNet34 architecture which contains 34 layers. We can also make use of the ResNet50 architecture which contains 50 layers and can handle more complex images.
 
-This blogpost was based on the first lecture of the course and I am looking forward to interesting topics to be covered down the line.
+This blogpost was based on the first lecture of the course and I am looking forward the rest of the course.
+
+
 
 
 ## Reference:
