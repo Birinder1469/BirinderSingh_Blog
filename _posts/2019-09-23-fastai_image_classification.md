@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "fast.ai Image classification"
+title:  "fast.ai Image classification Birinder Singh"
 date:   2019-09-23
 excerpt: "Computer Vision "
 tag:
