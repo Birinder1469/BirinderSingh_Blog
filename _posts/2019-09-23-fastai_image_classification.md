@@ -106,7 +106,7 @@ This is how the Image Data Bunch object looks like.
 
 ![](../imgs/imagedatabunch.PNG)
 
-We can see the number of Images in the Train, Valid and Test dataset.
+We can see the number of Images in the Train(428), Valid(71) and Test(16) dataset.
 
 
 Lets look at some of the train images:
