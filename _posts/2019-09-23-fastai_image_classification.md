@@ -104,14 +104,14 @@ In the above code chunk we create a Image.DataBunch object with image size 224x2
 
 This is how the Image Data Bunch object looks like.
 
-![](../imgs/imagedatabunch.PNG)
+![](../imgs/imagedatabunch.png)
 
 We can see the number of Images in the Train, Valid and Test dataset.
 
 
 Lets look at some of the train images:
 
-![](../imgs/trainimages_lakes_final.PNG)
+![](../imgs/trainimages_lakes_final.png)
 
 We notice the class of each image is displayed on the top of the image. This class label has been identified based on the folder structure. Any image in the Moraine folder will belong to the Lake Moraine and so on.
 
@@ -141,7 +141,7 @@ learn.fit_one_cycle(4)
 The 'cnn_learner' factory method helps to automatically get a pretrained model from a given architecture with a custom head that is suitable for our data. We train our model for 4 epochs. An epoch is defined as a look through the data once. 4 Epochs means we have 4 cycles through our data. The results are as shown below.
 We notice that the error_rate has fallen to ~24% or we can say our model is around 76% accurate. This is not a great accuracy.
 
-![](../imgs/resnet34_4cycles_final.PNG)
+![](../imgs/resnet34_4cycles_final.png)
 
 
 ## Model Evaluation
