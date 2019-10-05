@@ -104,7 +104,7 @@ In the above code chunk we create a Image.DataBunch object with image size 224x2
 
 This is how the Image Data Bunch object looks like.
 
-![](../imgs/imagedatabunch.png)
+![](../imgs/imagedatabunch.PNG)
 
 We can see the number of Images in the Train, Valid and Test dataset.
 
