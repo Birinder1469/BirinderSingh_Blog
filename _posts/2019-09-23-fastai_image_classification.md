@@ -10,7 +10,7 @@ tag:
 comments: true
 ---
 
-## fast.ai course on Image classification
+## fast.ai course on Image Classification
 ### About the course
 
 While I was looking for some good courses on Deep Learning, my search ended when I came across this course by fast.ai: [Practical Deep Learning for Coders, v3](https://course.fastai/). This is the part 1 of the two part series by fast.ai. Part 1 covers four applications:
