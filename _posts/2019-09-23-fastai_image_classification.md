@@ -20,7 +20,7 @@ While I was looking for some good courses on Deep Learning, my search ended when
 3. Collaborative filtering  
 4. Tabular Data
 
-The course teaches how to train PyTorch models using the fastai library. The instructor Jeremy is the cofounder of the fast.ai. The course helps the user set up the cloud service in the beginning before getting into the actual deep learning problems. In this course Jeremy has followed a unique approach of hands on experience in coding first and then getting into the concepts of what is going on under the hood. My experience in Computer Vision during my Capstone project through the Master of Data Science program was in Keras but I found the fastai commands quite straightforward.
+The course teaches how to train PyTorch models using the fastai library. The course is taught by Jeremy who is also the cofounder of fast.ai. The course helps the user set up the cloud service in the beginning before getting into the actual deep learning problems. In this course Jeremy has followed a unique approach of hands on experience in coding first and then getting into the concepts of what is going on under the hood. My experience in Computer Vision during my Capstone project through the Master of Data Science program was in Keras but I found the fastai commands quite straightforward.
 The number of lines of codes in fastai is generally 1/6th those in Keras.
 
 ## Motivation
