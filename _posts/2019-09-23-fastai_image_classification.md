@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "fastai Image classification"
+title:  "Practical Deep Learning for Coders - fast.ai Image Classification"
 date:   2019-09-23
-excerpt: "Computer Vision "
+excerpt: "Computer Vision"
 tag:
 - sample post
 - post
