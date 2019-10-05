@@ -42,7 +42,7 @@ The first task was to collect the Images of these lakes to train my model. I use
 This add-on allows you to directly download multiple pictures from google search.
 With not much effort I collected around 100 images for each of these Lakes. Now that I had all the images I had to organize them so I can use them to train my model.
 
-fastai library expects the dataset to be converted into ImageDataBunch. ImageDataBunch is simply an object which fastai library easily comprehends before getting into training, validation and testing the model.
+fastai library expects the dataset to be converted into ImageDataBunch. ImageDataBunch is simply an object which fastai library easily comprehends before getting into training, validation and testing the model. ImageDataBunch identifies the data structure and accordingly splits into train, valid and test datasets.
 
 There are several wrapper methods in case of ImageDataBunch which make it easy for us to handle the dataset. To do so, I would need to organize my data in one of the following formats which the ImageDataBunch can identify:
 
