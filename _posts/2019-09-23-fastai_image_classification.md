@@ -99,7 +99,7 @@ data = ImageDataBunch.from_folder(path = 'parent_directory/',
 
 
 
-In the above code chunk we create a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. The images have been normalized so that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for each of the R,G and B channels. I have intentionally not flipped the images as I think it wont add lot of value by flipping the image of Lakes while training the model. To know more about the transforms which can be applied to the dataset please follow the url: [get_transforms](https://docs.fastai/vision.transform.html).
+In the above code chunk we create a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. The images have been normalized so that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for each of the R,G and B channels. This variation can affect the training process. I have intentionally not flipped the images as I think it wont add lot of value by flipping the image of Lakes while training the model. To know more about the transforms which can be applied to the dataset please follow the url: [get_transforms](https://docs.fastai/vision.transform.html).
 
 
 This is how the Image Data Bunch object looks like.
