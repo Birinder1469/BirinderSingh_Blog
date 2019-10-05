@@ -224,6 +224,10 @@ We can further try some more complex model architectures. For instance we have u
 
 This blogpost was based on the first lecture of the course and I am looking forward the rest of the course.
 
+Please leave a comment or get in touch with me for your feedback or suggestions. I am currently working as a Data Scientist serving Energy industry based in Calgary.
+
+Email address : birinder1469@gmail.com
+
 
 
 
