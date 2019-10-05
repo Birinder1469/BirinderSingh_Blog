@@ -171,7 +171,7 @@ tensor([5.9310, 3.4642, 3.3008, 2.6140, 2.4885, 2.3212, 2.3197, 1.9972, 1.9669,
 ```
 
 
-![](../imgs/predicted_top_losses_final.PNG)
+![](../imgs/predicted_top_losses_final.png)
 
 On top of the Images we have the ``prediction/actual/loss/probability``.
 The `prediction` is the category of lake that has been predicted by the model.    
@@ -182,14 +182,14 @@ For instance for the first image we see:
 
 Lets see the [Confusion matrix](https://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html) for the model performance. The diagonal entries are the correct predictions and non diagonal elements signify how much our model has incorrectly predicted for each category. We notice the model has performed poorly on the detection of Emerald lake. The Grassi lake has been predicted very well. This could be because of the input images we have used for training the model.    
 
-![](../imgs/lakes_confusion_matrix_final.PNG)
+![](../imgs/lakes_confusion_matrix_final.png)
 
 ## Model Improvement
 
 In the above model training we took the model weights from the ResNet34 just replaced the last couple of fully connected layers to suit our dataset. We had just trained the last couple of layers. Now lets train the model from the beginning. We will use the ResNet34 architecture but the weights will be trained from scratch. There is another important parameter that we can improve upon, `learning rate`. Below we see how the loss varies with different learning rates. The default learning rate is 1e-3 which seems to correspond to the least loss. Changing the learning rate might not add any significant value but we can try training the model weights from scratch specific to our dataset. Using the `unfreeze()` method we can instruct the model to train the weights for the entire network.
 
 
-![](../imgs/learning_rate_lakes_final.PNG)
+![](../imgs/learning_rate_lakes_final.png)
 
 
 After unfreezing the network and training from scratch we get the following results.
@@ -199,10 +199,10 @@ After unfreezing the network and training from scratch we get the following resu
 learn.unfreeze()
 learn.fit_one_cycle(4)
 ```
-![](../imgs/improved_model_34NET.PNG)
+![](../imgs/improved_model_34NET.png)
 
 
-![](../imgs/confusion_matrix_lr_imprved_final.PNG)
+![](../imgs/confusion_matrix_lr_imprved_final.png)
 
 
 
