@@ -132,17 +132,17 @@ In our case we will use the ResNet34(contains 34 layers) architecture with the m
 
 learn = cnn_learner(data, models.resnet34, metrics=error_rate)
 
-# We will train for 4 epochs (4 cycles through all our data).
+# We will train for 12 epochs (12 cycles through all our data).
 
-learn.fit_one_cycle(4)
+learn.fit_one_cycle(12)
 
 ```
 
-The 'cnn_learner' factory method helps to automatically get a pretrained model from a given architecture with a custom head that is suitable for our data. We train our model for 4 epochs. An epoch is defined as a look through the data once. 4 Epochs means we have 4 cycles through our data. The results are as shown below.
+The 'cnn_learner' factory method helps to automatically get a pretrained model from a given architecture with a custom head that is suitable for our data. We train our model for 12 epochs. An epoch is defined as a look through the data once. 12 Epochs means we have 12 cycles through our data. The results are as shown below.
 
-![](../imgs/resnet34_4cycles_final.png)
+![](../imgs/resnet34_12cycles_final.png)
 
-We notice that the error_rate has fallen to ~24% or we can say our model is around 76% accurate. This is not a great accuracy.
+We notice that the error_rate has fallen to ~25% or we can say our model is around 75% accurate. Up to this the loss for train and validation were decreasing sharply but after about 12 epochs the validation loss has sort of saturated and is not decreasing any further. 75% however is not a great accuracy.
 
 
 ## Model Evaluation
@@ -198,16 +198,16 @@ After unfreezing the network and training from scratch we get the following resu
 
 ```
 learn.unfreeze()
-learn.fit_one_cycle(4)
+learn.fit_one_cycle(12)
 ```
-![](../imgs/improved_model_34NET.png)
+![](../imgs/improved_model_34NET_12epochs.png)
 
 
 ![](../imgs/confusion_matrix_lr_imprved_final.png)
 
 
 
-We notice significant improvement in the model performance. The error_rate has fallen from 24% to ~13%. This indicates accuracy of 87%. I notice some randomness in this part where we unfreeze the layers. Every time I train this model I get different results. Most of the time unfreezing is giving me better results than just training the last layers.  I am hoping to have more clarity on this in the subsequent lectures.
+We notice significant improvement in the model performance. The error_rate has fallen from 25% to ~13%. This indicates accuracy of 87%. I notice some randomness in this part where we unfreeze the layers. Every time I train this model I get different results. Most of the time unfreezing is giving me better results than just training the last layers.  I am hoping to have more clarity on this in the subsequent lectures.
 
 ## Prediction on test dataset
 
