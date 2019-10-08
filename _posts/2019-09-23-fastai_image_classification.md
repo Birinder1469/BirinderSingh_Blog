@@ -13,7 +13,7 @@ comments: true
 ## fast.ai course on Image Classification
 ### About the course
 
-While I was looking for some good courses on Deep Learning, my search ended when I came across this course by fast.ai: [Practical Deep Learning for Coders, v3](https://course.fastai/). This is the part 1 of the two part series by fast.ai. Part 1 covers four applications:
+While I was looking for some good courses on Deep Learning, my search ended when I came across this course by fast.ai: [Practical Deep Learning for Coders, v3](https://course.fast.ai). This is the part 1 of the two part series by fast.ai. Part 1 covers four applications:
 
 1. Computer Vision
 2. Natural Language Text
@@ -46,28 +46,28 @@ fastai library expects the dataset to be converted into ImageDataBunch. ImageDat
 
 There are several wrapper methods in case of ImageDataBunch which make it easy for us to handle/load the dataset. To do so, I would need to organize my data in one of the following formats which the ImageDataBunch can identify:
 
-1. [ImageDataBunch.from_folder](https://docs.fastai/vision.data.html#ImageDataBunch.from_folder)
+1. [ImageDataBunch.from_folder](https://docs.fast.ai/vision.data.html#ImageDataBunch.from_folder)
 
 ![](../imgs/from_folder_img.PNG)
 
 In this method we add the images in their specific class folders in the train, valid(validation) and if we wish in the test folders. For instance class1, class2 folders within the train folder will be considered for training the model and the images within the class1 folder will be assigned the label "class1" and so on.
 
 
-2. [ImageDataBunch.from_df](https://docs.fastai/vision.data.html#ImageDataBunch.from_df)
+2. [ImageDataBunch.from_df](https://docs.fast.ai/vision.data.html#ImageDataBunch.from_df)
 
 ![](../imgs/from_df_imgs.PNG)
 
 A pandas DataFrame with a column of filenames and a column of labels which can be strings for classification, strings separated by a label_delim for multi-classification or floats for a regression problem (ImageDataBunch.from_df)
 
-3. [ImageDataBunch.from_csv](https://docs.fastai/vision.data.html#ImageDataBunch.from_csv)
+3. [ImageDataBunch.from_csv](https://docs.fast.ai/vision.data.html#ImageDataBunch.from_csv)
 
 Create an ImageDataBunch from path by splitting the data in folder and labelled in a file csv_labels between a training and validation set. Use valid_pct to indicate the percentage of the total images to use as the validation set. An optional test folder contains unlabeled data and suffix contains an optional suffix to add to the filenames in csv_labels (such as '.jpg').
 
-4. A list of filenames and a list of targets [ImageDataBunch.from_lists](https://docs.fastai/vision.data.html#ImageDataBunch.from_lists)
+4. A list of filenames and a list of targets [ImageDataBunch.from_lists](https://docs.fast.ai/vision.data.html#ImageDataBunch.from_lists)
 
-5. A list of filenames and a function to get the target from the filename [ImageDataBunch.from_name_func](https://docs.fastai/vision.data.html#ImageDataBunch.from_name_func)
+5. A list of filenames and a function to get the target from the filename [ImageDataBunch.from_name_func](https://docs.fast.ai/vision.data.html#ImageDataBunch.from_name_func)
 
-6. A list of filenames and a regex pattern to get the target from the filename [ImageDataBunch.from_name_re](https://docs.fastai/vision.data.html#ImageDataBunch.from_name_re)
+6. A list of filenames and a regex pattern to get the target from the filename [ImageDataBunch.from_name_re](https://docs.fast.ai/vision.data.html#ImageDataBunch.from_name_re)
 
 In the last five factory methods, a random split is performed between train and validation, in the first one it is based on the separation between training and a validation folders. For more details on the usage of these methods please follow the links alongside the method.
 In my case I used the 1st option. I simple organized different folders for train, validation and test data.
@@ -78,7 +78,7 @@ In my case I used the 1st option. I simple organized different folders for train
 ## Loading data in Google Colab
 
 To do nearly everything in this course, we need access to a computer with an NVIDIA GPU.
-Several options have been discussed in the course at [platform_setup_url](https://course.fastai/index.html). Setting up a computer takes time and energy, I would rather concentrate my energy to focus on deep learning right now. Therefore, renting access to a computer that already has everything I need preinstalled and ready to go sounds more reasonable. Since I have been working on Google Colab for quite some time, I decided to build the model on Google Colab which comes with a free GPU instance.
+Several options have been discussed in the course at [platform_setup_url](https://course.fast.ai/index.html). Setting up a computer takes time and energy, I would rather concentrate my energy to focus on deep learning right now. Therefore, renting access to a computer that already has everything I need preinstalled and ready to go sounds more reasonable. Since I have been working on Google Colab for quite some time, I decided to build the model on Google Colab which comes with a free GPU instance.
 
 I uploaded the dataset on the google drive and then accessed it through the Jupyter Notebook on Google Colab.
 Lets load the dataset and create a Image Data Bunch.
@@ -99,7 +99,7 @@ data = ImageDataBunch.from_folder(path = 'parent_directory/',
 
 
 
-In the above code chunk we create a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. The images have been normalized so that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for each of the R,G and B channels. This variation can affect the training process. I have intentionally not flipped the images as I think it wont add lot of value by flipping the image of Lakes while training the model. To know more about the transforms which can be applied to the dataset please follow the url: [get_transforms](https://docs.fastai/vision.transform.html).
+In the above code chunk we create a Image.DataBunch object with image size 224x224 for each image. Some relevant image transforms have been applied on the images. The images have been normalized so that the pixel values have mean of 0 and standard deviation of 1. Normalization is important as otherwise there can be huge variation in the pixel values for each of the R,G and B channels. This variation can affect the training process. I have intentionally not flipped the images as I think it wont add lot of value by flipping the image of Lakes while training the model. To know more about the transforms which can be applied to the dataset please follow the url: [get_transforms](https://docs.fast.ai/vision.transform.html).
 
 
 This is how the Image Data Bunch object looks like.
@@ -122,7 +122,7 @@ We are dealing with 5 different lakes here. Lets confirm by looking at the datas
 
 ## Model Training
 
-There are two options we have for training the model. The first is to train the model from scratch which includes designing the network architecture ourselves and the other is to utilize what we call the [Transfer learning](https://docs.fastai/vision.learner.html).
+There are two options we have for training the model. The first is to train the model from scratch which includes designing the network architecture ourselves and the other is to utilize what we call the [Transfer learning](https://docs.fast.ai/vision.learner.html).
 Transfer learning is a technique where we use a model trained on a very large dataset (usually ImageNet in computer vision) and then adapt it to our own dataset.
 
 In our case we will use the ResNet34(contains 34 layers) architecture with the model weights trained on the ImageNet dataset and replace the last few layers to suite our specific case. Our aim is the have the last layer give us the probability of the input image being any of the 5 labels of lakes. The one with highest probability will be chosen as the prediction for the input image.
@@ -232,5 +232,5 @@ Email address : birinder1469@gmail.com
 
 
 ## Reference:
-1. The credit for this blogpost goes to Practical Deep Learning for Coders, v3 : [Course_url](https://course.fastai/)
-2. The documentation by fast ai has been very helpful : [Doc_url](https://course.fastai/)
+1. The credit for this blogpost goes to Practical Deep Learning for Coders, v3 : [Course_url](https://course.fast.ai/)
+2. The documentation by fast ai has been very helpful : [Doc_url](https://course.fast.ai/)
