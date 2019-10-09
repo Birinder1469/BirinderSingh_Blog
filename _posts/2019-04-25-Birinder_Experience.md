@@ -17,6 +17,16 @@ comments: true
 
 After qualifying the IIT JEE(Indian Institute of Technology [Joint Entrance Examination](https://en.wikipedia.org/wiki/Joint_Entrance_Examination)) in 2008 I got into studying Geophysical Technology from the prestigious IIT Roorkee. I was an outgoing person and the field offered me exactly what I wanted. I loved going on field trips and we had couple of them in my first and second year at IIT Roorkee. Due to my love for the subject I did voluntary internship in 2009 at The Wadiya Institute of Himalayan Geology, Dehradun under the supervision of Dr. Naresh Dhatwalia, Scientist-B. I got great insights about carrying out the Earthquake data analysis and using softwares like SEISAN. I was curious to work in the field of Seismic and in 2011 I got a chance to go on funded Internship at The University of Bergen, Norway. This was a lifetime experience for me. We went on the research cruise aboard G.O SARS looking for Black smokers. Our team from UoB along with the Team from STATOIL now Equinor investigated the gas leakages from the Sliepner Storage sites in the North Sea. I learnt a lot during 2 months in the sea. I worked with advanced Technologies, Multi beam Echo Sounder being one of them.
 My experiences are shared on the University website [My Experiences](https://www.uib.no/en/geobio/54047/discovering-new-world-beneath-one%E2%80%99s-feet).
+
+
+![](../imgs/birinder_singh_norway.png)
+
+
+
+
+
+
+
 For my final year thesis I worked on the Estimation of attenuation characteristics of Aswan reservoir region, Egypt under the supervision of Prof Sagarika Mukhopadhyay, Department of Earth Sciences, IIT Roorkee. For the first time I got a chance to work on the large volume of data comprising several earthquake records observed in the region of interest over last couple of decades. We were wasting lot of time analyzing these earthquake records manually. To make the procedure efficient I used MATLAB to reduce manual editing and manipulation of excel files. The task which otherwise would have taken more than a month and if there were to bring any change then god knows how much more could now be done in less than a week using these MATLAB scripts.
 After a year long hard work we successfully published our work in the prestigious Journal of Seismology [Estimation of attenuation characteristics of Aswan reservoir region, Egypt](https://link.springer.com/article/10.1007/s10950-015-9511-2).
 
