@@ -15,6 +15,7 @@ comments: true
 
 ## Monte Carlo Simulation
 
+### Finding the Area
 Based on my understanding, Monte Carlo Simulation is a technique to estimate the parameter of interest(otherwise difficult to compute) by carrying out computations on random numbers picked repeatedly from a distribution. Sounds complicated right. Let me make it a little more intuitive. Lets say if we want to find the area of a Square, what can do what we have been doing since high school which is to use the formula $$Side^2$$. Or alternately we can count and sum total number of points(many, many points) enclosed in the square. Ideally both of them will give us the same and correct answer. What if I now ask the area of the Circle enclosed within the Square. Again using our high school knowledge we can either use $$\pi r^2$$. Or if we already know the area of the square we can roughly find the proportion of randomly picked points lying within the circle and this proportion will give us of the area of the Circle given the area of Square.
 
 
@@ -37,6 +38,34 @@ Another observation is that more the number of random numbers/points we pick, be
 | ![](../imgs/Snowflake_1000.png)  | ![](../imgs/Snowflake_10000.png)  |
 
 
+### Application in Coin Toss experiment
+We have always believed that a fair coin toss has 50% probability of showing up `Heads` and 50% probability of showing up `Tails`. What that means is that if we carry out the experiment many times then half of the times I should get `Heads` and the other half of the times I should get `Tails`. Let us see if that is True.
+
+In the below experiment we are going to flip the coin multiple times and initially assuming the coin is fair(probability of `Heads` showing up is 50%). After multiple flips we will see the proportion of `Head`.
+
+```
+# number of trials, probability of each trial being 0.5
+
+n, p = 1, 0.5  
+n_flips= 10000
+
+#
+s = np.random.binomial(n, p, n_flips)
+
+# result of flipping a coin n=1 time, tested n_flips=10000 times.
+
+experiment_outcome= np.where(s==1, 'Heads', 'Tails')
+
+print(experiment_outcome)
+
+```
+
+```
+
+array(['Heads', 'Tails', 'Heads', ..., 'Tails', 'Heads', 'Heads'],
+      dtype='<U5')
+
+```
 
 
 
