@@ -45,28 +45,84 @@ In the below experiment we are going to flip the coin multiple times and initial
 
 ```Python
 # number of trials, probability of each trial being 0.5
+n_flips, probability_of_heads = 1, 0.5  
+n_experiments= 10000
+# we are using the binomial distribution, where the outcome will be either 0 or 1 with the probability of 50%.
+s = np.random.binomial(n_flips, probability_of_heads, n_experiments)
+# result of flipping a coin n=1 time, tested n_flips=10000 times.
+experiment_outcome= np.where(s==1, 'Heads', 'Tails')
+print(experiment_outcome)
+```
 
-n, p = 1, 0.5  
-n_flips= 10000
+```Python
+['Tails' 'Tails' 'Heads' ... 'Heads' 'Heads' 'Tails']
+```
+
+In the experiment above we used the Binomial distribution where the outcome would be either 0 or 1 with the probability defined as 50% in the above case. Of the outcome is 1 we hae defined it as `Heads` and `Tails` otherwise.
+
+Now lets find out the proportion of times we got `Heads`.
+
+```Python
+prop_heads=sum(experiment_outcome=='Heads')/len(experiment_outcome)
+print(prop_heads)
+```
+
+
+```Python
+0.4
+```
+
+We obtain the proportion of `Heads` showing up is 0.4. But this experiment was only performed 10 times. Lets increase the number of experiments to 1,00,000.
+
+Carrying out the experiment 1,00,000 times we get:
+
+
+```Python
+n_flips, probability_of_heads = 1, 0.5  
+n_experiments= 100000
+
+# we are using the binomial distribution, where the outcome will be either 0 or 1 with the probability of 50%.
+s = np.random.binomial(n_flips, probability_of_heads, n_experiments)
+
+# result of flipping a coin n=1 time, tested n_flips=10000 times.
+experiment_outcome= np.where(s==1, 'Heads', 'Tails')
+
+prop_heads=sum(experiment_outcome=='Heads')/len(experiment_outcome)
+print(prop_heads)
+```
+
+
+```Python
+0.5035
+```
+
+
+Now we get the proportion of `Heads` showing up as 0.5035 which is quite close to the 0.5 we had initially assigned.
+
+Lets do another simulation, lets increase the probability of `Heads` showing up as 70% now. In case some one is trying to cheat us with an Unfair coin. Lets see what the proportion of `Heads` showing up in that case is.
+
+```Python
+n_flips, probability_of_heads = 1, 0.7  
+n_experiments= 100000
 
 # we are using the binomial distribution, where the outcome will be either 0 or 1 with the probability of 50%.
 
-s = np.random.binomial(n, p, n_flips)
+s = np.random.binomial(n_flips, probability_of_heads, n_experiments)
 
 # result of flipping a coin n=1 time, tested n_flips=10000 times.
 
 experiment_outcome= np.where(s==1, 'Heads', 'Tails')
 
-print(experiment_outcome)
-
+prop_heads=sum(experiment_outcome=='Heads')/len(experiment_outcome)
+print(prop_heads)
 ```
 
+```Python
+0.70073
 ```
 
-['Tails' 'Tails' 'Heads' ... 'Heads' 'Heads' 'Tails']
 
-```
-
+Thats amazing. Now out of 1,00,000 coin flips we got `Heads` 70% of the times.
 
 
 ## Reference:
