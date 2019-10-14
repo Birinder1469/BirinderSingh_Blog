@@ -44,12 +44,17 @@ We have always believed that a fair coin toss has 50% probability of showing up 
 In the below experiment we are going to flip the coin multiple times and initially assuming the coin is fair(probability of `Heads` showing up is 50%). After multiple flips we will see the proportion of `Head`.
 
 ```python
+
 # number of trials, probability of each trial being 0.5
 n_flips, probability_of_heads = 1, 0.5  
 n_experiments= 10000
+
 # we are using the binomial distribution, where the outcome will be either 0 or 1 with the probability of 50%.
+
 s = np.random.binomial(n_flips, probability_of_heads, n_experiments)
+
 # result of flipping a coin n=1 time, tested n_flips=10000 times.
+
 experiment_outcome= np.where(s==1, 'Heads', 'Tails')
 print(experiment_outcome)
 ```
@@ -63,6 +68,7 @@ In the experiment above we used the Binomial distribution where the outcome woul
 Now lets find out the proportion of times we got `Heads`.
 
 ```python
+
 prop_heads=sum(experiment_outcome=='Heads')/len(experiment_outcome)
 print(prop_heads)
 ```
