@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is Monte Carlo Simulation"
+title:  "What is Monte Carlo method"
 date:   2019-10-15
 excerpt: "Simulations"
 tag:
