@@ -30,7 +30,7 @@ In the figure given below we see the same happening. I have randomly picked 10,1
 
 You may argue that this is not very useful. What is the big deal with estimating the area of Circle using this complicated approach you suggested. But what if I tell you to get me the area of the snowflake given below. Do you know the formula to estimate the area of a Snowflake. At least I do not. I have to get into complicated geometry and find a way to estimate the area of a Snowflake. However if you use the technique I suggested above we can easily estimate the area of the Snowflake.  
 
-Another observation is that more the number of random numbers/points we pick better will be our estimation of the area of the Snowflake. Isn't it cool.
+Another observation is that more the number of random numbers/points we pick, better will be our estimation of the area of the Snowflake. Isn't it cool.
 
 |-- | -- |
 | ![](../imgs/Snowflake_10.png)  | ![](../imgs/Snowflake_100.png) |
