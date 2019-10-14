@@ -43,7 +43,7 @@ We have always believed that a fair coin toss has 50% probability of showing up 
 
 In the below experiment we are going to flip the coin multiple times and initially assuming the coin is fair(probability of `Heads` showing up is 50%). After multiple flips we will see the proportion of `Head`.
 
-```
+```python
 # number of trials, probability of each trial being 0.5
 n_flips, probability_of_heads = 1, 0.5  
 n_experiments= 10000
@@ -54,7 +54,7 @@ experiment_outcome= np.where(s==1, 'Heads', 'Tails')
 print(experiment_outcome)
 ```
 
-```
+```python
 ['Tails' 'Tails' 'Heads' ... 'Heads' 'Heads' 'Tails']
 ```
 
@@ -62,13 +62,13 @@ In the experiment above we used the Binomial distribution where the outcome woul
 
 Now lets find out the proportion of times we got `Heads`.
 
-```
+```python
 prop_heads=sum(experiment_outcome=='Heads')/len(experiment_outcome)
 print(prop_heads)
 ```
 
 
-```
+```python
 0.4
 ```
 
@@ -77,7 +77,7 @@ We obtain the proportion of `Heads` showing up is 0.4. But this experiment was o
 Carrying out the experiment 1,00,000 times we get:
 
 
-```
+```python
 n_flips, probability_of_heads = 1, 0.5  
 n_experiments= 100000
 
@@ -92,7 +92,7 @@ print(prop_heads)
 ```
 
 
-```
+```python
 0.5035
 ```
 
@@ -101,7 +101,7 @@ Now we get the proportion of `Heads` showing up as 0.5035 which is quite close t
 
 Lets do another simulation, lets increase the probability of `Heads` showing up as 70% now. In case some one is trying to cheat us with an Unfair coin. Lets see what the proportion of `Heads` showing up in that case is.
 
-```
+```python
 n_flips, probability_of_heads = 1, 0.7  
 n_experiments= 100000
 
@@ -117,7 +117,7 @@ prop_heads=sum(experiment_outcome=='Heads')/len(experiment_outcome)
 print(prop_heads)
 ```
 
-```{Python}
+```python
 0.70073
 ```
 
