@@ -18,8 +18,8 @@ comments: true
 
 
 |-- | -- |
-| ![](../imgs/Snowflake_1000.png)  | ![](../imgs/Snowflake_10000.png) |
-| ![](../imgs/Snowflake_10.png)  | ![](../imgs/Snowflake_100.png)  |
+| ![](../imgs/Snowflake_10.png)  | ![](../imgs/Snowflake_100.png) |
+| ![](../imgs/Snowflake_1000.png)  | ![](../imgs/Snowflake_10000.png)  |
 
 
 
