@@ -128,7 +128,11 @@ print(prop_heads)
 ```
 
 
-Thats amazing. Now out of 1,00,000 coin flips we got `Heads` 70% of the times.
+That's amazing. Now out of 1,00,000 coin flips we got `Heads` 70% of the times.
+
+The Jupyter notebook with the above analysis is available on my GitHub at: [Monte_Carlo_Simulation_GitHub](https://github.com/Birinder1469/MonteCarlo_Simulation)
+
+For feedback please contact me at birinder1469@gmail.com
 
 
 ## Reference:
