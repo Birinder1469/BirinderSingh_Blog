@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Anomaly Detection"
+title:  "Anomaly Detection on Sensor Data"
 date:   2020-04-30
 excerpt: "Anomaly Detection"
 tag:
