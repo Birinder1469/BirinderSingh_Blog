@@ -130,6 +130,23 @@ print(prop_heads)
 
 That's amazing. Now out of 1,00,000 coin flips we got `Heads` 70% of the times.
 
+
+
+### Bayesian Inference in Practice
+If frequentist and Bayesian inference were programming functions, with inputs being statistical problems, then the two would be different in what they return to the user. The frequentist inference function would return a number, representing an estimate (typically a summary statistic like the sample average etc.), whereas the Bayesian function would return probabilities.
+
+For example, in our debugging problem above, calling the frequentist function with the argument "My code passed all 𝑋 tests; is my code bug-free?" would return a YES. On the other hand, asking our Bayesian function "Often my code has bugs. My code passed all 𝑋 tests; is my code bug-free?" would return something very different: probabilities of YES and NO. The function might return:
+
+```
+YES, with probability 0.8; NO, with probability 0.2
+
+```
+
+This is very different from the answer the frequentist function returned. Notice that the Bayesian function accepted an additional argument: "Often my code has bugs". This parameter is the prior. By including the prior parameter, we are telling the Bayesian function to include our belief about the situation. Technically this parameter in the Bayesian function is optional, but we will see excluding it has its own consequences.
+
+
+
+
 The Jupyter notebook with the above analysis is available on my GitHub at: [Monte_Carlo_Simulation_GitHub](https://github.com/Birinder1469/MonteCarlo_Simulation)
 
 For feedback please contact me at birinder1469@gmail.com
