@@ -13,16 +13,16 @@ comments: true
 ## Anomaly Detection explained
 
 In upstream and mid-stream operations the engineers often deal with lot of sensor
-data which they are expected to interpret and before taking appropriate actions.
+data which they are expected to interpret before taking appropriate actions.
 Lot of times this data is getting updated Real Time and its a laborious task for the engineers
-to devote his full concentration on what each of those 100s of measurements are trying to show.
+to devote full concentration on what each of those 100s of measurements are trying to show.
 
 It has been widely believed that the next tool failure is already in the data we have with us.
 It means the data already contains some kind of Anomaly in the measurements which
 could be potentially warning us about the upcoming incident.
 
 Machines in current time have seen massive upgradation in the processing power and storage space
-compared to what it used to be couple of decades back.
+compared to what it used to be couple of years back.
 These days we have the capability to make machines process N dimension multi gega bytes
 data and spit out any weird behavior of the measurements.
 
@@ -39,10 +39,10 @@ These measurements have been obtained from N(260,5) for RPM and N(70,5) for Temp
 ![](../imgs/measurements_plot.PNG)
 
 Even though this is a hypothetical situation, it is a possible in the day to day operations.
-We are considering only two measurements to have ease of plotting but machine learning can handle large number of measurements and
-data over much longer period.
+We are considering only two measurements for ease of plotting but machine learning  techniques  can handle large number of measurements and
+over much longer period.
 
-## Anomalous detection from Visualizations
+## Anomalous behavior identified from Visualizations
 We can use some quick visualizations to identify any Anomalous behavior of the rotor.
 Below are the plots showing the histogram of RPM and Temperature measurements.
 
