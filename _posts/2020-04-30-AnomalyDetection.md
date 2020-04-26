@@ -10,7 +10,7 @@ tag:
 comments: true
 ---
 
-# Anomaly Detection explained
+## Anomaly Detection explained
 
 In upstream and mid-stream operations the engineers often deal with lot of sensor
 data which they are expected to interpret and before taking appropriate actions.
@@ -75,3 +75,9 @@ When a forest of random trees collectively produces shorter path lengths
 for particular samples, they are highly likely to be anomalies.
 
 ![](../imgs/isolation_forest_results.PNG)
+
+
+### References
+
+1. Outlier detection : https://scikit-learn.org/stable/modules/outlier_detection.html
+2. Isolation Forest : http://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science/if.html
