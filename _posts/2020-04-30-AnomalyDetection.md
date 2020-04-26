@@ -36,7 +36,7 @@ The data has been synthetically generated from a Normal distribution N(230,5) fo
 We notice some abnormal behavior from the rotor in the last week of April 2020, where suddenly the rotations per minute shoot up which leads to corresponding increase in the temperature.
 These measurements have been obtained from N(260,5) for RPM and N(70,5) for Temperature.
 
-![](../imgs/measurements_plot.png)
+![](../imgs/measurements_plot.PNG)
 
 Even though this is a hypothetical situation, it is a possible in the day to day operations.
 We are considering only two measurements to have ease of plotting but machine learning can handle large number of measurements and
@@ -46,10 +46,10 @@ data over much longer period.
 We can use some quick visualizations to identify any Anomalous behavior of the rotor.
 Below are the plots showing the histogram of RPM and Temperature measurements.
 
-![](../imgs/Temperature_hist.png)
+![](../imgs/Temperature_hist.PNG)
 
 
-![](../imgs/RPM_hist.png)
+![](../imgs/RPM_hist.PNG)
 
 We notice a normal behavior from both Temperature and RPM in a nice normal distribution
 but as highlighted in red box there are some higher than average values as well.
@@ -74,4 +74,4 @@ Random partitioning produces noticeably shorter paths for anomalies.
 When a forest of random trees collectively produces shorter path lengths
 for particular samples, they are highly likely to be anomalies.
 
-![](../imgs/isolation_forest_results.png)
+![](../imgs/isolation_forest_results.PNG)
