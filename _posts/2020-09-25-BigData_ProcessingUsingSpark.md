@@ -34,7 +34,7 @@ However in this blogpost I will share with you the working of PySpark and overvi
 
 
 <p align="center">
-  <img width="100" height="100" src="../imgs/apache_spark.png">
+  <img width="5" height="5" src="../imgs/apache_spark.png">
 </p>
 
 ## Spark architecture
