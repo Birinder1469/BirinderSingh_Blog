@@ -10,8 +10,9 @@ tag:
 comments: true
 ---
 
+*In progress*
 
-In progress
+*Alert - this blog is going to be a little long. It will showcase all the research I had done to understand Spark as well.*
 
 # Taking Data Processing to next level
 
