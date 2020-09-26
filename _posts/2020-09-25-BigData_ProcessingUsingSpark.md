@@ -30,14 +30,6 @@ However in this blogpost I will share with you the working of PySpark and overvi
 ![](../imgs/apache_spark.png)
 
 
-<img align="center" src="../imgs/apache_spark.png" width="500" height="300"  />
-
-
-<p align="center">
-  <img width="5" height="5" src="../imgs/apache_spark.png">
-</p>
-
-test now
 
 ## Spark architecture
 
