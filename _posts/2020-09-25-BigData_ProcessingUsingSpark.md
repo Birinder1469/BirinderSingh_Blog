@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Big Data Processing using Apache Spark"
+title:  "Big Data Processing with Apache Spark"
 date:   2020-10-25
 excerpt: "How Spark came to my rescue"
 tag:
