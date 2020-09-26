@@ -30,6 +30,15 @@ However in this blogpost I will share with you the working of PySpark and overvi
 ![](../imgs/apache_spark.png)
 
 
+<img align="center" src="../imgs/apache_spark.png" width="500" height="300"  />
+
+## Spark architecture
+
+
+## Used Case - Data loading, wrangling, ML model building and deploying
+
+
+
 
 
 ## References
