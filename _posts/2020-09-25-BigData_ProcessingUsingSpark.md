@@ -55,7 +55,8 @@ Now if I am asked to count the number of M&Ms in every store in Vancouver, I giv
 
 **M&Ms in whole of Vancouver**
 
-
+| Orphelia | Aditya | Sayanti | Akansha | 
+| ------ | ------ | ------ | ------ |
 | ![](../imgs/mnm_image.jpeg) | ![](../imgs/mnm_image.jpeg) |![](../imgs/mnm_image.jpeg)| ![](../imgs/mnm_image.jpeg)|
 
 
