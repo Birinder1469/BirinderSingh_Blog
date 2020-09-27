@@ -107,10 +107,11 @@ It is an R package that provides a distributed data frame implementation. It als
 Under the hood another very important component is the **Cluster manager**.
 Spark is designed to efficiently scale up from one to many thousands of compute nodes. To achieve this while maximizing flexibility, Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a simple cluster manager included in Spark itself called the Standalone Scheduler.
 
+### Data Representation
 
-**Resilient Distributed Dataset(RDD)**
+**Spark Resilient Distributed Dataset(RDD)**
 
-RDDs are the building blocks of any Spark application. RDDs Stands for:
+RDDs are the fundamental data structures of Spark or we can say the building blocks of any Spark application. RDDs Stands for:
 
 *Resilient*: Fault tolerant and is capable of rebuilding data on failure
 *Distributed*: Distributed data among the multiple nodes in a cluster
@@ -148,6 +149,11 @@ Iterative Operations on Spark RDD
 The diagram above shows how Spark’s RDD work in iterative applications. The intermediate results are written to memory instead of the stable disk storage and the subsequent steps can read the same memory RDD objects. Only when the memory(RAM) is insufficient to store the whole RDD, the results are spilled to the disk. But overall the whole system is way faster than the MapReduce application due to this optimization
 
 
+
+**Spark DataFrames**
+
+
+**Spark Datasets**
 
 
 ## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
