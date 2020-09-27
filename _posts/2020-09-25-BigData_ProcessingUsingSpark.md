@@ -100,9 +100,8 @@ Spark comes with a library containing common machine learning (ML) functionality
 It is an R package that provides a distributed data frame implementation. It also supports operations like selection, filtering, aggregation but on large data-sets.
 
 
-
-
-
+Under the hood another very important component is the **Cluster manager**.
+Spark is designed to efficiently scale up from one to many thousands of compute nodes. To achieve this while maximizing flexibility, Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a simple cluster manager included in Spark itself called the Standalone Scheduler.
 
 
 ## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
