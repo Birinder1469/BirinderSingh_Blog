@@ -12,7 +12,7 @@ comments: true
 
 *In progress*
 
-*Alert - this blog is going to be a little long. It will showcase all the research I had done to understand Spark as well.*
+*Alert - this blog is going to be a long. It will showcase all the research I had done to understand Spark as well.*
 
 # Taking Data Processing to next level
 
@@ -38,6 +38,26 @@ Lets dig into it.
 Traditionally when we were working only on our laptops we were limited to the storage capacity and the processing power as per the configuration of the laptop.
 
 Since the inception of cloud we are able to scale up our storage and processing and having second thoughts about upper limit on both is almost out of scope now. Be it Azure or AWS you just pay for as much as you want.
+
+But what is it that Spark is doing to get complex processing run on such high amount of datasets. The answer lies in parallelization.
+
+Let us understand with an example, lets say if I am given a task to count the M&Ms in the gif box which I got on my birthday, I can do it pretty easily right.
+This is same as when you have a usual CSV file such as the infamous Titanic dataset which we can easily handle with the Pandas and do the manipulations.
+On the other hand if now I am given a task to count the number of M&Ms in the store next to my house, I will hesitate a bit but after spending a day or two dedicatedly I can do it. It is slow but still something I can handle.
+Now if I am asked to count the number of M&Ms in every store in Vancouver, I give up right away. I cannot handle this task myself, what I can do instead is call all my UBC friends to go to the stores near their house and give me a count of M&Ms. In the end what I will do it collect all the counts from all my UBC friends and sum them all.
+
+
+
+**M&Ms in my gift box**
+
+![](../imgs/mnm_image.jpeg)
+
+
+**M&Ms in whole of Vancouver**
+
+
+| ![](../imgs/mnm_image.jpeg) | ![](../imgs/mnm_image.jpeg) |![](../imgs/mnm_image.jpeg)| ![](../imgs/mnm_image.jpeg)|
+
 
 
 
