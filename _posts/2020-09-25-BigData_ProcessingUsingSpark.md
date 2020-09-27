@@ -109,7 +109,7 @@ Spark is designed to efficiently scale up from one to many thousands of compute 
 
 ### Data Representation
 
-**Spark Resilient Distributed Dataset(RDD)**
+**Spark Resilient Distributed Dataset (RDD)**
 
 RDDs are the fundamental data structures of Spark or we can say the building blocks of any Spark application. RDDs Stands for:
 
@@ -148,13 +148,33 @@ Iterative Operations on Spark RDD
 
 The diagram above shows how Spark’s RDD work in iterative applications. The intermediate results are written to memory instead of the stable disk storage and the subsequent steps can read the same memory RDD objects. Only when the memory(RAM) is insufficient to store the whole RDD, the results are spilled to the disk. But overall the whole system is way faster than the MapReduce application due to this optimization
 
+Use RDDs when:
+
+- Low-level transformation and actions and control on dataset
+- Data is unstructured, such as media streams or streams of text
+- No requirement of imposing a schema, such as columnar format, while processing or accessing data attributes by name or column
+- Can afford to forgo some optimization and performance benefits available with DataFrames and Datasets for structured and semi-structured data.
 
 
 **Spark DataFrames**
 
+Came into focus in the recent releases of Spark, DataFrame is an immutable distributed collection of data. Unlike an RDD, data is organized into named columns, like a table in a relational database. Designed to make large data sets processing even easier, DataFrame allows developers to impose a structure onto a distributed collection of data, allowing higher-level abstraction
+
 
 **Spark Datasets**
 
+Datasets in Apache Spark are an extension of DataFrame API which provides type-safe, object-oriented programming interface.
+
+
+
+When to use DataFrames or Datasets?
+
+- For rich semantics, high-level abstractions, and domain specific APIs, use DataFrame or Dataset.
+- For high-level expressions, filters, maps, aggregation, averages, sum, SQL queries, columnar access and use of lambda functions on semi-structured data, use DataFrame or Dataset.
+- Higher degree of type-safety at compile time, want typed JVM objects, take advantage of Catalyst optimization, and benefit from Tungsten’s efficient code generation, use Dataset.
+- Unification and simplification of APIs across Spark Libraries, use DataFrame or Dataset.
+- If you are a R user, use DataFrames.
+- If you are a Python user, use DataFrames and resort back to RDDs if you need more control.
 
 ## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
 
@@ -162,3 +182,4 @@ The diagram above shows how Spark’s RDD work in iterative applications. The in
 1. [Spark_Architecture](https://www.edureka.co/blog/spark-architecture/)
 2. [Getting_started_with_Spark](https://pages.databricks.com/rs/094-YMS-629/images/Databricks-on-AWS-01-Getting-Started-Apache-Spark-Slides.pdf)
 3. [Resilient Distributed Dataset (RDDs)](https://www.knowledgehut.com/tutorials/apache-spark-tutorial/resilient-distributed-datasets)
+4. [RDDs Vs DataFrames Vs Datasets](https://databricks.com/blog/2016/07/14/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets.html)
