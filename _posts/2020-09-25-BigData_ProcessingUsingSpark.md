@@ -58,7 +58,10 @@ Now if I am asked to count the number of M&Ms in every store in Vancouver, I giv
 | ![](../imgs/mnm_image.jpeg) | ![](../imgs/mnm_image.jpeg) |![](../imgs/mnm_image.jpeg)| ![](../imgs/mnm_image.jpeg)|
 
 What happened here, I split the task into the hands of my friends(equivalent to the Workers in Spark) and then aggregated the final results.
-This is what is happening in Spark. It splits the data in partitions which lie on different cluster nodes and when you execute some operations they are executed in parallel fashion and we aggregate the results in the end. 
+This is what is happening in Spark. It splits the data in partitions which lie on different cluster nodes and when you execute some operations they are executed in parallel fashion and we aggregate the results in the end.
+
+Now some one may ask what is so different from MapReduce, Map reduce was doing the same parallelization into Map and Reduce steps. That is a valid question and I will answer that in the upcoming section.
+
 
 ## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
 
