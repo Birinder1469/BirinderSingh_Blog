@@ -72,9 +72,6 @@ Apache Spark is an open-source distributed general-purpose cluster-computing fra
 
 This is how the Spark Eco System looks like.
 
-![](../imgs/spark_ecosystem.PNG)
-
-test
 
 ![](../imgs/spark_ecosystem.png)
 
