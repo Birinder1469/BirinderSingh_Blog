@@ -76,7 +76,7 @@ for particular samples, they are highly likely to be anomalies.
 
 ![](../imgs/isolation_forest_results.PNG)
 
-
+There are other advanced methods for anomaly detection in Time Series which I will cover in the later blogposts.
 ### References
 
 1. Outlier detection : https://scikit-learn.org/stable/modules/outlier_detection.html
