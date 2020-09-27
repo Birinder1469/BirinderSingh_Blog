@@ -46,8 +46,6 @@ This is same as when you have a usual CSV file such as the infamous Titanic data
 On the other hand if now I am given a task to count the number of M&Ms in the store next to my house, I will hesitate a bit but after spending a day or two dedicatedly I can do it. It is slow but still something I can handle.
 Now if I am asked to count the number of M&Ms in every store in Vancouver, I give up right away. I cannot handle this task myself, what I can do instead is call all my UBC friends to go to the stores near their house and give me a count of M&Ms. In the end what I will do it collect all the counts from all my UBC friends and sum them all.
 
-
-
 **M&Ms in my gift box**
 
 ![](../imgs/mnm_image.jpeg)
@@ -55,12 +53,12 @@ Now if I am asked to count the number of M&Ms in every store in Vancouver, I giv
 
 **M&Ms in whole of Vancouver**
 
-| Orphelia | Aditya | Sayanti | Akansha | 
+| Orphelia | Aditya | Sayanti | Akansha |
 | ------ | ------ | ------ | ------ |
 | ![](../imgs/mnm_image.jpeg) | ![](../imgs/mnm_image.jpeg) |![](../imgs/mnm_image.jpeg)| ![](../imgs/mnm_image.jpeg)|
 
-
-
+What happened here, I split the task into the hands of my friends(equivalent to the Workers in Spark) and then aggregated the final results.
+This is what is happening in Spark. It splits the data in partitions which lie on different cluster nodes and when you execute some operations they are executed in parallel fashion and we aggregate the results in the end. 
 
 ## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
 
