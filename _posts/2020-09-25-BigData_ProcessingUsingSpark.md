@@ -123,11 +123,10 @@ Spark makes use of RDDs to achieve the same or similar processing results as Map
 
 MapReduce has established itself as one of the best technologies to process and generate huge datasets parallelly using distributed algorithms in distributed environments. It helps users and developers to do parallel computations using high-level APIs and the users do not have to get involved and take care of the intricacies of work distribution, concurrency issues and making the processing systems fault-tolerant.
 
-When we need to reuse data between different computation stages say in MapReduce processing, the only way to do this is to write the output of the first stage to physical storage e.g. HDFS. Though the MapReduce framework gives users many abstractions to use cluster’s compute power, we as developers are a never satisfied lot and still want more out of it. Both the iterative and interactive applications need data sharing to be very fast across parallel jobs. But the data sharing is not that fast in MapReduce due to disk IO, serialization, deserialization, and replication involved in writing to stable storage for intermediate results. It is found that Hadoop applications spend almost 90% of their time in reading and writing to storage systems.
+When we need to reuse data between different computation stages say in MapReduce processing, the only way to do this is to write the output of the first stage to physical storage e.g. HDFS. Both the iterative and interactive applications need data sharing to be very fast across parallel jobs. But the data sharing is not that fast in MapReduce due to disk IO, serialization, deserialization, and replication involved in writing to stable storage for intermediate results. It is found that Hadoop applications spend almost 90% of their time in reading and writing to storage systems.
 
 
-
-Interactive Operations on MapReduce
+Iterative Operations on MapReduce
 
 ![](../imgs/mapreduce_memory_storage.jpg)
 
@@ -136,7 +135,7 @@ In interactive operations, the user runs an ad-hoc query on the same subset of d
 
 
 
-We saw why the data sharing between intermediate steps for iterative applications and also for interactive applications is slow in MapReduce. The reason was due to disk IO, serialization and replication issues in MapReduce which are inbuilt features and core to the functioning of Hadoop MapReduce. To overcome this slowness Spark was developed which works on the concept of Resilient Distributed Datasets which essentially are in-memory objects but are partitioned and distributed on a cluster and also fault-tolerant. So the intermediate stage outputs do not require to be written to stable storage and can be accessed from memory avoiding the biggest bottleneck of the MapReduce systems. This in-memory sharing makes Spark 10 to 100 times faster than MapReduce.
+To overcome this slowness Spark was developed which works on the concept of Resilient Distributed Datasets which essentially are in-memory objects but are partitioned and distributed on a cluster and also fault-tolerant. So the intermediate stage outputs do not require to be written to stable storage and can be accessed from memory avoiding the biggest bottleneck of the MapReduce systems. This in-memory sharing makes Spark 10 to 100 times faster than MapReduce.
 
 Let us now see how iterative and interactive operations take place in Spark’s Resilient Distributed Datasets.
 
@@ -146,7 +145,7 @@ Iterative Operations on Spark RDD
 
 ![](../imgs/rdd_storage_inmemory.jpg)
 
-The below diagram shows how Spark’s RDD work in iterative applications. The intermediate results are written to memory instead of the stable disk storage and the subsequent steps can read the same memory RDD objects. Only when the memory(RAM) is insufficient to store the whole RDD, the results are spilled to the disk. But overall the whole system is way faster than the MapReduce application due to this optimization
+The diagram above shows how Spark’s RDD work in iterative applications. The intermediate results are written to memory instead of the stable disk storage and the subsequent steps can read the same memory RDD objects. Only when the memory(RAM) is insufficient to store the whole RDD, the results are spilled to the disk. But overall the whole system is way faster than the MapReduce application due to this optimization
 
 
 
