@@ -74,6 +74,10 @@ This is how the Spark Eco System looks like.
 
 ![](../imgs/spark_ecosystem.PNG)
 
+test
+
+![](../imgs/spark_ecosystem.png)
+
 #### Essential components of the eco system are:
 
 1. **Spark Core** <br>
