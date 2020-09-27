@@ -108,8 +108,52 @@ Under the hood another very important component is the **Cluster manager**.
 Spark is designed to efficiently scale up from one to many thousands of compute nodes. To achieve this while maximizing flexibility, Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a simple cluster manager included in Spark itself called the Standalone Scheduler.
 
 
+**Resilient Distributed Dataset(RDD)**
+
+RDDs are the building blocks of any Spark application. RDDs Stands for:
+
+*Resilient*: Fault tolerant and is capable of rebuilding data on failure
+*Distributed*: Distributed data among the multiple nodes in a cluster
+*Dataset*: Collection of partitioned data with values
+
+There are two ways to create RDDs − **parallelizing** an existing collection in your driver program, or **referencing a dataset** in an external storage system, such as a shared file system, HDFS, HBase, or any data source offering a Hadoop Input Format.
+Spark makes use of RDDs to achieve the same or similar processing results as MapReduce but at a much faster speed usually of the order by 10 to 100x.
+
+**MapReduce Vs Spark**
+
+MapReduce has established itself as one of the best technologies to process and generate huge datasets parallelly using distributed algorithms in distributed environments. It helps users and developers to do parallel computations using high-level APIs and the users do not have to get involved and take care of the intricacies of work distribution, concurrency issues and making the processing systems fault-tolerant.
+
+When we need to reuse data between different computation stages say in MapReduce processing, the only way to do this is to write the output of the first stage to physical storage e.g. HDFS. Though the MapReduce framework gives users many abstractions to use cluster’s compute power, we as developers are a never satisfied lot and still want more out of it. Both the iterative and interactive applications need data sharing to be very fast across parallel jobs. But the data sharing is not that fast in MapReduce due to disk IO, serialization, deserialization, and replication involved in writing to stable storage for intermediate results. It is found that Hadoop applications spend almost 90% of their time in reading and writing to storage systems.
+
+
+
+Interactive Operations on MapReduce
+
+![](../imgs/mapreduce_memory_storage.jpg)
+
+In interactive operations, the user runs an ad-hoc query on the same subset of data and each time the query will go to the disk and perform IO to fetch the data and return back to the user. This increases the interactive query time for the user and hampers the user experience.
+
+
+
+
+We saw why the data sharing between intermediate steps for iterative applications and also for interactive applications is slow in MapReduce. The reason was due to disk IO, serialization and replication issues in MapReduce which are inbuilt features and core to the functioning of Hadoop MapReduce. To overcome this slowness Spark was developed which works on the concept of Resilient Distributed Datasets which essentially are in-memory objects but are partitioned and distributed on a cluster and also fault-tolerant. So the intermediate stage outputs do not require to be written to stable storage and can be accessed from memory avoiding the biggest bottleneck of the MapReduce systems. This in-memory sharing makes Spark 10 to 100 times faster than MapReduce.
+
+Let us now see how iterative and interactive operations take place in Spark’s Resilient Distributed Datasets.
+
+
+Iterative Operations on Spark RDD
+
+
+![](../imgs/rdd_storage_inmemory.jpg)
+
+The below diagram shows how Spark’s RDD work in iterative applications. The intermediate results are written to memory instead of the stable disk storage and the subsequent steps can read the same memory RDD objects. Only when the memory(RAM) is insufficient to store the whole RDD, the results are spilled to the disk. But overall the whole system is way faster than the MapReduce application due to this optimization
+
+
+
+
 ## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
 
 ## References
 1. [Spark_Architecture](https://www.edureka.co/blog/spark-architecture/)
 2. [Getting_started_with_Spark](https://pages.databricks.com/rs/094-YMS-629/images/Databricks-on-AWS-01-Getting-Started-Apache-Spark-Slides.pdf)
+3. [Resilient Distributed Dataset (RDDs)](https://www.knowledgehut.com/tutorials/apache-spark-tutorial/resilient-distributed-datasets)
