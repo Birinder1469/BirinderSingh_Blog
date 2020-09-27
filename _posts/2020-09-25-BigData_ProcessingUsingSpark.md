@@ -10,8 +10,6 @@ tag:
 comments: true
 ---
 
-*In progress*
-
 *Alert - this blog is going to be a long. It will showcase all the research I had done to understand Spark as well.*
 
 # Taking Data Processing to next level
@@ -148,7 +146,7 @@ Iterative Operations on Spark RDD
 
 The diagram above shows how Spark’s RDD work in iterative applications. The intermediate results are written to memory instead of the stable disk storage and the subsequent steps can read the same memory RDD objects. Only when the memory(RAM) is insufficient to store the whole RDD, the results are spilled to the disk. But overall the whole system is way faster than the MapReduce application due to this optimization
 
-Use RDDs when:
+When to use RDDs:
 
 - Low-level transformation and actions and control on dataset
 - Data is unstructured, such as media streams or streams of text
@@ -176,7 +174,12 @@ When to use DataFrames or Datasets?
 - If you are a R user, use DataFrames.
 - If you are a Python user, use DataFrames and resort back to RDDs if you need more control.
 
-## Used Case - Data loading, wrangling, ML model - build, evaluate and deploy
+## Used Case
+
+*Coming Soon*
+
+
+
 
 ## References
 1. [Spark_Architecture](https://www.edureka.co/blog/spark-architecture/)
