@@ -174,7 +174,16 @@ When to use DataFrames or Datasets?
 - If you are a R user, use DataFrames.
 - If you are a Python user, use DataFrames and resort back to RDDs if you need more control.
 
-## Used Case
+
+### RDD Operations
+
+Coming Soon
+
+### Working of Spark Architecture
+
+*Coming Soon*
+
+### Used Case
 
 *Coming Soon*
 
@@ -186,3 +195,4 @@ When to use DataFrames or Datasets?
 2. [Getting_started_with_Spark](https://pages.databricks.com/rs/094-YMS-629/images/Databricks-on-AWS-01-Getting-Started-Apache-Spark-Slides.pdf)
 3. [Resilient Distributed Dataset (RDDs)](https://www.knowledgehut.com/tutorials/apache-spark-tutorial/resilient-distributed-datasets)
 4. [RDDs Vs DataFrames Vs Datasets](https://databricks.com/blog/2016/07/14/a-tale-of-three-apache-spark-apis-rdds-dataframes-and-datasets.html)
+5. [Spark Operations](https://training.databricks.com/visualapi.pdf)
