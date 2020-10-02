@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Big Data Processing with Apache Spark"
+title:  "Big Data Processing with Apache Spark - Part 1"
 date:   2020-09-25
 excerpt: "How Spark came to my rescue"
 tag:
@@ -10,7 +10,6 @@ tag:
 comments: true
 ---
 
-*Alert - this blog is going to be a long. It will showcase all the research I had done to understand Spark as well.*
 
 # Taking Data Processing to next level
 
@@ -177,15 +176,12 @@ When to use DataFrames or Datasets?
 
 ### RDD Operations
 
-Coming Soon
+*Coming Soon*
 
 ### Working of Spark Architecture
 
 *Coming Soon*
 
-### Used Case
-
-*Coming Soon*
 
 
 
