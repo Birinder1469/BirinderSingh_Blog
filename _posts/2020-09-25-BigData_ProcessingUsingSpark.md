@@ -38,10 +38,10 @@ Since the inception of cloud we are able to scale up our storage and processing 
 
 But what is it that Spark is doing to get complex processing run on such high amount of datasets. The answer lies in parallelization.
 
-Let us understand with an example, lets say if I am given a task to count the M&Ms in the gif box which I got on my birthday, I can do it pretty easily right.
+Let us understand with an example, let's say if I am given a task to count the M&Ms in a gift box which I got on my birthday, I can do it pretty easily, right.
 This is same as when you have a usual CSV file such as the infamous Titanic dataset which we can easily handle with the Pandas and do the manipulations.
-On the other hand if now I am given a task to count the number of M&Ms in the store next to my house, I will hesitate a bit but after spending a day or two dedicatedly I can do it. It is slow but still something I can handle.
-Now if I am asked to count the number of M&Ms in every store in Vancouver, I give up right away. I cannot handle this task myself, what I can do instead is call all my UBC friends to go to the stores near their house and give me a count of M&Ms. In the end what I will do it collect all the counts from all my UBC friends and sum them all.
+On the other hand if now I am given a task to count the number of M&Ms in the store next to my house, I will hesitate a bit but after spending a day or two dedicatedly, I can do it. It is slow but still something I can handle.
+Now if I am asked to count the number of M&Ms in every store in Vancouver, I give up right away. I cannot handle this task myself, what I can do instead is call all my UBC friends to go to the stores near their house and give me a count of M&Ms. In the end what I will do is collect all the counts from all my UBC friends and sum them all.
 
 **M&Ms in my gift box**
 
@@ -59,13 +59,13 @@ This is what is happening in Spark. It splits the data in partitions which lie o
 
 Now some one may ask what is so different from MapReduce, it was doing the same parallelization into Map and Reduce steps. That is a valid question and I will answer that in the upcoming section.
 
-Let us understand the architecture of the Spark and some essential components before we dig deeper into Used Case.
+Let us understand the architecture of the Spark and some essential components.
 
 
 
 ## Apache Spark architecture
 
-Apache Spark is an open-source distributed general-purpose cluster-computing framework.  Instead of trying to process computationally-expensive programs on a single computer, these tasks can be divided between multiple computers that communicate with each other. When Spark says it has to do with distributed data, this means that it is designed to deal with very large datasets and to process them on a distributed computing system.
+Apache Spark is an open-source distributed general-purpose cluster-computing framework.  Instead of trying to process computationally-expensive programs on a single computer, these tasks can be divided between multiple computers that communicate with each other.
 
 This is how the Spark Eco System looks like.
 
@@ -110,7 +110,7 @@ Spark is designed to efficiently scale up from one to many thousands of compute 
 
 RDDs are the fundamental data structures of Spark or we can say the building blocks of any Spark application. RDDs Stands for:
 
-*Resilient*: Fault tolerant and is capable of rebuilding data on failure
+*Resilient*: Fault tolerant and capable of rebuilding data on failure
 *Distributed*: Distributed data among the multiple nodes in a cluster
 *Dataset*: Collection of partitioned data with values
 
@@ -197,7 +197,7 @@ All the transformations in Spark are lazy, which means that they do not compute 
 ![](../imgs/transformations_actions.PNG)
 
 
-I hope this overview gave you better understanding of the Spark. In the next part we will work on a used case for better understanding of how a large dataset is partitioned and processed in Parallel.
+I hope this overview gave you better understanding of the working of Spark. In the next part we will work on a used case for better understanding of how a large dataset is partitioned and processed with Spark.
 
 
 
