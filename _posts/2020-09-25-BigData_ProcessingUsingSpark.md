@@ -11,7 +11,7 @@ comments: true
 ---
 
 
-# Taking data processing to next level
+# Take your data processing to the next level
 
 ## What led me to discover Apache Spark?
 
