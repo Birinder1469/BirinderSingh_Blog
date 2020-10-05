@@ -176,7 +176,7 @@ When to use DataFrames or Datasets?
 
 ### Working of Spark Architecture
 
- Spark has the concept of a Master and Slave(Worker) nodes. The master node has a driver program which drives the application.
+ Spark has a concept of a master and slave(worker) nodes. The master node has a driver program which drives the application.
 The first thing Driver node does is to create a Spark Context which is an entry point to any Spark functionality just like the Database connection. Spark Context works with the Cluster Manager to manage various jobs. The Driver and the Spark Context take care of the jobs on the clusters. Any job is split into multiple tasks which are split across the worker nodes. The worker nodes are responsible for executing the task assigned to them. With more workers you can split the data into more partitions.
 
 
