@@ -13,7 +13,7 @@ comments: true
 
 # Take your data processing to the next level
 
-## What led me to discover Apache Spark?
+## What led me to discover Apache Spark
 
 I am an experienced Data Scientist and I have been at the forefront of managing the entire data science project life cycle including defining project scope, identifying data requirements and acquisition, data cleaning, feature engineering, Machine Learning model building, evaluating and deploying.
 
