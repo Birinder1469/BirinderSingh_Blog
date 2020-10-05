@@ -180,7 +180,7 @@ When to use DataFrames or Datasets?
 The first thing Driver node does is to create a Spark Context which is an entry point to any Spark functionality just like the Database connection. Spark Context works with the Cluster Manager to manage various jobs. The Driver and the Spark Context take care of the jobs on the clusters. Any job is split into multiple tasks which are split across the worker nodes. The worker nodes are responsible for executing the task assigned to them. With more workers you can split the data into more partitions.
 
 
-![](../imgs/spark_architecture1.PNG)
+![](../imgs/spark_architecture1.png)
 
 
 The driver talks to the cluster manager and negotiates the resources. Cluster manager launches executors in worker nodes on behalf of the driver. At this point, the driver will send the tasks to the executors based on data placement. When executors start, they register themselves with drivers. So, the driver will have a complete view of executors that are executing the task.
@@ -194,7 +194,7 @@ The Spark operations are combination of **Transformation** and **Actions**. Tran
 
 All the transformations in Spark are lazy, which means that they do not compute the results right away. Instead they just memorize the series of transformations that are acting on a dataset. These transformations are computed only when a action requires a result to be returned to the driver program. When we run the MAP transformation followed by REDUCE action the large mapped dataset is not returned to the Driver rather only the final computation result from the REDUCE is sent. This makes execution through Spark much more efficient.
 
-![](../imgs/transformations_actions.PNG)
+![](../imgs/transformations_actions.png)
 
 
 I hope this overview gave you better understanding of the working of Spark. In the next part we will work on a used case for better understanding of how a large dataset is partitioned and processed with Spark.
