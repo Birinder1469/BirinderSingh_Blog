@@ -11,13 +11,13 @@ comments: true
 ---
 
 
-# Taking Data Processing to next level
+# Taking data processing to next level
 
-## What led me to discover Apache Spark and its power of parallel computing?
+## What led me to discover Apache Spark?
 
 I am an experienced Data Scientist and I have been at the forefront of managing the entire data science project life cycle including defining project scope, identifying data requirements and acquisition, data cleaning, feature engineering, Machine Learning model building, evaluating and deploying.
 
-This time around in one of the projects we had to analyze the high frequency data and build a machine learning model pipeline. I started with a sample to understand the data structure.
+This time around in one of the projects I had to analyze the high frequency data and build a machine learning model pipeline. I started with a sample to understand the data structure.
 
 But soon I realized it was not going to be possible to scale what I was doing on the entire dataset. Talking to my peers I came across Dask, an open source library for parallel computing written in Python and Koalas, which is the pandas DataFrame API for handling Big Data. Very recently Koalas has been highlighted as a good alternative to PySpark as there is no learning curve for the user if you already know pandas. Check: [Koalas - pandas API on Apache Spark](https://github.com/databricks/koalas).
 
@@ -63,7 +63,7 @@ Let us understand the architecture of the Spark and some essential components be
 
 
 
-## Apache Spark Architecture
+## Apache Spark architecture
 
 Apache Spark is an open-source distributed general-purpose cluster-computing framework.  Instead of trying to process computationally-expensive programs on a single computer, these tasks can be divided between multiple computers that communicate with each other. When Spark says it has to do with distributed data, this means that it is designed to deal with very large datasets and to process them on a distributed computing system.
 
@@ -155,7 +155,7 @@ When to use RDDs:
 
 **Spark DataFrames**
 
-Came into focus in the recent releases of Spark, DataFrame is an immutable distributed collection of data. Unlike an RDD, data is organized into named columns, like a table in a relational database. Designed to make large data sets processing even easier, DataFrame allows developers to impose a structure onto a distributed collection of data, allowing higher-level abstraction
+Spark DataFrames came into focus in the recent releases of Spark, DataFrame is an immutable distributed collection of data. Unlike an RDD, data is organized into named columns, like a table in a relational database. Designed to make large data sets processing even easier, DataFrame allows developers to impose a structure onto a distributed collection of data, allowing higher-level abstraction
 
 
 **Spark Datasets**
@@ -174,14 +174,30 @@ When to use DataFrames or Datasets?
 - If you are a Python user, use DataFrames and resort back to RDDs if you need more control.
 
 
-### RDD Operations
-
-*Coming Soon*
-
 ### Working of Spark Architecture
 
-*Coming Soon*
+ Spark has the concept of a Master and Slave(Worker) nodes. The master node has a driver program which drives the application.
+The first thing Driver node does is to create a Spark Context which is an entry point to any Spark functionality just like the Database connection. Spark Context works with the Cluster Manager to manage various jobs. The Driver and the Spark Context take care of the jobs on the clusters. Any job is split into multiple tasks which are split across the worker nodes. The worker nodes are responsible for executing the task assigned to them. With more workers you can split the data into more partitions.
 
+
+![](../imgs/spark_architecture1.PNG)
+
+
+The driver talks to the cluster manager and negotiates the resources. Cluster manager launches executors in worker nodes on behalf of the driver. At this point, the driver will send the tasks to the executors based on data placement. When executors start, they register themselves with drivers. So, the driver will have a complete view of executors that are executing the task.
+During the course of execution of tasks, driver program will monitor the set of executors that runs. Driver node also schedules future tasks based on data placement.
+
+
+### RDD Operations
+
+The Spark operations are combination of **Transformation** and **Actions**. Transformations create new RDDs from existing dataset and Actions return a value after running a computation on the dataset. For instance *MAP* is a transformation that passes each element of the dataset into the function but *REDUCE* is the action that aggregates all the elements of the RDD and passes through a function and returns the final result to the driver program.
+
+
+All the transformations in Spark are lazy, which means that they do not compute the results right away. Instead they just memorize the series of transformations that are acting on a dataset. These transformations are computed only when a action requires a result to be returned to the driver program. When we run the MAP transformation followed by REDUCE action the large mapped dataset is not returned to the Driver rather only the final computation result from the REDUCE is sent. This makes execution through Spark much more efficient.
+
+![](../imgs/transformations_actions.PNG)
+
+
+I hope this overview gave you better understanding of the Spark. In the next part we will work on a used case for better understanding of how a large dataset is partitioned and processed in Parallel.
 
 
 
