@@ -15,21 +15,21 @@ comments: true
 
 ## What led me to discover Apache Spark
 
-I am an experienced Data Scientist and I have been at the forefront of managing the entire data science project life cycle including defining project scope, identifying data requirements and acquisition, data cleaning, feature engineering, Machine Learning model building, evaluating and deploying.
+I am an experienced Data Scientist and I have been at the forefront of managing the entire data science project life cycle including defining project scope, identifying data requirements and acquisition, data cleaning, feature engineering, building, evaluating and deploying machine learning models.
 
-This time around in one of the projects I had to analyze the high frequency data and build a machine learning model pipeline. I started with a sample to understand the data structure.
+This time around in one of the projects, I had to analyze the high frequency data and build a machine learning model pipeline. I started with a sample to understand the data structure.
 
-But soon I realized it was not going to be possible to scale what I was doing on the entire dataset. Talking to my peers I came across Dask, an open source library for parallel computing written in Python and Koalas, which is the pandas DataFrame API for handling Big Data. Very recently Koalas has been highlighted as a good alternative to PySpark as there is no learning curve for the user if you already know pandas. Check: [Koalas - pandas API on Apache Spark](https://github.com/databricks/koalas).
+But soon I realized it was not possible to scale what I was doing to the entire dataset. Talking to my peers I came across 1. Dask, an open source library for parallel computing written in Python and 2. Koalas, which is the pandas DataFrame API for handling Big Data. Very recently Koalas has been highlighted as a good alternative to PySpark as there is no learning curve for the user if you already know pandas. Check: [Koalas - pandas API on Apache Spark](https://github.com/databricks/koalas).
 
-In this blogpost I will take you through the Spark architecture to understand how is it able to handle big data processing and we will go through a used case together. I cannot discuss about the project that I was working on because of the client confidentiality but we can definitely play around with open source datasets :)
-That is the power of being the Data Science practitioner, nothing can stop you from learning if you want to.
+In this blogpost I will take you through the Spark architecture to understand how is it able to handle big data processing and we will go through a used case together in the next blogpost. I cannot discuss about the project that I was working on because of the client confidentiality but we can definitely play around with open source datasets :)
+That is the power of being a Data Science practitioner, nothing can stop you from learning if you want to.
 
-Lets dig into it.
+Let's start
 
 ![](../imgs/apache_spark.png)
 
 
-## How is Spark handling big data processing?
+## How is Spark handling big data processing
 
 
 Traditionally when we were working only on our laptops we were limited to the storage capacity and the processing power as per the configuration of the laptop.
